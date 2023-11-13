@@ -12,14 +12,14 @@ rl.question('Enter MySQL username: ', (user) => {
       host: 'localhost',
       user: user,
       password: password,
-      database: 'student_simple'
+      database: 'musicshahp'
     });
 
     con.connect((err) => {
       if (err) throw err;
       console.log('Connected!');
 
-      con.query('SELECT * FROM student;', (err, result) => {
+      con.query('SELECT * FROM genres;', (err, result) => {
         if (err) throw err;
         console.log('1 record inserted, ID: ' + result.insertId);
 
