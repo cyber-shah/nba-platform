@@ -1,4 +1,10 @@
-const mysql = require('mysql');
+/**
+ * Role:    It establishes a connection to your MySQL database when 
+ *          the application starts.
+ * Export:  It exports the connection object so other parts of 
+ *          your application can use it.
+ */
+const mysql = require('mysql2');
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -6,9 +12,10 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let con;
 rl.question('Enter MySQL username: ', (user) => {
   rl.question('Enter MySQL password: ', (password) => {
-    const con = mysql.createConnection({
+    con = mysql.createConnection({
       host: 'localhost',
       user: user,
       password: password,
@@ -17,16 +24,10 @@ rl.question('Enter MySQL username: ', (user) => {
 
     con.connect((err) => {
       if (err) throw err;
-      console.log('Connected!');
-
-      con.query('SELECT * FROM genres;', (err, result) => {
-        if (err) throw err;
-        console.log('1 record inserted, ID: ' + result.insertId);
-
-        console.log(result);
-        con.end();
+      console.log('Connected to MySQL!');
         rl.close();
       });
     });
-  });
 });
+  
+module.exports = con;

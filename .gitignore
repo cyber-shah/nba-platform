@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+nba-dashboard/node_modules
+nba-dashboard/coverage
+nba-dashboard/build
+nba-dashboard/.pnp
 
 # testing
 /coverage
