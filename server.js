@@ -1,12 +1,19 @@
-// server.js
 const express = require('express');
-const apiRoutes = require('./api');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const port = 5555;
 
-app.use('/api', apiRoutes);
+app.use(cors());
+app.use(bodyParser.json());
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.post('/api/echo', (req, res) => {
+  const inputText = req.body.text;
+  res.json({ result: inputText });
 });
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
