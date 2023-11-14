@@ -1,15 +1,20 @@
+// Import required modules
 const mysql = require('mysql2');
 const readline = require('readline');
 
+// Create an interface for reading user input
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
+// Initialize a variable to store the MySQL connection
 let con;
 
+// Prompt the user for MySQL username and password
 rl.question('Enter MySQL username: ', (user) => {
   rl.question('Enter MySQL password: ', (password) => {
+    // Create a MySQL connection using user input
     con = mysql.createConnection({
       host: 'localhost',
       user: user,
@@ -17,19 +22,11 @@ rl.question('Enter MySQL username: ', (user) => {
       database: 'musicshahp'
     });
 
+    // Connect to MySQL and log the status
     con.connect((err) => {
       if (err) throw err;
       console.log('Connected to MySQL!');
       rl.close();
-
-      // Now that the connection is established, you can use it.
-      executeQuery('SELECT * FROM genres')
-        .then(results => {
-          console.log(results);
-        })
-        .catch(error => {
-          console.error(error);
-        });
     });
   });
 });
@@ -42,11 +39,13 @@ rl.question('Enter MySQL username: ', (user) => {
  */
 const executeQuery = (query, values = []) => {
   return new Promise((resolve, reject) => {
+    // Check if the connection is established before executing the query
     if (!con) {
       reject(new Error('Connection not established.'));
       return;
     }
 
+    // Execute the MySQL query and handle the results
     con.query(query, values, (err, results) => {
       if (err) {
         reject(err);
@@ -57,6 +56,7 @@ const executeQuery = (query, values = []) => {
   });
 };
 
+// Export the MySQL connection and executeQuery function for external use
 module.exports = {
   connection: con,
   executeQuery: executeQuery

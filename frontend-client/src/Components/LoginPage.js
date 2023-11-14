@@ -10,7 +10,6 @@ function LoginPage() {
       pad="large"
       height="large"
       justify="center"
-      
     >
       <Form>
         <FormField label="Username" name="username" />
