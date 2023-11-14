@@ -27,7 +27,14 @@ function DataTableExample() {
     
     const handleOnClick = async () => {
         const queryOutput = await queryAPI(inputText);
-        console.log(JSON.stringify(queryOutput, null, 2));
+        // const queryOutput = inputText;
+
+        try {
+            console.log("From react " + JSON.stringify(queryOutput));
+        }
+        catch (err) {
+            console.log("Error from react" + err);
+        }
     }
 
 

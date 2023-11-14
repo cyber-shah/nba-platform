@@ -1,9 +1,3 @@
-/**
- * Role:    It establishes a connection to your MySQL database when 
- *          the application starts.
- * Export:  It exports the connection object so other parts of 
- *          your application can use it.
- */
 const mysql = require('mysql2');
 const readline = require('readline');
 
@@ -13,6 +7,7 @@ const rl = readline.createInterface({
 });
 
 let con;
+
 rl.question('Enter MySQL username: ', (user) => {
   rl.question('Enter MySQL password: ', (password) => {
     con = mysql.createConnection({
@@ -25,9 +20,44 @@ rl.question('Enter MySQL username: ', (user) => {
     con.connect((err) => {
       if (err) throw err;
       console.log('Connected to MySQL!');
-        rl.close();
-      });
+      rl.close();
+
+      // Now that the connection is established, you can use it.
+      executeQuery('SELECT * FROM genres')
+        .then(results => {
+          console.log(results);
+        })
+        .catch(error => {
+          console.error(error);
+        });
     });
+  });
 });
-  
-module.exports = con;
+
+/**
+ * Execute a MySQL query
+ * @param {string} query - The SQL query to execute
+ * @param {Array} values - Optional values to replace placeholders in the query
+ * @returns {Promise<Object>} - A promise that resolves with the query result or rejects with an error
+ */
+const executeQuery = (query, values = []) => {
+  return new Promise((resolve, reject) => {
+    if (!con) {
+      reject(new Error('Connection not established.'));
+      return;
+    }
+
+    con.query(query, values, (err, results) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(results);
+    });
+  });
+};
+
+module.exports = {
+  connection: con,
+  executeQuery: executeQuery
+};

@@ -13,6 +13,8 @@ const echoText = async (text) => {
 };
 
 const queryAPI = async (text) => {
+  console.log("From API -- " + text);
+
   const response = await fetch(`${apiUrl}/api/query`, {
     method: 'POST',
     headers: {
@@ -21,6 +23,7 @@ const queryAPI = async (text) => {
     body: JSON.stringify({ text }),
   });
   const data = await response.json();
+  console.log("From API, Result -- " + data.result);
   return data;
 }
 
