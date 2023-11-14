@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { echoText } from './Api';
+import { echoText } from './api';
 
 function App() {
   const [inputText, setInputText] = useState('');
