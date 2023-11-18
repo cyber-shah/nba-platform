@@ -1,31 +1,23 @@
 import React from "react";
-import { getTeamLogoUrl, getPlayerImageUrl } from "../GetLogos";
-import { Image, Box, Heading } from "grommet";
+import { Grid, Box, Image } from "grommet";
+import { getPlayerImageUrl, getTeamLogoUrl } from "../GetLogos";
+import { Heading } from "grommet";
 
 export default function Graphics(props) {
   const styles = {
-    container: {
-          display: "flex",
-        padding: "medium",
+    main: {
+      maxHeight: "30vh",
     },
-    playerColumn: {
-      flex: 1, // Take up 50% of the width
-      alignItems: "center",
-    },
-    playerImage: {
+    image: {
       width: "100%",
+      maxHeight: "40vh",
       height: "auto",
     },
-    teamLogo: {
+
+    info: {
       width: "100%",
-      maxWidth: "200px",
       height: "auto",
-    },
-    header: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
+      maxHeight: "20vh",
     },
   };
 
@@ -39,36 +31,76 @@ export default function Graphics(props) {
   };
 
   return (
-    <Box style={styles.container} pad="medium">
-      {/* Player Column */}
-      <div style={styles.playerColumn}>
+    <Grid
+      columns={["1/2", "1/2"]}
+      gap="xsmall"
+      extend={{ className: styles.main }}
+    >
+      <Box pad="medium">
         <Image
-          style={styles.playerImage}
-          fit="cover"
+          style={styles.image}
+          fit="contain"
           src={getPlayerImageUrl(data.playerID)}
         />
-      </div>
-
-      {/* Information Column */}
-      <Box style={styles.playerColumn}>
-        <div>
-          <Image
-            style={styles.teamLogo}
-            fit="cover"
-            src={getTeamLogoUrl(data.TeamID)}
-          />
-        </div>
-
-        <div style={styles.header}>
-          <Heading level="1" margin="none">
-            {data.firstName}
-          </Heading>
-          <Heading level="1" margin="none">
-            {data.lastName}
-          </Heading>
-          <Heading level="1">#{data.jersey} </Heading>
-        </div>
       </Box>
-    </Box>
+
+      <Box pad="medium" flex="grow" align="center" justify="center">
+        <Grid
+          columns={["1/2", "1/2"]}
+          gap="xsmall"
+          extend={{ className: styles.main }}
+        >
+          <Box pad="xsmall">
+            <Image
+              style={styles.info}
+              fit="contain"
+              src={getTeamLogoUrl(data.TeamID)}
+            />
+          </Box>
+          <Box pad="xsmall">
+            <Heading level="2" margin="none">
+              {data.firstName}
+            </Heading>
+            <Heading level="2" margin="none">
+              {data.lastName}
+            </Heading>
+            <Heading level="1">#{data.jersey} </Heading>
+          </Box>
+        </Grid>
+      </Box>
+    </Grid>
   );
 }
+
+//   const styles = {
+//     container: {
+//           display: "flex",
+//         padding: "medium",
+//     },
+//     playerColumn: {
+//       flex: 1, // Take up 50% of the width
+//       alignItems: "center",
+//     },
+
+//     header: {
+//       display: "flex",
+//       flexDirection: "column",
+//       alignItems: "center",
+//       justifyContent: "center",
+//     },
+//   };
+// {/* Player Column */}
+//       <div style={styles.playerColumn}>
+
+//       </div>
+
+//       {/* Information Column */}
+//       <Box style={styles.playerColumn}>
+//         <div>
+
+//         </div>
+
+//         <div style={styles.header}>
+
+//         </div>
+//       </Box>
