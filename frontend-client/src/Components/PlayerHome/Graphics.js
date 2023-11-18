@@ -9,28 +9,29 @@ export default function Graphics(props) {
     },
     playerColumn: {
       flex: 1, // Take up 50% of the width
+      alignItems: "center",
     },
     playerImage: {
       width: "100%",
       height: "auto",
     },
     teamLogo: {
-      position: "absolute",
-      alignItems: "center",
-      width: "20%",
+      width: "100%",
       maxWidth: "200px",
       height: "auto",
     },
-    infoColumn: {
-      flex: 1,
-      padding: "20px",
-      alignItems: "end",
-    },
+    header: {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+},
   };
 
   const data = {
     playerID: 977,
-    playerName: "Kobe Bryant",
+      firstName: "KOBE",
+    lastName: "BRYANT",
     jersey: "24",
     TeamID: 1610612737,
     TeamName: "Atlanta Hawks",
@@ -45,21 +46,23 @@ export default function Graphics(props) {
           fit="cover"
           src={getPlayerImageUrl(data.playerID)}
         />
-        <Image
-          style={styles.teamLogo}
-          fit="cover"
-          src={getTeamLogoUrl(data.TeamID)}
-        />
       </div>
 
       {/* Information Column */}
-      <Box style={styles.infoColumn}>
-        <Heading level="1">{data.playerName}</Heading>
-        <p>
-          Jersey: {data.jersey} | Team: {data.TeamName}
-        </p>
-        <p></p>
-        {/* Add more information as needed */}
+      <Box style={styles.playerColumn}>
+        <div>
+          <Image
+            style={styles.teamLogo}
+            fit="cover"
+            src={getTeamLogoUrl(data.TeamID)}
+          />
+        </div>
+
+        <div style={styles.header}>
+                  <Heading level="1" margin="none">{data.firstName}</Heading>
+<Heading level="1" margin="none">{data.lastName}</Heading>
+                  <Heading level="1" >#{data.jersey} </Heading>
+        </div>
       </Box>
     </div>
   );
