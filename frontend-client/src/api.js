@@ -28,5 +28,11 @@ const queryAPI = async (text) => {
 export { queryAPI };
 
 /**
- * so whenever someone clicks the button on react, it sends the contents of the text to echotext, who then converts it into json and redirects it to express, who then sends a response json back to echotext who stores it inside data and returns result of data to react who shows the it inside result inside result component
+ * so whenever someone clicks the button on react, 
+ * it sends the contents of the text to echotext, 
+ * who then converts it into json and redirects it to express, 
+ * who then sends a response json back to echotext who stores it 
+ * inside data and 
+ * returns result of data to react 
+ * who shows the it inside result inside result component
  */
