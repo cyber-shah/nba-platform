@@ -1,9 +1,10 @@
 // App.js
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from './Components/LoginPage';
-import {DataTableExample} from './Components/Home';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LoginPage from "./Components/LoginPage";
+import { DataTableExample } from "./Components/Home";
+import PlayerHome from "./Components/PlayerHome/PlayerHome";
 
 function App() {
   return (
@@ -11,6 +12,11 @@ function App() {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<DataTableExample />} />
+        <Route
+          path="/PlayerHome"
+          // pass the player stats here
+          element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
+        />
       </Routes>
     </Router>
   );
