@@ -1,28 +1,33 @@
 import React from "react";
 import { getTeamLogoUrl, getPlayerImageUrl } from "../GetLogos";
-import { Image } from "grommet";
+import { Image, Box, Heading } from "grommet";
 
 export default function Graphics(props) {
   const styles = {
     container: {
       display: "flex",
     },
+    playerColumn: {
+      flex: 1, // Take up 50% of the width
+    },
     playerImage: {
-      width: "50%", // Adjust the width as needed
-      maxWidth: "600px",
-      height: "auto", // Maintain aspect ratio
+      width: "100%",
+      height: "auto",
     },
     teamLogo: {
       position: "absolute",
-      top: 0,
-      left: 0,
-      width: "20%", // Adjust the width as needed
+      alignItems: "center",
+      width: "20%",
       maxWidth: "200px",
-      height: "auto", // Maintain aspect ratio
+      height: "auto",
+    },
+    infoColumn: {
+      flex: 1,
+      padding: "20px",
+      alignItems: "end",
     },
   };
 
-  // data about the player, must all be derived
   const data = {
     playerID: 977,
     playerName: "Kobe Bryant",
@@ -32,24 +37,31 @@ export default function Graphics(props) {
   };
 
   return (
-      <div>
-          
+    <div style={styles.container}>
+      {/* Player Column */}
+      <Image
+        style={styles.playerImage}
+        fit="cover"
+        src={getPlayerImageUrl(data.playerID)}
+      />
+      <div />
       <div style={styles.container}>
-        <Image
-          style={styles.playerImage}
-          fit="cover"
-          src={getPlayerImageUrl(data.playerID)}
-        />
         <Image
           style={styles.teamLogo}
           fit="cover"
           src={getTeamLogoUrl(data.TeamID)}
         />
-          </div>
-          
-          <div style= {styles.Info}>
-              
       </div>
+
+      {/* Information Column */}
+      <Box style={styles.infoColumn}>
+        <Heading level="1">{data.playerName}</Heading>
+        <p>
+          Jersey: {data.jersey} | Team: {data.TeamName}
+        </p>
+        <p></p>
+        {/* Add more information as needed */}
+      </Box>
     </div>
   );
 }
