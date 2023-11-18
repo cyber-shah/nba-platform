@@ -25,7 +25,6 @@ const queryAPI = async (text) => {
 };
 
 const login = async (username, password) => {
-  console.log("From API -- " + username + password);
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
   const response = await fetch(`${apiUrl}/api/login`, {
@@ -45,7 +44,7 @@ const login = async (username, password) => {
 };
 
 // Export the echoText and queryAPI functions for external use
-export { queryAPI };
+export { queryAPI, login };
 
 /**
  * so whenever someone clicks the button on react,

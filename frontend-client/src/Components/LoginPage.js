@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Form, FormField, Button } from "grommet"; // Import Grommet components
 import { useState } from "react";
+import { login } from "../api";
+
 
 function LoginPage() {
   const [username, setUserName] = useState("");
@@ -15,7 +17,8 @@ function LoginPage() {
   };
 
   const handleOnClick = () => {
-    
+    const apiOutput = login(username, password);
+    console.log(apiOutput);
   };
 
   return (

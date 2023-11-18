@@ -1,6 +1,5 @@
 // Import required modules
-const mysql = require('mysql2');
-
+const mysql = require("mysql2");
 
 /*
 const readline = require('readline');
@@ -18,21 +17,30 @@ const rl = readline.createInterface({
 let con;
 
 function connect(username, password) {
-  con = mysql.createConnection({
-    host: 'localhost',
-    user: username,
-    password: password,
-    database: 'musicshahp'
-  });
-
-  // Connect to MySQL and log the status
-  con.connect((err) => {
-    if (err) throw err;
-    else return "success";
+  // using await in server.js so that it waits for this to complete
+  // and not run parallely
+  // now when we use await we need to use promise that
+  // basically resolves or rejects
+  return new Promise((resolve, reject) => {
+    con = mysql.createConnection({
+      host: "localhost",
+      user: username,
+      password: password,
+      database: "musicshahp",
+    });
+    console.log(username, password);
+    // Connect to MySQL and log the status
+    con.connect((err) => {
+      if (err) {
+        reject(err);
+      }
+      else {
+        console.log("Login successful");
+        resolve("success");
+      }
+    });
   });
 }
-
-
 
 /*
 // Prompt the user for MySQL username and password
@@ -66,7 +74,7 @@ const executeQuery = (query, values = []) => {
   return new Promise((resolve, reject) => {
     // Check if the connection is established before executing the query
     if (!con) {
-      reject(new Error('Connection not established.'));
+      reject(new Error("Connection not established."));
       return;
     }
 
@@ -84,5 +92,5 @@ const executeQuery = (query, values = []) => {
 // Export the MySQL connection and executeQuery function for external use
 module.exports = {
   connect: connect,
-  executeQuery: executeQuery
+  executeQuery: executeQuery,
 };

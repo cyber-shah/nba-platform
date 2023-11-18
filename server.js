@@ -19,14 +19,13 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 
-
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
   // Call the connect function from your module
-  const result = db.connect(username, password);
-
-  if (result === 'sucess') {
+  const result = await db.connect(username, password);
+  console.log(result);
+  if (result === 'success') {
     res.status(200).json({
       message: "Login successful"
     })
@@ -38,10 +37,6 @@ app.post('/api/login', async (req, res) => {
     });
   }
 })
-
-
-
-
 
 
 
