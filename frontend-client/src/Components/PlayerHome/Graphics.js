@@ -39,13 +39,12 @@ export default function Graphics(props) {
   return (
     <div style={styles.container}>
       {/* Player Column */}
-      <Image
-        style={styles.playerImage}
-        fit="cover"
-        src={getPlayerImageUrl(data.playerID)}
-      />
-      <div />
-      <div style={styles.container}>
+      <div style={styles.playerColumn}>
+        <Image
+          style={styles.playerImage}
+          fit="cover"
+          src={getPlayerImageUrl(data.playerID)}
+        />
         <Image
           style={styles.teamLogo}
           fit="cover"
