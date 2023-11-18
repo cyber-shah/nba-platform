@@ -20,6 +20,31 @@ app.use(bodyParser.json());
 
 
 
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  // Call the connect function from your module
+  const result = db.connect(username, password);
+
+  if (result === 'sucess') {
+    res.status(200).json({
+      message: "Login successful"
+    })
+  }
+  else {
+    res.status(401).json({
+      message: 'Login failed',
+      error: 'Invalid credentials'
+    });
+  }
+})
+
+
+
+
+
+
+
 /**
  * Endpoint to handle POST requests containing SQL queries.
  * Calls executeQuery inside db.js and responds with the query result.
@@ -39,6 +64,9 @@ app.post('/api/query', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
+
 
 
 
