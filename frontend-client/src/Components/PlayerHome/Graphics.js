@@ -15,12 +15,10 @@ export default function Graphics(props) {
   const styles = {
     container: {
       position: "relative",
-      },
-      
+    },
+
     background: {
       position: "absolute",
-      top: 0,
-      left: 0,
       width: "100%",
       height: "100%",
       backgroundImage: `url(${getTeamLogoUrl(data.TeamID)})`,
@@ -46,12 +44,13 @@ export default function Graphics(props) {
   return (
     <div style={styles.container}>
       <div style={styles.background}></div>
-
+      {/* nested grids starts the main grid */}
       <Grid
         columns={["1/2", "1/2"]}
         gap="xsmall"
         extend={{ className: styles.main }}
       >
+        {/* first component in the main grid -- 1 */}
         <Box pad="medium">
           <Image
             style={styles.image}
@@ -60,12 +59,14 @@ export default function Graphics(props) {
           />
         </Box>
 
+        {/* second component which is a grid -- 2 */}
         <Box pad="medium" justify="center">
           <Grid
             columns={["1/2", "1/2"]}
             gap="xsmall"
             extend={{ className: styles.main }}
           >
+            {/* 2.1 --  */}
             <Box pad="xsmall">
               <Image
                 style={styles.info}
@@ -73,6 +74,8 @@ export default function Graphics(props) {
                 src={getTeamLogoUrl(data.TeamID)}
               />
             </Box>
+
+            {/* 2.2 -- */}
             <Box pad="xsmall" justify="center">
               <Heading level="2" margin="none">
                 {data.firstName}

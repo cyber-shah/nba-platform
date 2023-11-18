@@ -3,7 +3,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
-import { DataTableExample } from "./Components/Home";
+import { DataTableExample } from "./Components/DataTableExample";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 
 function App() {

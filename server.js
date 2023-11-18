@@ -20,8 +20,6 @@ app.use(bodyParser.json());
 
 
 
-
-
 /**
  * Endpoint to handle POST requests containing SQL queries.
  * Calls executeQuery inside db.js and responds with the query result.
