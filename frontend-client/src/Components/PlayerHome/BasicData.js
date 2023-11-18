@@ -17,26 +17,21 @@ const DataBox = ({ attribute, value }) => (
 
 // BasicData component containing a grid of DataBoxes
 export default function BasicData(props) {
-  const columns = "small";
-  const rows = "xsmall";
-  const gap = "small";
-
   // Sample data
   const data = [
     { attribute: "PPG", value: 25.5 },
     { attribute: "APG", value: 5.8 },
     { attribute: "RPG", value: 8.2 },
     { attribute: "Age", value: 28 },
-    { attribute: "PPG", value: 25.5 },
-    { attribute: "APG", value: 5.8 },
-    { attribute: "RPG", value: 8.2 },
+    { attribute: "Experience", value: 20 },
+    { attribute: "Draft", value: 5.8 },
+    { attribute: "Position", value: "Forward Guard" },
     { attribute: "Age", value: 28 },
-
     // Add more attributes as needed
   ];
 
   return (
-    <Grid columns={columns} rows={rows} gap={gap}>
+    <Grid columns="small" rows="xsmall" gap="small">
           {
               data.map((item) => (
                   <DataBox
