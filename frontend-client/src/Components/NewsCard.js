@@ -3,8 +3,9 @@ import { Card, CardBody, CardFooter, Image, Text, Anchor } from "grommet";
 
 const NewsCard = ({ imageUrl, title, description, publishedDate, linkUrl }) => {
   return (
-    <Card elevation="medium" margin="xsmall">
-      <Image src={imageUrl} alt="Card Image" />
+    <Card margin="xsmall">
+      <Image src={imageUrl}
+        alt="Card Image" />
 
       <CardBody>
         <Anchor
