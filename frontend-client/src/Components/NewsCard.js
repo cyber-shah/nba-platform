@@ -7,10 +7,18 @@ const NewsCard = ({ imageUrl, title, description, publishedDate, linkUrl }) => {
       <Image src={imageUrl} alt="Card Image" />
 
       <CardBody>
-         <Anchor href={linkUrl} size="small" weight="bold" margin="small" color="black">
+        <Anchor
+          href={linkUrl}
+          size="small"
+          weight="bold"
+          margin="small"
+          color="black"
+        >
           {title}
         </Anchor>
-        <Text size="xsmall" margin="small">{description}</Text>
+        <Text size="xsmall" margin="small">
+          {description}
+        </Text>
       </CardBody>
 
       <Text size="xsmall" textAlign="center">
