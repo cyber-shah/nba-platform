@@ -1,21 +1,21 @@
 import React from "react";
-import { Card, CardBody, CardFooter, Image, Text } from "grommet";
+import { Card, CardBody, CardFooter, Image, Text, Anchor } from "grommet";
 
-const NewsCard = ({ imageUrl, title, description }) => {
+const NewsCard = ({ imageUrl, title, description, publishedDate, linkUrl }) => {
   return (
-    <Card elevation="medium" margin="small">
+    <Card elevation="medium" margin="xsmall">
       <Image src={imageUrl} alt="Card Image" />
 
       <CardBody>
-        <Text size="small" weight="bold">
+         <Anchor href={linkUrl} size="small" weight="bold" margin="small" color="black">
           {title}
-        </Text>
-        <Text size="small">{description}</Text>
+        </Anchor>
+        <Text size="xsmall" margin="small">{description}</Text>
       </CardBody>
 
-      <CardFooter>
-        {/* Add any additional content for the card footer */}
-      </CardFooter>
+      <Text size="xsmall" textAlign="center">
+        {publishedDate}
+      </Text>
     </Card>
   );
 };

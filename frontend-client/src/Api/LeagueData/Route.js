@@ -5,7 +5,7 @@ export async function GET() {
       cache: "no-store",
     }
     );
-    
+  
   const nbaNews = await nbaNewsResponse.json();
   
     return {
