@@ -3,15 +3,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
-import { DataTableExample } from "./Components/DataTableExample";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
+import Home from "./Components/Home";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/Home" element={<DataTableExample />} />
+        <Route path="/Home" element={<Home />} />
         <Route
           path="/PlayerHome"
           // pass the player stats here

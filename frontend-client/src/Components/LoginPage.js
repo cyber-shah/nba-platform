@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Form, FormField, Button, Text } from "grommet"; // Import Grommet components
+import { Box, Form, FormField, Button, Text, Anchor } from "grommet"; // Import Grommet components
 import { useState } from "react";
-import { login } from "../api";
+import { login } from "../Api/ServerApi";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
@@ -35,41 +35,51 @@ function LoginPage() {
   };
 
   return (
-    <div>
-      <Box
-        gap="large"
-        width="large"
-        margin="auto"
-        pad="large"
-        height="large"
-        justify="center"
-      >
-        <Form>
-          <FormField
-            label="Username"
-            name="username"
-            onChange={handleChangeUsername}
-            id="username"
-            placeholder="mySQL username"
-          />
-          <FormField
-            label="Password"
-            placeholder="Password"
-            onChange={handleChangePassword}
-            name="password"
-            type="password"
-          />
-          <Button type="submit" primary label="Login" onClick={handleOnClick} />
-        </Form>
-      </Box>
-
-
-      <Text size="medium" margin="auto" color="placeholder">
+    <Box
+      gap="large"
+      width="large"
+      margin="auto"
+      pad="large"
+      justify="center"
+      height="100vh"
+    >
+      <Form>
+        <FormField
+          label="Username"
+          name="username"
+          onChange={handleChangeUsername}
+          id="username"
+          placeholder="root"
+        />
+        <FormField
+          label="Password"
+          placeholder="Password"
+          onChange={handleChangePassword}
+          name="password"
+          type="password"
+        />
+        <Button type="submit" primary label="Login" onClick={handleOnClick} />
+      </Form>
+      <Text 
+        size="medium"
+        color="placeholder"
+        margin={{
+          top: "xlarge"
+        }
+        }
+        style={{
+          width: "100%",
+          textAlign: "center"
+        }}>
         Please enter the User and password for mySQL database, it connects to
-        the database stored locally called - NBADatabase
+        the database stored locally called - NBADatabase. 
+        You can find the database
+        <Anchor
+          label=" here."
+          href="/your-database-link"
+        />
       </Text>
-
-    </div>
+    </Box>
   );
 }
 

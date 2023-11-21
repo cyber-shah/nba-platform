@@ -1,6 +1,4 @@
 import React from "react";
-import { Image } from "grommet";
-import { getTeamLogoUrl, getPlayerImageUrl } from "../GetLogos";
 import Graphics from "./Graphics";
 import BasicData from "./BasicData";
 import { DataTableExample } from "../DataTableExample";

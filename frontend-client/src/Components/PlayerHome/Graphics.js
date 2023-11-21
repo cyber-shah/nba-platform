@@ -1,7 +1,6 @@
 import React from "react";
-import { Grid, Box, Image } from "grommet";
-import { getPlayerImageUrl, getTeamLogoUrl } from "../GetLogos";
-import { Heading } from "grommet";
+import { Grid, Box, Image, Heading } from "grommet";
+import { getPlayerImageUrl, getTeamLogoUrl } from "../../Api/GetLogos";
 
 const data = {
   playerID: 977,
