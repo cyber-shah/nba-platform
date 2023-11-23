@@ -4,17 +4,6 @@ import NewsCard from "./NewsCard/NewsCard";
 import GET from "../Api/LeagueData/Route";
 
 export default function Home(props) {
-  // data initally set to null
-  const [data, setData] = useState(null);
-
-  // TODO : learn more here
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await GET();
-      setData(result);
-    };
-    fetchData();
-  }, []);
 
   return (
     <div>
@@ -34,11 +23,11 @@ export default function Home(props) {
               data.LeagueNews.articles.map((article, index) => (
                 <NewsCard
                   key={index}
-                  imageUrl={article.images[0].url}
+                  imageURL={article.images[0].url}
                   title={article.headline}
                   description={article.description}
                   publishedDate={new Date(article.published).toLocaleString()}
-                  linkUrl={article.links.web.href}
+                  linkURL={article.links.web.href}
                 />
               ))}
           </Box>

@@ -1,19 +1,21 @@
 import React from "react";
 import { Card, CardBody, Image, Text, Anchor } from "grommet";
 
-const NewsCard = ({ imageUrl,
+const NewsCard = ({ imageURL,
   title, description,
-  publishedDate, linkUrl }) => {
+  publishedDate, linkURL }) => {
+  
+  
   
   
   return (
     <Card margin="xsmall">
-      <Image src={imageUrl}
+      <Image src={imageURL}
         alt="Card Image" />
 
       <CardBody>
         <Anchor
-          href={linkUrl}
+          href={linkURL}
           size="small"
           weight="bold"
           margin="small"
