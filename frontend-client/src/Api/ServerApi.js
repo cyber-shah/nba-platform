@@ -40,7 +40,6 @@ const login = async (username, password) => {
 
   // await for the response and convert it to json
   const data = await response.json();
-  console.log(data);
   return data;
 };
 

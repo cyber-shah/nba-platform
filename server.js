@@ -22,19 +22,20 @@ app.use(bodyParser.json());
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
-  // Call the connect function from your module
-  const result = await db.connect(username, password);
-  console.log(result);
-  if (result === 'success') {
+  // use a try and catch block to 
+  // catch errors instead throwing them up
+  try {
+    // Call the connect function from your module
+    const result = await db.connect(username, password);
+    // if no errors
     res.status(200).json({
       message: "Login successful"
     })
-  }
-  else {
+  } catch (error) {
     res.status(401).json({
       message: 'Login failed',
-      error: 'Invalid credentials'
-    });
+      error: error,
+    }); 
   }
 })
 

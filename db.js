@@ -35,7 +35,6 @@ function connect(username, password) {
         reject(err);
       }
       else {
-        console.log("Login successful");
         resolve("success");
       }
     });
