@@ -15,21 +15,7 @@ export default function Home(props) {
 
           {/* News side bar */}
           <Box pad="small">
-            {/* TODO : learn more here */}
-            {data &&
-              data.LeagueNews &&
-              data.LeagueNews.articles &&
-              data.LeagueNews.articles.length > 0 &&
-              data.LeagueNews.articles.map((article, index) => (
-                <NewsCard
-                  key={index}
-                  imageURL={article.images[0].url}
-                  title={article.headline}
-                  description={article.description}
-                  publishedDate={new Date(article.published).toLocaleString()}
-                  linkURL={article.links.web.href}
-                />
-              ))}
+            <NewsCard/>
           </Box>
         </Grid>
       </Box>

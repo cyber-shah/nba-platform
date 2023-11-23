@@ -3,9 +3,9 @@ import { Box, Image, Text, Anchor } from "grommet";
 
 export default function NewsBox(props) {
   return (
-    <Box margin = "medium">
-          <Image src={props.ImageURL} />
-          
+    <Box margin="xsmall">
+      <Image src={props.ImageURL} />
+
       <Anchor
         href={props.linkURL}
         size="small"
@@ -17,8 +17,12 @@ export default function NewsBox(props) {
       </Anchor>
 
       <Text size="xsmall" margin="small">
-          {props.description}
-        </Text>
+        {props.description}
+      </Text>
+
+      <Text size="xsmall" margin="small" textAlign="center">
+        {props.publishedDate}
+      </Text>
     </Box>
   );
 }
