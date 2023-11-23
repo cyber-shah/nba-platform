@@ -4,7 +4,7 @@ import { useState } from "react";
 import { login } from "../Api/ServerApi";
 import { useNavigate } from "react-router-dom";
 
-function LoginPage() {
+function LoginPage(props) {
   const navigate = useNavigate();
   // two states for username and password
   const [username, setUserName] = useState("");
@@ -30,7 +30,7 @@ function LoginPage() {
       navigate("/Home");
     } else {
       // Redirect to the login page with an error message
-      navigate("/login", { errorMessage: apiOutput.message });
+      navigate("/", { errorMessage: apiOutput.message });
     }
   };
 
