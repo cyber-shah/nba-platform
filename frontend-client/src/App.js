@@ -4,7 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
-import TeamHome from "./Components/TeamsHome/TeamHome";
+import TeamHome from "./Components/SeasonHome/SeasonHome";
 
 function App() {
   return (

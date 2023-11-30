@@ -3,7 +3,7 @@ import { Text, Anchor, Image, Box } from "grommet";
 
 export default function TListBox(props) {
   return (
-      <Box pad="medium">
+      <Box pad="small">
           <div
           style={{
             display: "flex",
@@ -23,8 +23,8 @@ export default function TListBox(props) {
             <div>
               {/* Links */}
               {props.teamLinks.map((link, index) => (
-                <Anchor key={index} size="xsmall" href={link.href} margin="xsmall">
-                  {link.text}
+                <Anchor key={index} size="xsmall" href={link.href} margin="xxsmall">
+                  | {link.text} 
                   </Anchor>
               ))}
             </div>

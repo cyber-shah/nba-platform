@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import { Box, Grid, Image, Text } from "grommet";
 import NewsSideBar from "./TeamNews/NewsSideBar";
 import TeamList from "./TeamList/TeamList";
-import GET from "../../Api/LeagueData/Route";
+import GET from "../../EspnAPI/LeagueData/Route";
 
 export default function TeamHome(props) {
   // data initally set to null
@@ -13,6 +13,7 @@ export default function TeamHome(props) {
     setData(result);
   }
 
+  // TODO : learn more here
   // useEffect fires on mount due to the empty dependency array
   useEffect(() => {
     fetchData();
@@ -22,7 +23,7 @@ export default function TeamHome(props) {
   
   return (
     <div>
-      <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
+      <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto"}}>
         <Grid columns={["3/4", "1/4"]} gap="xsmall">
           
           {data !== null && (
@@ -33,7 +34,7 @@ export default function TeamHome(props) {
 
           {/* News side bar */}
           {data !== null && (
-            <Box pad="small">
+            <Box pad="small" >
               {/* pass league news here */}
               <NewsSideBar newsData={data.LeagueNews} />
             </Box>

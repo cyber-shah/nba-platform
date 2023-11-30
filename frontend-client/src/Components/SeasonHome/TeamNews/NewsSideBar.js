@@ -6,7 +6,7 @@ import NewsBox from "./NewsBox";
 const NewsSideBar = (props) => {
 
   return (
-    <Box elevation="medium">
+    <Box elevation="xlarge" round="medium">
       <Text weight="bold" margin="small">
         NBA Team News
       </Text>
