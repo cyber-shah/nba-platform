@@ -16,9 +16,11 @@ export async function GET(params) {
   // TEAM SCHEDULES ____________________________________
   const teamScheduleResponse = await fetch(
       `https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/
-    teams/${params.teamId}/schedule?region=us&lang=en&season=${params.seasonYear}&seasontype=1`
+    teams/${params.teamId}/schedule?region=us&lang=en&season=${params.seasonYear}&seasontype=1`,
+    {
+      cache: "no-store",
+    }
   );
-
   if (!teamScheduleResponse.ok) {
     throw new Error("Failed to fetch team data");
   }
@@ -28,9 +30,11 @@ export async function GET(params) {
   // TEAM ROSTER___________________________________________
   const teamRosterResponse = await fetch(
       `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/
-    ${params.teamId}/roster`
+    ${params.teamId}/roster?region=us&lang=en&season=${params.seasonYear}`,
+    {
+      cache: "no-store",
+    }
   );
-
   if (!teamRosterResponse.ok) {
     throw new Error("Failed to fetch team data");
   }
@@ -41,9 +45,9 @@ export async function GET(params) {
   // TEAM NEWS ____________________________________________
   const teamNewsResponse = await fetch(
       `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?
-    team=${params.teamId}`
+    team=${params.teamId}`,
+    { cache: "no-store", }
   );
-
   if (!teamNewsResponse.ok) {
     throw new Error("Failed to fetch team news");
   }
