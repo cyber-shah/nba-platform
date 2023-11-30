@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Form, FormField, Button, Text, Anchor } from "grommet"; // Import Grommet components
 import { useState } from "react";
-import { login } from "../EspnAPI/ServerApi";
+import { login } from "../API/ServerApi";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage(props) {
@@ -23,7 +23,7 @@ function LoginPage(props) {
   const handleOnClick = async () => {
     const apiOutput = await login(username, password);
     console.log(apiOutput.message);
-
+    
     // Check the message and redirect accordingly
     if (apiOutput.message === "Login successful") {
       // Redirect to the success page

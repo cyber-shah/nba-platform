@@ -4,14 +4,17 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
-import TeamHome from "./Components/SeasonHome/SeasonHome";
+import SeasonHome from "./Components/SeasonHome/SeasonHome";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/Home" element={<TeamHome />} />
+        <Route
+          path="/Home"
+          element={<SeasonHome/>}
+        />
         <Route
           path="/PlayerHome"
           // pass the player stats here

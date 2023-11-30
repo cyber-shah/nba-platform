@@ -24,6 +24,8 @@ const queryAPI = async (text) => {
   return data;
 };
 
+
+
 const login = async (username, password) => {
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
