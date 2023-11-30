@@ -12,10 +12,11 @@ export async function GET(params) {
   }
   const teamStats = await teamStatsResponse.json();
 
+    
   // TEAM SCHEDULES ____________________________________
   const teamScheduleResponse = await fetch(
-    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/
-        ${params.teamId}/schedule`
+      `https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/
+    teams/${params.teamId}/schedule?region=us&lang=en&season=${params.seasonYear}&seasontype=1`
   );
 
   if (!teamScheduleResponse.ok) {
@@ -23,6 +24,7 @@ export async function GET(params) {
   }
   const teamSchedule = await teamScheduleResponse.json();
 
+    
   // TEAM ROSTER___________________________________________
   const teamRosterResponse = await fetch(
       `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/
@@ -35,6 +37,7 @@ export async function GET(params) {
 
   const teamRoster = await teamRosterResponse.json();
 
+    
   // TEAM NEWS ____________________________________________
   const teamNewsResponse = await fetch(
       `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?
