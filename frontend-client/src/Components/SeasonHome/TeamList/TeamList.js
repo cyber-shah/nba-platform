@@ -7,7 +7,8 @@ export default function TeamList(props) {
 
   return (
     <div>
-      <Box >
+      <Box elevation="xlarge" round="large">
+
         {/* TITLE */}
         <Text size="large" margin="medium">
           {console.log(league)}
@@ -16,7 +17,7 @@ export default function TeamList(props) {
         </Text>
 
         {/* create the list */}
-        <Box elevation="xlarge" round="medium">
+        <Box >
         {league.teams.map((team, index) => (
           <TListBox
             teamLinks={league.teams[index].team.links.slice(1)}

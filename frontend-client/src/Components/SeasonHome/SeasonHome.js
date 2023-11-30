@@ -24,10 +24,10 @@ export default function TeamHome(props) {
   return (
     <div>
       <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto"}}>
-        <Grid columns={["3/4", "1/4"]} gap="xsmall">
+        <Grid columns={["3/4", "1/4"]}>
           
           {data !== null && (
-            <Box pad="medium">
+            <Box pad="small">
               <TeamList teamData={data.LeagueTeams} />
             </Box>
           )}
