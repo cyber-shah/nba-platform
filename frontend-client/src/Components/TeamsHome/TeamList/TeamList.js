@@ -1,34 +1,28 @@
 import React from "react";
-import { Box, Text, Anchor, Image } from "grommet";
+import { Box, Text } from "grommet";
+import TListBox from "./TListBox";
 
 export default function TeamList(props) {
   const league = props.teamData.sports[0].leagues[0];
-  const teamLinks = league.teams[0].team.links;
 
   return (
     <div>
       <Box>
-        <Text size="large">
+        {/* TITLE */}
+        <Text size="large" margin="medium">
           {console.log(league)}
           {league.name} Teams <br />
           {league.season.year} Year
         </Text>
 
-        <Text size="medium">{league.teams[0].team.displayName}</Text>
-
-        <Image
-          src={league.teams[0].team.logos[0].href}
-          width="100"
-          height="100"
-        />
-        
-              {/* Links */}
-        {teamLinks.map((link, index) => (
-          <Anchor key={index} size="xsmall" href={link.href}>
-            {link.text}
-          </Anchor>
+        {/* create the list */}
+        {league.teams.map((team, index) => (
+          <TListBox
+            teamLinks={league.teams[index].team.links.slice(1)}
+            league={league}
+            team={team}
+          />
         ))}
-              
       </Box>
     </div>
   );
