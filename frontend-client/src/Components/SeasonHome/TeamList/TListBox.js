@@ -13,12 +13,13 @@ export default function TListBox(props) {
       >
 
         {/* Logo on the left with fixed size */}
-        <Image src={props.team.team.logos[0].href} width="50" height="50" />
+        <Image src={props.team.team.logos[0].href} width="75" height="75" />
 
         {/* The other half */}
         <div>
           {/* Team Name */}
-          <Anchor color="black" size="medium" margin="xsmall">
+          {/* TODO : add href here */}
+          <Anchor color="black" size="medium" margin="xxsmall">
             {props.team.team.displayName}
           </Anchor>
 
