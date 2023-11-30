@@ -9,7 +9,7 @@ export default function TeamHome(props) {
   const [data, setData] = useState(null);
 
   const fetchData = async () => {
-    const result = await GET();
+    const result = await GET({seasonYear: 2024});
     setData(result);
   }
 

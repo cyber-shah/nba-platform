@@ -8,7 +8,7 @@ const NewsSideBar = (props) => {
   return (
     <Box elevation="xlarge" round="medium">
       <Text weight="bold" margin="small">
-        NBA Team News
+        NBA League News
       </Text>
 
       <Box border="top">
