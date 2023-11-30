@@ -1,6 +1,3 @@
-Just remove the $ and put in actual data there, maybe you can also write a python script or something? to fetch and create all files for all teams or something
-
-
 # Games Data
 1. game data = https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event=${params.gameId}
 2. home team stats = https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/2023/types/2/teams/${homeTeamId}/statistics
