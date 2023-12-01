@@ -34,6 +34,7 @@ const queryAPI = async (text) => {
 const login = async (username, password) => {
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
+  console.log("From API -- " + username + " " + password);
   const response = await fetch(`${apiUrl}/api/db/login`, {
     method: "POST",
     headers: {

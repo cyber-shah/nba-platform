@@ -2,9 +2,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./db");
 const app = express();
 const port = 5555;
+const leagueRouter = require("./LeagueServer");
+const DBrouter = require("./DBServer");
+// const teamRouter = require("./TeamServer");
 
 
 /**
@@ -20,18 +22,12 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-// include the leagueRouter ----------------------------------------------------
-const leagueRouter = require("./LeagueServer");
-// Use the router with a specific prefix
+
 app.use("/api/league", leagueRouter);
 
-// include the DBrouter --------------------------------------------------------
-const DBrouter = require("./DBServer");
-// Use the router with a specific prefix
 app.use("/api/db", DBrouter);
 
-
-
+// app.use("/api/team", teamRouter);
 
 
 // Start the server and listen on the specified port

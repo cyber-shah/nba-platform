@@ -14,4 +14,9 @@ app.post("/seasonTeams", async (req, res) => {
   }
 });
 
+app.post("/seasonStandings", async (req, res) => {
+  console.log("From LeagueServer: request received by standings server successfully ");
+
+});
+
 module.exports = app; // Export the router

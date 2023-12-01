@@ -3,7 +3,7 @@ import { Box, Grid, Select } from "grommet";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
 import TeamList from "./TeamList/TeamList";
 // import GET from "../../API/EspnAPI/LeagueData/Route";
-import { getSeasonsData } from "../../API/MySQL/SeasonsData";
+import { getSeasonsData } from "../../API/MySQL/LeagueAPI";
 import SeasonHeader from "./SeasonHeader";
 import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 

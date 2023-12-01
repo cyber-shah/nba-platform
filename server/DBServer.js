@@ -1,9 +1,10 @@
 const express = require("express");
 const app = express();
+const db = require("./db");
 
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const { username, password } = req.body;
-
+  console.log("From Server -- " + username + " " + password);
   // use a try and catch block to
   // catch errors instead throwing them up
   try {

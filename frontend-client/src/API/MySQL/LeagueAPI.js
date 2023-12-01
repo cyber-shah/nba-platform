@@ -1,9 +1,8 @@
 const apiUrl = "http://localhost:5555";
 
 export async function getSeasonsData(seasonYear) {
-  console.log("request recieved by teams data api successfully ")
+  console.log("request received by LeagueAPI successfully ")
 
-  
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
   const teamListResponse = await fetch(`${apiUrl}/api/league/seasonTeams`, {

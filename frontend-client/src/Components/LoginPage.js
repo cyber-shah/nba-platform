@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Form, FormField, Button, Text, Anchor } from "grommet"; // Import Grommet components
 import { useState } from "react";
-import { login } from "../API/ServerApi";
+import { login } from "../API/DBapi";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage(props) {
@@ -21,6 +21,7 @@ function LoginPage(props) {
   // handle clicks which redirects the data into API
   // and then later to the server
   const handleOnClick = async () => {
+    console.log("Username: " + username);
     const apiOutput = await login(username, password);
     console.log(apiOutput.message);
     
