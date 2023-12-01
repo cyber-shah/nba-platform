@@ -10,7 +10,7 @@ const queryAPI = async (text) => {
   console.log("From API -- " + text);
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
-  const response = await fetch(`${apiUrl}/api/query`, {
+  const response = await fetch(`${apiUrl}/api/db/query`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,11 +25,16 @@ const queryAPI = async (text) => {
 };
 
 
-
+/**
+ * Function to send a login request to the server
+ * @param {*} username: username of the user
+ * @param {*} password: password of the user
+ * @returns: A promise that resolves with the query result or rejects with an error
+ */
 const login = async (username, password) => {
   // Send a POST request to the 'query'
   // endpoint with the provided SQL query
-  const response = await fetch(`${apiUrl}/api/login`, {
+  const response = await fetch(`${apiUrl}/api/db/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -48,6 +53,12 @@ const login = async (username, password) => {
 // Export the echoText and queryAPI functions for external use
 export { queryAPI, login };
 
+  
+  
+  
+  
+  
+  
 /**
  * so whenever someone clicks the button on react,
  * it sends the contents of the text to echotext,

@@ -1,20 +1,14 @@
 import React from "react";
 import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
+import TeamHeader from "./TeamHeader";
 
 export default function TeamHome(props) {
+  const teamData = {
+
+  }
   return (
     <div>
-      <Data
-        data={[
-          { id: 1, name: "Scott", age: 12 },
-          { id: 2, name: "Zelda", age: 91 },
-        ]}
-      >
-        <Toolbar>
-          <DataTableColumns options={["id", "name", "age"]} drop />
-        </Toolbar>
-        <DataTable />
-      </Data>
+      <TeamHeader team={teamData} />
     </div>
   );
 }

@@ -11,7 +11,6 @@ export default function SeasonHeader(props) {
         justify="between"
       >
         <Tabs
-          flex="true"
           activeIndex={props.selectedTab}
           onActive={props.onActive}
           alignControls="start"

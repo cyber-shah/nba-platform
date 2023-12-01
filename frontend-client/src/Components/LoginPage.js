@@ -27,7 +27,7 @@ function LoginPage(props) {
     // Check the message and redirect accordingly
     if (apiOutput.message === "Login successful") {
       // Redirect to the success page
-      navigate("/Home");
+      navigate("/SeasonHome");
     } else {
       // Redirect to the login page with an error message
       navigate("/", { errorMessage: apiOutput.message });

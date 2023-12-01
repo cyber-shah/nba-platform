@@ -3,7 +3,7 @@ import { Box, Grid, Select } from "grommet";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
 import TeamList from "./TeamList/TeamList";
 // import GET from "../../API/EspnAPI/LeagueData/Route";
-import { getTeamsData } from "../../API/MySQL/TeamsDataAPI";
+import { getSeasonsData } from "../../API/MySQL/SeasonsData";
 import SeasonHeader from "./SeasonHeader";
 import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 
@@ -12,7 +12,7 @@ export default function SeasonHome(props) {
   const [teamData, setTeamData] = useState(null);
 
   const fetchData = async () => {
-    const result = await getTeamsData();
+    const result = await getSeasonsData();
     setTeamData(result);
   };
   // useEffect fires on mount due to the empty dependency array

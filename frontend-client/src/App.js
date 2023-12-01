@@ -4,6 +4,7 @@ import { Grommet, Tabs, Tab } from "grommet";
 import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
+import TeamHome from "./Components/TeamHome/TeamHome";
 
 function App() {
   const customTheme = {
@@ -28,13 +29,6 @@ function App() {
         },
       },
     },
-
-    button: {
-      color: {
-        text: "black", // Adjust the label (text) color
-        background: "text", // Adjust the fill (background) color
-      },
-    },
   };
 
   return (
@@ -44,7 +38,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/Home" element={<SeasonHome />} />
+            <Route path="/SeasonHome" element={<SeasonHome />} />
+            <Route path="/TeamHome" element={<TeamHome />} />
           <Route
             path="/PlayerHome"
             // pass the player stats here
