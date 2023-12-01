@@ -21,7 +21,6 @@ export default function SeasonHeader(props) {
           <Tab title="Game" border="black"></Tab>
           <Tab title="Teams"></Tab>
           <Tab title="Standings">
-            <SeasonsStandings />
           </Tab>
         </Tabs>
 

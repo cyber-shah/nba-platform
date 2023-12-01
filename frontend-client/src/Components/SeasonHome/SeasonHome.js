@@ -60,7 +60,7 @@ export default function SeasonHome(props) {
         <Box>
           <Grid columns={["2/3", "1/3"]}>
             {teamData !== null && selectedTab === 1 && TeamContent()}
-            {teamData !== null && selectedTab === 1 && TeamContent()}
+            {teamData !== null && selectedTab === 2 && StandingsContent()}
 
             {/* News side bar */}
             {teamData !== null && (
