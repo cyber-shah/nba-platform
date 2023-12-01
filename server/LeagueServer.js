@@ -1,17 +1,7 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
 const app = express();
 const path = require("path");
 
-const corsOptions = {
-  origin: "http://localhost:3000",
-  methods: "POST",
-  optionsSuccessStatus: 204,
-};
-
-app.use(cors(corsOptions));
-app.use(bodyParser.json());
 
 app.post("/seasonTeams", async (req, res) => {
   console.log("From LeagueServer: request received by teams server successfully ");

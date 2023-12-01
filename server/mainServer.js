@@ -20,14 +20,17 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
-// include the leagueRouter
+// include the leagueRouter ----------------------------------------------------
 const leagueRouter = require("./LeagueServer");
 // Use the router with a specific prefix
 app.use("/api/league", leagueRouter);
 
-
+// include the DBrouter --------------------------------------------------------
 const DBrouter = require("./DBServer");
+// Use the router with a specific prefix
 app.use("/api/db", DBrouter);
+
+
 
 
 
