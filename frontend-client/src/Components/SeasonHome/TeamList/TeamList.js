@@ -8,9 +8,8 @@ export default function TeamList(props) {
     <div>
       <Box elevation="xlarge" round="large">
         {console.log(props.teamData)}
-        <Text size="large" margin="medium">
-          NBA Teams <br />
-          2024 Year
+        <Text size="xxlarge" margin="medium">
+          NBA Teams
         </Text>
 
       <Box>

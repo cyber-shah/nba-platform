@@ -16,26 +16,43 @@ export default function SeasonsStandings(props) {
           <TableHeader>
             <TableRow>
               <TableCell scope="col" border="bottom">
-                Name
+                Rank
               </TableCell>
               <TableCell scope="col" border="bottom">
-                Flavor
+                Team
+              </TableCell>
+              <TableCell scope="col" border="bottom">
+                Wins
+              </TableCell>
+              <TableCell scope="col" border="bottom">
+                Losses
+              </TableCell>
+              <TableCell scope="col" border="bottom">
+                Win %
+              </TableCell>
+              <TableCell scope="col" border="bottom">
+                Games Behind
               </TableCell>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell scope="row">
-                <strong>Eric</strong>
-              </TableCell>
-              <TableCell>Coconut</TableCell>
+              <TableCell scope="row">1</TableCell>
+              <TableCell>Dallas Mavericks</TableCell>
+              <TableCell>20</TableCell>
+              <TableCell>5</TableCell>
+              <TableCell>80%</TableCell>
+              <TableCell>0</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell scope="row">
-                <strong>Chris</strong>
-              </TableCell>
-              <TableCell>Watermelon</TableCell>
+              <TableCell scope="row">2</TableCell>
+              <TableCell>Los Angeles Lakers</TableCell>
+              <TableCell>18</TableCell>
+              <TableCell>7</TableCell>
+              <TableCell>72%</TableCell>
+              <TableCell>2</TableCell>
             </TableRow>
+            {/* Add more rows as needed */}
           </TableBody>
         </Table>
       </Box>

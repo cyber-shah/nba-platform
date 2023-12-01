@@ -59,6 +59,7 @@ export default function SeasonHome(props) {
       <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
         <Box>
           <Grid columns={["2/3", "1/3"]}>
+            {teamData !== null && selectedTab === 0 && GameContent()}
             {teamData !== null && selectedTab === 1 && TeamContent()}
             {teamData !== null && selectedTab === 2 && StandingsContent()}
 
