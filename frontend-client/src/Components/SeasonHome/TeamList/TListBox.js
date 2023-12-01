@@ -22,6 +22,11 @@ export default function TListBox(props) {
           <Anchor color="black" size="medium" margin="xxsmall">
             {props.team.full_name}
           </Anchor>
+          <div>
+            <Text size="small">
+              {props.team.year_founded} | {props.team.city}, {props.team.state}
+            </Text>
+          </div>
         </div>
       </div>
     </Box>

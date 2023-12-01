@@ -13,7 +13,7 @@ export default function TeamList(props) {
           NBA Teams <br />
           2024 Year
         </Text>
-      </Box>
+      
 
       
       <Box>
@@ -23,25 +23,8 @@ export default function TeamList(props) {
             team={team}
           />
         ))}
-      </Box>
+        </Box>
+        </Box>
     </div>
   );
 }
-
-// {/* TITLE */}
-// <Text size="large" margin="medium">
-//   {console.log(league)}
-//   {league.name} Teams <br />
-//   {league.season.year} Year
-// </Text>
-
-// {/* create the list */}
-// <Box >
-// {league.teams.map((team, index) => (
-//   <TListBox
-//     teamLinks={league.teams[index].team.links.slice(1)}
-//     league={league}
-//     team={team}
-//   />
-// ))}
-//   </Box>

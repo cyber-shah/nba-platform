@@ -33,7 +33,7 @@ export default function SeasonHome(props) {
           {data !== null && (
             <Box pad="small">
               {/* pass league news here */}
-              {/* <NewsSideBar newsData={data.LeagueNews} /> */}
+              <NewsSideBar newsData={data.LeagueNews} />
             </Box>
           )}
         </Grid>
