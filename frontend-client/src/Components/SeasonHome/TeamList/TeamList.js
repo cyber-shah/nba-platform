@@ -3,7 +3,6 @@ import { Box, Text } from "grommet";
 import TListBox from "./TListBox";
 
 export default function TeamList(props) {
-  // const league = props.teamData.sports[0].leagues[0];
 
   return (
     <div>
