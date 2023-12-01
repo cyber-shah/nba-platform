@@ -3,13 +3,13 @@ import { Box, Grid, Image, Text } from "grommet";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
 import TeamList from "./TeamList/TeamList";
 // import GET from "../../API/EspnAPI/LeagueData/Route";
-import { getTeams } from "../../API/MySQL/TeamsDataAPI";
+import { getTeamsData } from "../../API/MySQL/TeamsDataAPI";
 
 export default function SeasonHome(props) {
   const [data, setData] = useState(null);
 
   const fetchData = async () => {
-    const result = await getTeams();
+    const result = await getTeamsData();
     setData(result);
   };
 
@@ -25,7 +25,7 @@ export default function SeasonHome(props) {
         <Grid columns={["3/4", "1/4"]}>
           {data !== null && (
             <Box pad="small">
-              {/* <TeamList teamData={data.teamList} /> */}
+              <TeamList teamData={data.teamList} />
             </Box>
           )}
 

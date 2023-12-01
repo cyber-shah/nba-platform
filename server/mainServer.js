@@ -5,6 +5,8 @@ const cors = require("cors");
 const db = require("./db");
 const app = express();
 const port = 5555;
+const path = require('path');
+
 
 /**
  * CORS middleware configuration to handle cross-origin requests.
@@ -65,12 +67,18 @@ app.post("/api/query", async (req, res) => {
 
 
 app.post("/api/teams", async (req, res) => {
-  const filePath = path.join(
+  console.log("request received by teams server successfully ")
+  try {const filePath = path.join(
     __dirname,
-    "/jsons/fromNBA/all_teams.json"
+    "./../jsons/fromNBA/all_teams.json"
   );
   // Send the JSON file as the response
-  res.sendFile(filePath);
+    res.sendFile(filePath);
+  }
+  catch (error) {
+    console.error('Error sending JSON file:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 

@@ -8,28 +8,40 @@ export default function TeamList(props) {
   return (
     <div>
       <Box elevation="xlarge" round="large">
-        {console.log(props)}
+        {console.log(props.teamData)}
+        <Text size="large" margin="medium">
+          NBA Teams <br />
+          2024 Year
+        </Text>
+      </Box>
+
+      
+      <Box>
+        {props.teamData.map((team) => (
+          <TListBox 
+            key={team.id}
+            team={team}
+          />
+        ))}
       </Box>
     </div>
   );
 }
 
+// {/* TITLE */}
+// <Text size="large" margin="medium">
+//   {console.log(league)}
+//   {league.name} Teams <br />
+//   {league.season.year} Year
+// </Text>
 
-
-        // {/* TITLE */}
-        // <Text size="large" margin="medium">
-        //   {console.log(league)}
-        //   {league.name} Teams <br />
-        //   {league.season.year} Year
-        // </Text>
-
-        // {/* create the list */}
-        // <Box >
-        // {league.teams.map((team, index) => (
-        //   <TListBox
-        //     teamLinks={league.teams[index].team.links.slice(1)}
-        //     league={league}
-        //     team={team}
-        //   />
-        // ))}
-        //   </Box>
+// {/* create the list */}
+// <Box >
+// {league.teams.map((team, index) => (
+//   <TListBox
+//     teamLinks={league.teams[index].team.links.slice(1)}
+//     league={league}
+//     team={team}
+//   />
+// ))}
+//   </Box>
