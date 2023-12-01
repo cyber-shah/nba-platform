@@ -1,24 +1,39 @@
 import React, { useState } from "react";
-import { Tab, Tabs, Box } from "grommet";
+import { Tab, Tabs, Box, Select } from "grommet";
+import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 
-export default function SeasonHeader() {
-  const [index, setIndex] = useState();
-  const onActive = (index) => setIndex(index);
-
+export default function SeasonHeader(props) {
   return (
     <div>
-      <Box pad="none">
+      <Box
+        style={{ maxWidth: "500px", margin: "auto" }}
+        align="start"
+        pad="small"
+        justify="between"
+      >
         <Tabs
           flex="true"
-          activeIndex={index}
-          onActive={onActive}
+          activeIndex={props.selectedTab}
+          onActive={props.onActive}
           alignControls="start"
           margin="small"
         >
           <Tab title="Game" border="black"></Tab>
-                  <Tab title="Teams"></Tab>
-                  <Tab title="Standings"></Tab>
+          <Tab title="Teams"></Tab>
+          <Tab title="Standings">
+            <SeasonsStandings />
+          </Tab>
         </Tabs>
+
+        <Box direction="row" align="center" gap="small">
+          <span>Select Year:</span>
+          <Select
+            width="xsmall"
+            options={["2023", "2022", "2021"]}
+            value={props.seasonYear}
+            onChange={({ seasonYear }) => props.setYear(seasonYear)}
+          />
+        </Box>
       </Box>
     </div>
   );
