@@ -1,9 +1,11 @@
 import { React, useState, useEffect } from "react";
-import { Box, Grid, Image, Text } from "grommet";
+import { Box, Grid, Tabs, Tab } from "grommet";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
 import TeamList from "./TeamList/TeamList";
 // import GET from "../../API/EspnAPI/LeagueData/Route";
 import { getTeamsData } from "../../API/MySQL/TeamsDataAPI";
+import SeasonHeader from "./SeasonHeader";
+
 
 export default function SeasonHome(props) {
   const [data, setData] = useState(null);
@@ -22,7 +24,9 @@ export default function SeasonHome(props) {
   return (
     <div>
       <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
-        <Grid columns={["3/4", "1/4"]}>
+        <SeasonHeader/>
+        <Box>
+        <Grid columns={["2/3", "1/3"]}>
           {data !== null && (
             <Box pad="small">
               <TeamList teamData={data.teamList} />
@@ -36,7 +40,8 @@ export default function SeasonHome(props) {
               <NewsSideBar newsData={data.LeagueNews} />
             </Box>
           )}
-        </Grid>
+          </Grid>
+          </Box>
       </Box>
     </div>
   );

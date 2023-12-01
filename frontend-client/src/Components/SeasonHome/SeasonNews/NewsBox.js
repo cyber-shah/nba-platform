@@ -26,7 +26,8 @@ export default function NewsBox(props) {
         textAlign="start"
         color="dark-4"
       >
-        {/* {props.publishedDate} */}
+        {props.publishedDate}<br/>
+        Estimated Read Time : {props.readTime} minutes
       </Text>
     </Box>
   );

@@ -9,21 +9,22 @@ const NewsSideBar = (props) => {
     <Box elevation="xlarge" round="medium">
       <Text weight="bold" margin="small">
         NBA League News
+        {console.log(props.newsData.results)}
       </Text>
 
       <Box border="top">
         {/* TODO : learn more here */}
         { 
-          props.newsData.articles &&
-          props.newsData.articles.length > 0 &&
-          props.newsData.articles.map((article, index) => (
+          props.newsData.results.count > 0 &&
+          props.newsData.results.items.map((article, index) => (
             <NewsBox
               key={index}
-              imageURL={article.images[0].url}
-              title={article.headline}
-              description={article.description}
-              publishedDate={new Date(article.published).toLocaleString()}
-              linkURL={article.links.web.href}
+              imageURL={article.featuredImage}
+              title={article.title}
+              description={article.seo.description}
+              readTime = {article.seo.estimated_reading_time_minutes}
+              publishedDate={new Date(article.date).toLocaleString()}
+              linkURL={article.permalink}
           />
           ))
         }

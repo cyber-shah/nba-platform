@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
 
-export default function TeamHome() {
+export default function TeamHome(props) {
   return (
-      <div>
-          
+    <div>
+      <Data
+        data={[
+          { id: 1, name: "Scott", age: 12 },
+          { id: 2, name: "Zelda", age: 91 },
+        ]}
+      >
+        <Toolbar>
+          <DataTableColumns options={["id", "name", "age"]} drop />
+        </Toolbar>
+        <DataTable />
+      </Data>
     </div>
-  )
+  );
 }

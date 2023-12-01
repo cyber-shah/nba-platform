@@ -23,7 +23,7 @@ export async function getTeamsData() {
 
 
   const nbaNewsResponse = await fetch(
-    "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=10",
+    "https://content-api-prod.nba.com/public/1/leagues/nba/content?page=1&count=10&types=post&region=united-states",
     {
       cache: "no-store",
     }
