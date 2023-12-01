@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Tab, Tabs, Box, Select } from "grommet";
-import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 
 export default function SeasonHeader(props) {
   return (

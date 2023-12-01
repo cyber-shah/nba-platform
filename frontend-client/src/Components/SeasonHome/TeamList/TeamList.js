@@ -12,9 +12,7 @@ export default function TeamList(props) {
           NBA Teams <br />
           2024 Year
         </Text>
-      
 
-      
       <Box>
         {props.teamData.map((team) => (
           <TListBox 

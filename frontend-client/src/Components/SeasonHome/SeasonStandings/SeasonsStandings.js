@@ -1,20 +1,44 @@
 import React from "react";
-import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
+import {
+  Box,
+  Table,
+  TableHeader,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "grommet";
 
 export default function SeasonsStandings(props) {
   return (
     <div>
-      <Data
-        data={[
-          { id: 1, name: "Scott", age: 12 },
-          { id: 2, name: "Zelda", age: 91 },
-        ]}
-      >
-        <Toolbar>
-          <DataTableColumns options={["id", "name", "age"]} drop />
-        </Toolbar>
-        <DataTable />
-      </Data>
+      <Box elevation="large" round="medium" pad="medium">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableCell scope="col" border="bottom">
+                Name
+              </TableCell>
+              <TableCell scope="col" border="bottom">
+                Flavor
+              </TableCell>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell scope="row">
+                <strong>Eric</strong>
+              </TableCell>
+              <TableCell>Coconut</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell scope="row">
+                <strong>Chris</strong>
+              </TableCell>
+              <TableCell>Watermelon</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Box>
     </div>
   );
 }
