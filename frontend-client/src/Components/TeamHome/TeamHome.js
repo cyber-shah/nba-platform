@@ -1,14 +1,37 @@
 import React from "react";
 import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
 import TeamHeader from "./TeamHeader";
+import { getTeamData } from "../../API/MySQL/TeamAPI";
+
 
 export default function TeamHome(props) {
-  const teamData = {
 
-  }
+  const [teamDetails, setTeamDetails] = React.useState({});
+  const [teamSchedule, setTeamSchedule] = React.useState({});
+  const [teamRoster, setTeamRoster] = React.useState({});
+  const [teamStats, setTeamStats] = React.useState({});
+
+  React.useEffect(() => {
+    async function fetchData() {
+      try {
+        // TODO : pass the team id and season from the props
+        const teamData = await getTeamData();
+        setTeamDetails(teamData.teamDetails);
+        setTeamSchedule(teamData.teamSchedule);
+        setTeamRoster(teamData.teamRoster);
+        setTeamStats(teamData.teamStats);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  } ,[]);
+  
+
   return (
     <div>
-      <TeamHeader team={teamData} />
+      <TeamHeader team={teamDetails} />
+      {console.log(teamDetails)}
     </div>
   );
 }

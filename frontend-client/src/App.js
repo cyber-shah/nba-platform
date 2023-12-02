@@ -34,20 +34,17 @@ function App() {
   return (
     <>
       <Grommet theme={customTheme}>
-      
-      <Router>
-        <Routes>
-          <Route path="/" element={<LoginPage />} />
+        <Router>
+          <Routes>
+            <Route path="/" element={<LoginPage />} />
             <Route path="/SeasonHome" element={<SeasonHome />} />
             <Route path="/TeamHome" element={<TeamHome />} />
-          <Route
-            path="/PlayerHome"
-            // pass the player stats here
-            element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
-          />
-        </Routes>
+            <Route
+              path="/PlayerHome"
+              element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
+            />
+          </Routes>
         </Router>
-      
       </Grommet>
     </>
   );
