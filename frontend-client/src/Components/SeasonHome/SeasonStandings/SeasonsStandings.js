@@ -1,7 +1,7 @@
 import React from "react";
 import {
   Box,
-  Table,
+  DataTable,
   TableHeader,
   TableRow,
   TableCell,
@@ -12,7 +12,7 @@ export default function SeasonsStandings(props) {
   return (
     <div>
       <Box elevation="large" round="medium" pad="medium">
-        <Table>
+        <DataTable>
           <TableHeader>
             <TableRow>
               <TableCell scope="col" border="bottom">
@@ -54,7 +54,7 @@ export default function SeasonsStandings(props) {
             </TableRow>
             {/* Add more rows as needed */}
           </TableBody>
-        </Table>
+        </DataTable>
       </Box>
     </div>
   );

@@ -5,6 +5,7 @@ from nba_api.stats.static import players
 from nba_api.stats.static import teams
 from nba_api.stats.endpoints import teamdetails
 from nba_api.stats.endpoints import commonteamroster
+from nba_api.stats.endpoints import leaguestandingsv3
 
 # # Create a PlayerCareerStats object
 # career = playercareerstats.PlayerCareerStats(977)
@@ -29,6 +30,11 @@ from nba_api.stats.endpoints import commonteamroster
 # with open('team_details.json', 'w') as f:
 #     json.dump(teamdetails.get_dict(), f)
 
-teamroster = commonteamroster.CommonTeamRoster(1610612754, 2022);
-with open('team_roster.json', 'w') as f:
-    json.dump(teamroster.get_dict(), f)
+# teamroster = commonteamroster.CommonTeamRoster(1610612754, 2022);
+# with open('team_roster.json', 'w') as f:
+#     json.dump(teamroster.get_dict(), f)
+
+
+standings = leaguestandingsv3.LeagueStandingsV3();
+with open('league_standings.json', 'w') as f:
+    json.dump(standings.get_dict(), f)
