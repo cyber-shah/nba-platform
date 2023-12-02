@@ -11,12 +11,14 @@ export default function TeamHome(props) {
   const [teamRoster, setTeamRoster] = React.useState({});
   const [teamStats, setTeamStats] = React.useState({});
 
+
+
   React.useEffect(() => {
     async function fetchData() {
       try {
         // TODO : pass the team id and season from the props
         const teamData = await getTeamDetails(2024, 1610612744);
-        setTeamDetails(teamData.teamDetails);
+        setTeamDetails(teamData);
         setTeamSchedule(teamData.teamSchedule);
         setTeamRoster(teamData.teamRoster);
         setTeamStats(teamData.teamStats);
