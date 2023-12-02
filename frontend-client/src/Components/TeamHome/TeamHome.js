@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
 import TeamHeader from "./TeamHeader";
 import { useState } from "react";
-import { getTeamDetails } from "../../API/MySQL/TeamAPI";
+import { getTeamDetails, getTeamRoster } from "../../API/MySQL/TeamAPI";
 import TeamSchedule from "./TeamSchedule/TeamSchedule";
 import TeamStats from "./TeamStats/TeamStats";
 import TeamRoster from "./TeamRoster/TeamRoster";
-
 
 export default function TeamHome(props) {
   const [teamDetails, setTeamDetails] = React.useState(null);
@@ -26,8 +25,15 @@ export default function TeamHome(props) {
         const teamDetails = await getTeamDetails(2024, 1610612744);
         setTeamDetails(teamDetails);
 
+        // TODO : pass the team id and season from the props
+
         setTeamSchedule(teamSchedule);
+
+        // TODO : pass the team id and season from the props
+        const teamRoster = await getTeamRoster(2024, 1610612744);
         setTeamRoster(teamRoster);
+
+        // TODO : pass the team id and season from the props
         setTeamStats(teamStats);
       } catch (error) {
         console.error(error);
@@ -47,9 +53,10 @@ export default function TeamHome(props) {
         />
       )}
 
-      {teamRoster !== null && selectedTab === 1 && TeamRoster()}
+      {teamRoster !== null && selectedTab === 1 && TeamRoster(teamRoster)}
       {teamStats !== null && selectedTab === 2 && TeamStats()}
       {teamSchedule !== null && selectedTab === 3 && TeamSchedule()}
+      {teamRoster !== null && console.log(teamRoster)}
     </div>
   );
 }

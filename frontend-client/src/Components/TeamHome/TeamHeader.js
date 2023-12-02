@@ -1,6 +1,6 @@
 import React from "react";
 import { getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
-import { Image, Grid, Box, Text, Tabs, Tab } from "grommet";
+import { Image, Grid, Box, Text, Tabs, Tab, Button } from "grommet";
 
 export default function TeamHeader(props) {
   const teamID = props.team.resultSets[0].rowSet[0][0];
@@ -19,8 +19,11 @@ export default function TeamHeader(props) {
         </Box>
         <Box justify="center">
           <Text size="xlarge">{teamName}</Text>
+          
         </Box>
       </Grid>
+
+      
 
       <Tabs
         activeIndex={props.selectedTab}
