@@ -1,15 +1,23 @@
 import React from "react";
-import { Tab, Tabs, Box, Select } from "grommet";
+import { Tab, Tabs, Box, Select, Image } from "grommet";
 
 export default function SeasonHeader(props) {
   return (
-    <div>
+    <Box elevation="large" justify="end" align="start" >
       <Box
         style={{ maxWidth: "500px", margin: "auto" }}
-        align="start"
+        align="center"
         pad="small"
         justify="between"
       >
+
+        {/* 1. NBA Logo */}
+        <Image src="https://cdn.nba.com/manage/2020/10/NBA_Logoman_2017-horizontal-1-1568x923.jpg"
+          alt="NBA Logo"
+          width="50%" />
+        
+
+        {/* 2. Tabs */}
         <Tabs
           activeIndex={props.selectedTab}
           onActive={props.onActive}
@@ -22,16 +30,16 @@ export default function SeasonHeader(props) {
           </Tab>
         </Tabs>
 
+        {/* 3. Select Year */}
         <Box direction="row" align="center" gap="small">
-          <span>Select Year:</span>
           <Select
-            width="xsmall"
+            size="small"
             options={["2023", "2022", "2021"]}
             value={props.seasonYear}
             onChange={({ seasonYear }) => props.setYear(seasonYear)}
           />
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 }
