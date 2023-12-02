@@ -9,4 +9,3 @@ export function getPlayerImageUrl(playerId) {
   const imageUrl = `https://cdn.nba.com/headshots/nba/latest/1040x760/${playerId}.png`;
   return imageUrl;
 }
-
