@@ -7,19 +7,19 @@ import { getTeamData } from "../../API/MySQL/TeamAPI";
 export default function TeamHome(props) {
 
   const [teamDetails, setTeamDetails] = React.useState({});
-  const [teamSchedule, setTeamSchedule] = React.useState({});
-  const [teamRoster, setTeamRoster] = React.useState({});
-  const [teamStats, setTeamStats] = React.useState({});
+  // const [teamSchedule, setTeamSchedule] = React.useState({});
+  // const [teamRoster, setTeamRoster] = React.useState({});
+  // const [teamStats, setTeamStats] = React.useState({});
 
   React.useEffect(() => {
     async function fetchData() {
       try {
         // TODO : pass the team id and season from the props
-        const teamData = await getTeamData();
+        const teamData = await getTeamData(2024, 1610612744);
         setTeamDetails(teamData.teamDetails);
-        setTeamSchedule(teamData.teamSchedule);
-        setTeamRoster(teamData.teamRoster);
-        setTeamStats(teamData.teamStats);
+        // setTeamSchedule(teamData.teamSchedule);
+        // setTeamRoster(teamData.teamRoster);
+        // setTeamStats(teamData.teamStats);
       } catch (error) {
         console.error(error);
       }
@@ -30,8 +30,9 @@ export default function TeamHome(props) {
 
   return (
     <div>
-      <TeamHeader team={teamDetails} />
-      {console.log(teamDetails)}
+      {teamDetails != null && <TeamHeader team={teamDetails} />}
+      
+      {teamDetails != null && console.log(teamDetails)}
     </div>
   );
 }

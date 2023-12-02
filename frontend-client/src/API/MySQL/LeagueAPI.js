@@ -45,7 +45,10 @@ export async function getSeasonsData(seasonYear) {
     }
   );
   const nbaNews = await nbaNewsResponse.json();
-  // await for the response and convert it to json
+
+
+
+
 
   return {
     teamList: teamList,

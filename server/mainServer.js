@@ -6,7 +6,7 @@ const app = express();
 const port = 5555;
 const leagueRouter = require("./LeagueServer");
 const DBrouter = require("./DBServer");
-// const teamRouter = require("./TeamServer");
+const teamRouter = require("./TeamsServer");
 
 
 /**
@@ -24,10 +24,9 @@ app.use(bodyParser.json());
 
 
 app.use("/api/league", leagueRouter);
-
+app.use("/api/teams", teamRouter);
 app.use("/api/db", DBrouter);
 
-// app.use("/api/team", teamRouter);
 
 
 // Start the server and listen on the specified port

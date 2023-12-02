@@ -30,6 +30,7 @@ app.post("/teamStats", async (req, res) => {
     res.send("From TeamServer: request received by teamStats server successfully ");
 });
 
+
 app.post("/teamDetails", async (req, res) => {
     console.log("From TeamServer: request received by teamDetails server successfully ");
     // get team id and season from request body
@@ -46,4 +47,4 @@ app.post("/teamDetails", async (req, res) => {
     }
 });
 
-exports.default = app; // Export the router
+module.exports = app;

@@ -4,7 +4,7 @@ const path = require("path");
 
 
 app.post("/seasonTeams", async (req, res) => {
-  console.log("From LeagueServer: request received by teams server successfully ");
+  console.log("From LeagueServer: sending Teams");
   // TODO : Implement the logic here to get the data from the database
   try {
     const filePath = path.join(__dirname, "./../jsons/fromNBA/all_teams.json");
@@ -19,5 +19,7 @@ app.post("/seasonStandings", async (req, res) => {
   console.log("From LeagueServer: request received by standings server successfully ");
 
 });
+
+
 
 module.exports = app; // Export the router
