@@ -34,3 +34,7 @@ export async function getTeamStats(seasonYear, teamID) {
 export async function getTeamDetails(seasonYear, teamID) {
   return fetchTeamData("teamDetails", seasonYear, teamID);
 }
+
+
+export async function getTeamLogoUrl(teamID) {
+}

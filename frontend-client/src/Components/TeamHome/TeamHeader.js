@@ -28,6 +28,7 @@ export default function TeamHeader(props) {
         alignControls="start"
         margin="small"
       >
+        <Tab title="Home"></Tab>
         <Tab title="Roster"></Tab>
         <Tab title="Stats"></Tab>
         <Tab title="Schedule"></Tab>

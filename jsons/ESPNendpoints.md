@@ -12,9 +12,5 @@
 # Team Data
 1. Team Stats(may not be useful to us ): https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/seasons/{params.seasonYear}/types/2/teams/{params.teamId}/statistics
 2. Team Schedule : https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{params.teamId}/schedule?region=us&lang=en&season={params.seasonYear}&seasontype=1
-
-
-
-
-# NBA endpoints
-https://stats.nba.com/stats/commonteamroster?LeagueID=00&Season=2023-24&TeamID=1610612738
+3. Team News : https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?team=${params.teamId}
+4. 
