@@ -1,74 +1,36 @@
 const apiUrl = "http://localhost:5555";
 
-export async function getTeamData(seasonYear, teamID) {    
-    // Send a POST request to the 'query'
-    // endpoint with the provided SQL query
-    const teamScheduleResponse = await fetch(`${apiUrl}/api/team/teamSchedule`, {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ seasonYear: seasonYear, teamID: teamID }),
-    });
-    // Check if the response status is ok
-    if (!teamScheduleResponse.ok) {
-        throw new Error(`HTTP error! Status: ${teamScheduleResponse.status}`);
-    }
-    const teamSchedule = await teamScheduleResponse.json();
+async function fetchTeamData(endpoint, seasonYear, teamID) {
+  console.log(`Request to ${endpoint} received by TeamServer successfully. 
+    Season Year: ${seasonYear}, Team ID: ${teamID}`);
 
+  const response = await fetch(`${apiUrl}/api/teams/${endpoint}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ seasonYear: seasonYear, teamID: teamID }),
+  });
 
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
 
-    const teamRosterResponse = await fetch(`${apiUrl}/api/team/teamRoster`, {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ seasonYear: seasonYear, teamID: teamID }),
-    });
-    // Check if the response status is ok
-    if (!teamRosterResponse.ok) {
-        throw new Error(`HTTP error! Status: ${teamRosterResponse.status}`);
-    }
-    const teamRoster = await teamRosterResponse.json();
+  return response.json();
+}
 
+export async function getTeamSchedule(seasonYear, teamID) {
+  return fetchTeamData("teamSchedule", seasonYear, teamID);
+}
 
+export async function getTeamRoster(seasonYear, teamID) {
+  return fetchTeamData("teamRoster", seasonYear, teamID);
+}
 
-    const teamStatsResponse = await fetch(`${apiUrl}/api/team/teamStats`, {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ seasonYear: seasonYear, teamID: teamID }),
-    });
-    // Check if the response status is ok
-    if (!teamStatsResponse.ok) {
-        throw new Error(`HTTP error! Status: ${teamStatsResponse.status}`);
-    }
-    const teamStats = await teamStatsResponse.json();
+export async function getTeamStats(seasonYear, teamID) {
+  return fetchTeamData("teamStats", seasonYear, teamID);
+}
 
-
-    const teamDetailsResponse = await fetch(`${apiUrl}/api/teams/teamDetails`, {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ seasonYear: seasonYear, teamID: teamID }),
-    });
-    console.log("request sent to TeamServer successfully, with " + seasonYear + " and " + teamID);
-
-    // Check if the response status is ok
-    if (!teamDetailsResponse.ok) {
-        throw new Error(`HTTP error! Status: ${teamDetailsResponse.status}`);
-    }
-    const teamDetails = await teamDetailsResponse.json();
-
-    
-    return {
-        teamSchedule: teamSchedule,
-        teamRoster: teamRoster,
-        teamStats: teamStats,
-        teamDetails: teamDetails
-    };
-};
-
-
+export async function getTeamDetails(seasonYear, teamID) {
+  return fetchTeamData("teamDetails", seasonYear, teamID);
+}
