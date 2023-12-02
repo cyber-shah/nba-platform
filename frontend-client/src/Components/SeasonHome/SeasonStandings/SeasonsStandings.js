@@ -1,61 +1,50 @@
 import React from "react";
-import {
-  Box,
-  DataTable,
-  TableHeader,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "grommet";
+import { Box, DataTable, Image, Text } from "grommet";
 
 export default function SeasonsStandings(props) {
+  const dataProp = props.seasonYear.resultSets[0].rowSet;
+  const columnsProp = props.seasonYear.resultSets[0].headers;
+  console.log(columnsProp);
+  console.log(dataProp);
+  console.log(dataProp[0][2]);
+
+  
+  const columns = [
+    { property: "rank", header: "Rank" },
+    { property: "team", header: "Team", render: (datum) => <TeamCell datum={datum} /> },
+    { property: "wins", header: "Wins" },
+    { property: "losses", header: "Losses" },
+    { property: "winPercentage", header: "Win %" },
+    { property: "gamesBehind", header: "Games Behind" },
+  ];
+
+  const data = [
+    { rank: 1, team: "Dallas Mavericks", wins: 20, losses: 5, winPercentage: "80%", gamesBehind: 0, logo: dataProp[0][2] },
+    { rank: 2, team: "Los Angeles Lakers", wins: 18, losses: 7, winPercentage: "72%", gamesBehind: 2, logo: "url_to_lakers_logo" },
+    // Add more rows as needed
+  ];
+
+  const TeamCell = ({ datum }) => (
+    <Box direction="row" align="center">
+      <Image src={datum.logo} alt={`${datum.team} Logo`} height="24px" width="24px" margin={{ right: "small" }} />
+      <Text>{datum.team}</Text>
+    </Box>
+  );
+
   return (
-    <div>
-      <Box elevation="large" round="medium" pad="medium">
-        <DataTable>
-          <TableHeader>
-            <TableRow>
-              <TableCell scope="col" border="bottom">
-                Rank
-              </TableCell>
-              <TableCell scope="col" border="bottom">
-                Team
-              </TableCell>
-              <TableCell scope="col" border="bottom">
-                Wins
-              </TableCell>
-              <TableCell scope="col" border="bottom">
-                Losses
-              </TableCell>
-              <TableCell scope="col" border="bottom">
-                Win %
-              </TableCell>
-              <TableCell scope="col" border="bottom">
-                Games Behind
-              </TableCell>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableCell scope="row">1</TableCell>
-              <TableCell>Dallas Mavericks</TableCell>
-              <TableCell>20</TableCell>
-              <TableCell>5</TableCell>
-              <TableCell>80%</TableCell>
-              <TableCell>0</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell scope="row">2</TableCell>
-              <TableCell>Los Angeles Lakers</TableCell>
-              <TableCell>18</TableCell>
-              <TableCell>7</TableCell>
-              <TableCell>72%</TableCell>
-              <TableCell>2</TableCell>
-            </TableRow>
-            {/* Add more rows as needed */}
-          </TableBody>
-        </DataTable>
-      </Box>
-    </div>
+    <Box align="center" pad="large" elevation="large" round="medium">
+      <DataTable
+        columns={columns}
+        data={data}
+        step={10}
+        pad={{ horizontal: "medium", vertical: "xsmall" }}
+        background={{
+          header: { color: "white", opacity: "strong" },
+          body: ["light-1", "white"],
+          footer: { color: "dark-1", opacity: "strong" },
+        }}
+        border={{ body: "bottom" }}
+      />
+    </Box>
   );
 }

@@ -9,7 +9,6 @@ const NewsSideBar = (props) => {
     <Box elevation="xlarge" round="medium">
       <Text weight="bold" margin="small">
         NBA League News
-        {console.log(props.newsData.results)}
       </Text>
 
       <Box border="top">

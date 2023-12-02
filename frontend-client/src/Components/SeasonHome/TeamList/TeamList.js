@@ -7,7 +7,6 @@ export default function TeamList(props) {
   return (
     <div>
       <Box elevation="xlarge" round="large">
-        {console.log(props.teamData)}
         <Text size="xxlarge" margin="medium">
           NBA Teams
         </Text>
