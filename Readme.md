@@ -6,10 +6,9 @@
 - [x] Tabs for Each Component
 - [x] LeagueServer Created
 - [x] LeagueAPI Created
-- [ ] change news to ESPN
 
 #### Standings
-- [ ] Front End - 50%
+- [x] Front End
 - [x] API Created:
     - [x] Get All Standings
 - [x] Server Setup Created
@@ -17,6 +16,14 @@
 
 #### Games
 - [ ] Your Task Here    
+
+
+#### Season Leaderboard Players
+- [x] Front End
+- [x] API Created:
+    - [x] Get All Standings
+- [x] Server Setup Created
+    - [ ] Connection with MySQL
 
 #### Teams List
 - [x] Front End
@@ -28,10 +35,10 @@
 ## 02 Teams
 
 ### Team Home
-- [ ] Front End
-  - [ ] Team Header
+- [x] Front End
+  - [x] Team Header
   - [ ] Team news
-  - [ ] Tabs for Each Component
+  - [x] Tabs for Each Component
 
 #### Team Stats
 - [ ] Front End
@@ -42,7 +49,7 @@
 
 
 #### Team Roster
-- [ ] Front End
+- [x] Front End
 - [x] API Created:
     - [x] Get All Players
 - [x] Server Setup Created
