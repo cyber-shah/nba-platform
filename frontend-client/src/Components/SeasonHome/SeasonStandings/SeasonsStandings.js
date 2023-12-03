@@ -1,12 +1,19 @@
 import React from "react";
 import { Box, DataTable, Image, Text } from "grommet";
+import { useState, useEffect } from "react";
+import { getSeasonStandings } from "../../../API/MySQL/LeagueAPI";
 
 export default function SeasonsStandings(props) {
-  const dataProp = props.seasonYear.resultSets[0].rowSet;
-  const columnsProp = props.seasonYear.resultSets[0].headers;
-  console.log(columnsProp);
-  console.log(dataProp);
-  console.log(dataProp[0][2]);
+  const [standingsdata, setStandingsData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+    
+  const fetchData = async () => {
+    const result = await getSeasonStandings();
+    setStandingsData(result);
+  }
 
   
   const columns = [
@@ -19,7 +26,7 @@ export default function SeasonsStandings(props) {
   ];
 
   const data = [
-    { rank: 1, team: "Dallas Mavericks", wins: 20, losses: 5, winPercentage: "80%", gamesBehind: 0, logo: dataProp[0][2] },
+    { rank: 1, team: "Dallas Mavericks", wins: 20, losses: 5, winPercentage: "80%", gamesBehind: 0, logo: "url_to_lakers_logo"  },
     { rank: 2, team: "Los Angeles Lakers", wins: 18, losses: 7, winPercentage: "72%", gamesBehind: 2, logo: "url_to_lakers_logo" },
     // Add more rows as needed
   ];

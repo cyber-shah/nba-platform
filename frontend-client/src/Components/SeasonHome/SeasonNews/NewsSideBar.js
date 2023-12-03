@@ -1,9 +1,21 @@
 import { React } from "react";
 import { Text, Box } from "grommet";
 import NewsBox from "./NewsBox";
+import { useState, useEffect } from "react";
+import { getSeasonNews } from "../../../API/MySQL/LeagueAPI";
 
 
 const NewsSideBar = (props) => {
+  const [leagueNews, setLeagueNews] = useState(null);
+  
+  const fetchData = async () => {
+    const newsResult = await getSeasonNews();
+    setLeagueNews(newsResult);
+  }
+
+  useEffect(() => {
+    fetchData();
+  } , []);
 
   return (
     <Box elevation="xlarge" round="medium">
@@ -13,9 +25,9 @@ const NewsSideBar = (props) => {
 
       <Box border="top">
         {/* TODO : learn more here */}
-        { 
-          props.newsData.results.count > 0 &&
-          props.newsData.results.items.map((article, index) => (
+        { leagueNews !== null &&
+          leagueNews.results.count > 0 &&
+          leagueNews.results.items.map((article, index) => (
             <NewsBox
               key={index}
               imageURL={article.featuredImage}
