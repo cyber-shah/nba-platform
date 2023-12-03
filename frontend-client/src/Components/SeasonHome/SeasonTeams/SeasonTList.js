@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Text } from "grommet";
 import TListBox from "./TListBox";
 import { getSeasonsTeams } from "../../../API/MySQL/LeagueAPI";
@@ -10,7 +10,7 @@ export default function TeamList(props) {
     fetchData();
   }, []);
 
-    const fetchData = async () => {
+  const fetchData = async () => {
     const result = await getSeasonsTeams();
     setTeamData(result);
   };
@@ -22,16 +22,11 @@ export default function TeamList(props) {
           NBA Teams
         </Text>
 
-      <Box>
+        <Box>
           {teamData !== null &&
-            teamData.map((team) => (
-          <TListBox 
-            key={team.id}
-            team={team}
-          />
-        ))}
+            teamData.map((team) => <TListBox key={team.id} team={team} />)}
         </Box>
-        </Box>
+      </Box>
     </div>
   );
 }

@@ -39,7 +39,11 @@ export default function SeasonsStandings(props) {
   );
 
   return (
-    <Box align="center" pad="large" elevation="large" round="medium">
+    <Box align="center" elevation="large" round="medium">
+      <Text size="xxlarge" margin="medium" alignSelf="start">
+          Season Standings
+      </Text>
+      
       <DataTable
         columns={columns}
         data={data}

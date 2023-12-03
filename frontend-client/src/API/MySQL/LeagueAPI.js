@@ -66,4 +66,10 @@ export async function getSeasonPlayers(seasonYear) {
       body: JSON.stringify({ seasonYear: seasonYear }),
     }
   );
+  // Check if the response status is ok
+  if (!seasonPlayersResponse.ok) {
+    throw new Error(`HTTP error! Status: ${seasonPlayersResponse.status}`);
+  }
+  const seasonPlayers = await seasonPlayersResponse.json();
+  return seasonPlayers;
 }
