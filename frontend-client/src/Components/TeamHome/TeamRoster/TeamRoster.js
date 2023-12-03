@@ -5,6 +5,7 @@ import { getPlayerImageUrl } from "../../../API/EspnAPI/GetLogos";
 export default function TeamRoster(props) {
   const players = props.resultSets[0].rowSet;
 
+  // TODO : display all the columns that are in the data set
   const columns = [
     {
       property: "fullName",  

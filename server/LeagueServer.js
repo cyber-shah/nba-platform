@@ -28,4 +28,16 @@ app.post("/seasonStandings", async (req, res) => {
 });
 
 
+app.post("/seasonPlayers", async (req, res) => {
+  console.log("From LeagueServer: request received by players server successfully ");
+  // TODO : Implement the logic here to get the data from the database
+  try {
+    const filePath = path.join(__dirname, "./../jsons/fromNBA/league_players.json");
+    res.sendFile(filePath);
+  } catch (error) {
+    console.error('Error sending JSON file:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 module.exports = app; // Export the router

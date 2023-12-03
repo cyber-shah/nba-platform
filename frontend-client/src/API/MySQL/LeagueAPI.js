@@ -20,8 +20,6 @@ export async function getSeasonStandings(seasonYear) {
 }
 
 
-
-
 export async function getSeasonsTeams(seasonYear) {
   console.log("request for getSeasonsTeams received successfully ");
 
@@ -53,4 +51,19 @@ export async function getSeasonNews() {
   );
   const nbaNews = await nbaNewsResponse.json();
   return nbaNews;
+}
+
+
+export async function getSeasonPlayers(seasonYear) {
+  console.log("request for getSeasonPlayers received successfully ");
+  const seasonPlayersResponse = await fetch(
+    `${apiUrl}/api/league/seasonPlayers`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ seasonYear: seasonYear }),
+    }
+  );
 }

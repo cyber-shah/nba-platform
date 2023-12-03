@@ -1,15 +1,18 @@
 import { React, useState, useEffect } from "react";
 import { Box, Grid, Select } from "grommet";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
-import TeamList from "./TeamList/TeamList";
+import TeamList from "./SeasonTeams/SeasonTList";
 // import GET from "../../API/EspnAPI/LeagueData/Route";
 // import { getSeasonsData } from "../../API/MySQL/LeagueAPI";
 import { getSeasonNews, getSeasonStandings, getSeasonsTeams } from "../../API/MySQL/LeagueAPI";
 import SeasonHeader from "./SeasonHeader";
 import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
+import SeasonPlayers from "./SeasonPlayers/SeasonPlayers";
 
 export default function SeasonHome(props) {
   // for Team List --------------------------------------------------------------------------------------------------------------------
+  // WHY: why fetch data here instead of inside each component?
+  // because we want to talk about seasons years and teams in the same place
   const [teamData, setTeamData] = useState(null);
   const [leagueNews, setLeagueNews] = useState(null);
   const [standingsData, setStandingsData] = useState(null);
@@ -49,13 +52,17 @@ export default function SeasonHome(props) {
       <TeamList teamData={teamData} seasonYear={seasonYear} />
     </Box>
   );
-
   const StandingsContent = () => (
     <Box pad="small">
       <SeasonsStandings standingsData={null} seasonYear={standingsData} />
     </Box>
   );
   const GameContent = () => <Box pad="small"></Box>;
+  const PlayerContent = () => (
+    <Box pad="small">
+      <SeasonPlayers seasonYear={seasonYear} />
+    </Box>
+  );
   // Contents --------------------------------------------------------------------------------------------------------------------
 
 
@@ -75,7 +82,9 @@ export default function SeasonHome(props) {
             {teamData !== null && selectedTab === 0 && GameContent()}
             {teamData !== null && selectedTab === 1 && TeamContent()}
             {teamData !== null && selectedTab === 2 && StandingsContent()}
+            {teamData !== null && selectedTab === 3 && PlayerContent()}
 
+            
             {/* News side bar */}
             {leagueNews !== null && (
               <Box pad="small">

@@ -6,8 +6,12 @@ import { getTeamDetails, getTeamRoster } from "../../API/MySQL/TeamAPI";
 import TeamSchedule from "./TeamSchedule/TeamSchedule";
 import TeamStats from "./TeamStats/TeamStats";
 import TeamRoster from "./TeamRoster/TeamRoster";
+import { useParams } from "react-router-dom";
+
 
 export default function TeamHome(props) {
+  const { teamId } = useParams();
+  console.log(teamId);
   const [teamDetails, setTeamDetails] = React.useState(null);
   const [teamSchedule, setTeamSchedule] = React.useState(null);
   const [teamRoster, setTeamRoster] = React.useState(null);

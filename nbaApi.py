@@ -6,6 +6,9 @@ from nba_api.stats.static import teams
 from nba_api.stats.endpoints import teamdetails
 from nba_api.stats.endpoints import commonteamroster
 from nba_api.stats.endpoints import leaguestandingsv3
+from nba_api.stats.endpoints import leaderstiles
+from nba_api.stats.endpoints import alltimeleadersgrids
+from nba_api.stats.endpoints import leagueleaders
 
 # # Create a PlayerCareerStats object
 # career = playercareerstats.PlayerCareerStats(977)
@@ -35,6 +38,21 @@ from nba_api.stats.endpoints import leaguestandingsv3
 #     json.dump(teamroster.get_dict(), f)
 
 
-standings = leaguestandingsv3.LeagueStandingsV3();
-with open('league_standings.json', 'w') as f:
-    json.dump(standings.get_dict(), f)
+# standings = leaguestandingsv3.LeagueStandingsV3();
+# with open('league_standings.json', 'w') as f:
+#     json.dump(standings.get_dict(), f)
+
+
+# leaders = leaderstiles.LeadersTiles(2024)
+# print(leaders.get_dict())
+# with open('team_leaders.json', 'w') as f:
+#     json.dump(leaders.get_dict(), f)
+
+# leadersplayers = alltimeleadersgrids.AllTimeLeadersGrids()
+# with open('leaders_players.json', 'w') as f:
+#     json.dump(leadersplayers.get_dict(), f)
+
+
+leadersseason = leagueleaders.LeagueLeaders()
+with open('leaders_season.json', 'w') as f:
+    json.dump(leadersseason.get_dict(), f)
