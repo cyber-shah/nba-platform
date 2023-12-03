@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Data, DataTable, Toolbar, DataTableColumns } from "grommet";
+import { Box } from "grommet";
 import TeamHeader from "./TeamHeader";
 import { useState } from "react";
 import { getTeamDetails, getTeamRoster } from "../../API/MySQL/TeamAPI";
@@ -52,11 +52,12 @@ export default function TeamHome(props) {
           setTab={setTab}
         />
       )}
-
-      {teamRoster !== null && selectedTab === 1 && TeamRoster(teamRoster)}
-      {teamStats !== null && selectedTab === 2 && TeamStats()}
-      {teamSchedule !== null && selectedTab === 3 && TeamSchedule()}
-      {teamRoster !== null && console.log(teamRoster)}
+      <Box width="1500px" justify="center" margin="auto" pad="medium">
+        {teamRoster !== null && selectedTab === 1 && TeamRoster(teamRoster)}
+        {teamStats !== null && selectedTab === 2 && TeamStats()}
+        {teamSchedule !== null && selectedTab === 3 && TeamSchedule()}
+        {teamRoster !== null && console.log(teamRoster)}
+      </Box>
     </div>
   );
 }

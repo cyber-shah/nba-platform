@@ -1,8 +1,15 @@
 import React from "react";
 import { Text, Anchor, Image, Box } from "grommet";
 import { getTeamLogoUrl } from "../../../API/EspnAPI/GetLogos";
+import { useNavigate } from "react-router-dom";
 
 export default function TListBox(props) {
+  const navigate = useNavigate();
+
+  const handleTeamClick = () => {
+    navigate(`/team/${props.team.id}`);
+  };
+
   return (
     <Box pad="small">
       <div
@@ -13,13 +20,17 @@ export default function TListBox(props) {
         }}
       >
         {/* Logo on the left with fixed size */}
-        <Image src= {getTeamLogoUrl(props.team.id)} width="75" height="75" />
+        <Image src={getTeamLogoUrl(props.team.id)} width="75" height="75" />
 
         {/* The other half */}
         <div>
           {/* Team Name */}
-          {/* TODO : add href here */}
-          <Anchor color="black" size="medium" margin="xxsmall">
+          <Anchor
+            color="black"
+            size="medium"
+            margin="xxsmall"
+            onClick={handleTeamClick}
+          >
             {props.team.full_name}
           </Anchor>
           <div>

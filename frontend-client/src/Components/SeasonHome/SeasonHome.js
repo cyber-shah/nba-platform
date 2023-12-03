@@ -59,11 +59,6 @@ export default function SeasonHome(props) {
   // Contents --------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-
-
   return (
     <div>
       <SeasonHeader
