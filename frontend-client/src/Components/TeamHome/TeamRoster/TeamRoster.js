@@ -6,7 +6,7 @@ import { getTeamRoster } from "../../../API/MySQL/TeamAPI";
 
 export default function TeamRoster(props) {
   const [teamRoster, setTeamRoster] = React.useState(null);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   async function fetchData() {
     const teamRoster = await getTeamRoster(props.season, props.teamId);
@@ -35,7 +35,7 @@ export default function TeamRoster(props) {
     }));
 
     const handlePlayerClick = (playerId) => {
-      // navigate(`/PlayerHome/${playerId}`);
+      navigate(`/PlayerHome/${playerId}`);
       console.log(playerId);
     };
 
