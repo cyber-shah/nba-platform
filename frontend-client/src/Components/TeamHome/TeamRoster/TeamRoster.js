@@ -1,15 +1,38 @@
 import React from "react";
-import { DataTable, Grommet, Text, Box, Image, Anchor } from "grommet";
+import { DataTable, Box, Text, Image, Anchor } from "grommet";
 import { getPlayerImageUrl } from "../../../API/EspnAPI/GetLogos";
 
 export default function TeamRoster(props) {
   const players = props.resultSets[0].rowSet;
 
-  // TODO : display all the columns that are in the data set
+  // NOTE: translate the data from the API into a format that we want to use
+  const transformedData = players.map((player) => ({
+    id: player[14],
+    fullName: player[3],
+    position: player[7],
+    height: player[8],
+    weight: player[9],
+    birthDate: player[10],
+    age: player[11],
+    experience: player[12],
+    college: player[13],
+    Acquired: player[15],
+  }));
+
+    const handlePlayerClick = (playerId) => {
+    // Use navigate to redirect to the player's profile page with the player's ID in the URL
+    navigate(`/player/${playerId}`);
+    };
+  
+  
+  console.log(transformedData);
+  
+  // NOTE: this the 
   const columns = [
     {
       property: "fullName",
       header: "Full Name",
+      // function that takes in the player object and renders the an image of the player
       render: (player) => (
         <Box direction="row" align="center">
           <Image
@@ -19,7 +42,7 @@ export default function TeamRoster(props) {
             width="80px"
             margin={{ right: "small" }}
           />
-          <Text>{player.fullName}</Text>
+          <Anchor color="black" onClick={() => handlePlayerClick(player.id)}> >{player.fullName}</Anchor>
         </Box>
       ),
     },
@@ -32,23 +55,13 @@ export default function TeamRoster(props) {
     { property: "college", header: "College" },
     { property: "Acquired", header: "Acquired via" },
   ];
+  console.log(columns);
 
   return (
     <Box align="center" elevation="large" pad="large" round="large">
       <DataTable
         columns={columns}
-        data={players.map((player) => ({
-          id: player[14],
-          fullName: <Anchor color="black">{player[3]}</Anchor>,
-          position: player[7],
-          height: player[8],
-          weight: player[9],
-          birthDate: player[10],
-          age: player[11],
-          experience: player[12],
-          college: player[13],
-          Acquired: player[15],
-        }))}
+        data={transformedData}
         pad={{ horizontal: "medium", vertical: "xsmall" }}
         background={{
           header: { color: "white", opacity: "strong" },
