@@ -10,12 +10,10 @@ import { useParams } from "react-router-dom";
 
 export default function TeamHome(props) {
   const { teamId } = useParams();
-
   console.log(teamId);
 
+  // TODO: set this inside the TeamHeader component
   const [teamDetails, setTeamDetails] = React.useState(null);
-  const [teamStats, setTeamStats] = React.useState(null);
-  const [teamSchedule, setTeamSchedule] = React.useState(null);
 
   // tabs --------------------------------------------------------------------
   const [selectedTab, setTab] = useState(1);
@@ -28,12 +26,6 @@ export default function TeamHome(props) {
         // TODO : pass the team id and season from the props
         const teamDetails = await getTeamDetails(2024, 1610612744);
         setTeamDetails(teamDetails);
-
-        // TODO : pass the team id and season from the props
-        setTeamSchedule(teamSchedule);
-
-        // TODO : pass the team id and season from the props
-        setTeamStats(teamStats);
       } catch (error) {
         console.error(error);
       }
@@ -43,6 +35,7 @@ export default function TeamHome(props) {
 
   return (
     <div>
+      {/* TODO: extract season year from this to be able to pass it into props */}
       {teamDetails != null && (
         <TeamHeader
           team={teamDetails}
@@ -54,10 +47,10 @@ export default function TeamHome(props) {
 
       <Box width="1500px" justify="center" margin="auto" pad="medium">
         {selectedTab === 1 && <TeamRoster teamId={teamId} season={2024} />}
-        {teamStats !== null && selectedTab === 2 && TeamStats()}
-        {teamSchedule !== null && selectedTab === 3 && TeamSchedule()}
+        {selectedTab === 2 && <TeamStats />}
+        {selectedTab === 3 && <TeamSchedule />}
       </Box>
-      
+
     </div>
   );
 }
