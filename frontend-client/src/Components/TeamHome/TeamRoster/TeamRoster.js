@@ -1,5 +1,5 @@
 import React from "react";
-import { DataTable, Grommet, Text, Box, Image } from "grommet";
+import { DataTable, Grommet, Text, Box, Image, Anchor } from "grommet";
 import { getPlayerImageUrl } from "../../../API/EspnAPI/GetLogos";
 
 export default function TeamRoster(props) {
@@ -8,7 +8,7 @@ export default function TeamRoster(props) {
   // TODO : display all the columns that are in the data set
   const columns = [
     {
-      property: "fullName",  
+      property: "fullName",
       header: "Full Name",
       render: (player) => (
         <Box direction="row" align="center">
@@ -34,17 +34,12 @@ export default function TeamRoster(props) {
   ];
 
   return (
-    <Box
-      align="center"
-      elevation="large"
-      pad="large"
-      round="large"
-    >
+    <Box align="center" elevation="large" pad="large" round="large">
       <DataTable
         columns={columns}
         data={players.map((player) => ({
           id: player[14],
-          fullName: player[3],
+          fullName: <Anchor color="black">{player[3]}</Anchor>,
           position: player[7],
           height: player[8],
           weight: player[9],

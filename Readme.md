@@ -23,7 +23,7 @@
 - [x] API Created:
     - [x] Get All Standings
 - [x] Server Setup Created
-    - [ ] Connection with MySQL
+    - [$$ ] Connection with MySQL
 
 #### Teams List
 - [x] Front End
