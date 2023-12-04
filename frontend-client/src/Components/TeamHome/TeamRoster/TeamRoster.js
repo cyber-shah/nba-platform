@@ -17,6 +17,10 @@ export default function TeamRoster(props) {
     fetchData();
   }, []);
 
+      const handlePlayerClick = (playerId) => {
+      navigate(`/PlayerHome/${playerId}`);
+    };
+
   if (teamRoster !== null) {
     const players = teamRoster.resultSets[0].rowSet;
 
@@ -34,10 +38,7 @@ export default function TeamRoster(props) {
       Acquired: player[15],
     }));
 
-    const handlePlayerClick = (playerId) => {
-      navigate(`/PlayerHome/${playerId}`);
-      console.log(playerId);
-    };
+
 
     const columns = [
       {

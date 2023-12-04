@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Box } from "grommet";
 import TeamHeader from "./TeamHeader";
 import { useState } from "react";
-import { getTeamDetails, getTeamRoster } from "../../API/MySQL/TeamAPI";
 import TeamSchedule from "./TeamSchedule/TeamSchedule";
 import TeamStats from "./TeamStats/TeamStats";
 import TeamRoster from "./TeamRoster/TeamRoster";
@@ -40,8 +39,8 @@ export default function TeamHome(props) {
 
       <Box width="1500px" justify="center" margin="auto" pad="medium">
         {selectedTab === 1 && <TeamRoster teamId={teamId} season={2024} />}
-        {selectedTab === 2 && <TeamStats />}
-        {selectedTab === 3 && <TeamSchedule />}
+        {selectedTab === 2 && <TeamStats teamId={teamId} season={2024} />}
+        {selectedTab === 3 && <TeamSchedule teamId={teamId} season={2024}/>}
       </Box>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
-import { Image, Grid, Box, Text, Tabs, Tab, Select } from "grommet";
+import { Image, Grid, Box, Text, Tabs, Tab } from "grommet";
 import { getTeamDetails } from "../../API/MySQL/TeamAPI";
 
 /**
