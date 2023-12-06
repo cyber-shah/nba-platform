@@ -2,7 +2,7 @@ import React from "react";
 import Graphics from "./Graphics";
 import { generateColumns } from "../GlobalFunctions";
 import { useParams } from "react-router-dom";
-import { DataTable } from "grommet";
+import { DataTable, Box } from "grommet";
 import PlayerHeader from "./PlayerHeader";
 
 export default function PlayerHome(props) {
@@ -28,11 +28,9 @@ export default function PlayerHome(props) {
     },
   };
   return (
-    <div style={style.main}>
-      <div>
-        <Graphics playerId={playerId} />
-        {/* <PlayerHeader playerId={playerId} /> */}
-      </div>
+    <div >
+      <PlayerHeader playerId={playerId} />
+      <Graphics playerId={playerId} />
     </div>
   );
 }
