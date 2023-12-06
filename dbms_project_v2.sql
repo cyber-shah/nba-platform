@@ -187,7 +187,7 @@ insert into nba_assistant_coaches values (1647,'Kenny','Gattison',1610612737,'19
 -- nba_games table
 drop table if exists nba_games;
 CREATE TABLE nba_games (
-    game_id INT PRIMARY KEY,
+    game_id varchar(255) PRIMARY KEY,
     game_date DATE NOT NULL,
     home_team_id INT,
     home_team_points INT,
@@ -201,7 +201,7 @@ drop table if exists player_season_per_game;
 CREATE TABLE player_season_per_game (
     player_id INT NOT NULL,
     season_id VARCHAR(255) NOT NULL,
-    game_id INT NOT NULL,
+    game_id varchar(255) NOT NULL,
     player_minutes int default 0,
     player_points INT DEFAULT 0,
 	player_fg_percent FLOAT DEFAULT 0.0,
@@ -228,7 +228,7 @@ drop table if exists team_season_per_game;
 CREATE TABLE team_season_per_game (
     team_id INT NOT NULL,
     season_id VARCHAR(255) NOT NULL,
-    game_id INT NOT NULL,
+    game_id varchar(255) NOT NULL,
     team_points INT DEFAULT 0,
     team_rebounds INT DEFAULT 0,
     team_assists INT DEFAULT 0,
