@@ -4,6 +4,7 @@ import BasicData from "./Cards/Cards";
 import { generateColumns } from "../GlobalFunctions";
 import { useParams } from "react-router-dom";
 import { DataTable } from "grommet";
+import PlayerHeader from "./PlayerHeader";
 
 export default function PlayerHome(props) {
   const { playerId } = useParams();
@@ -14,7 +15,9 @@ export default function PlayerHome(props) {
     fetchData();
   }, []);
 
-  const fetchData = async () => {};
+  const fetchData = async (playerId) => {
+    
+  };
 
   console.log(playerId);
 
@@ -29,6 +32,7 @@ export default function PlayerHome(props) {
     <div style={style.main}>
       <div>
         <Graphics data={props} />
+        <PlayerHeader playerId={playerId} />
       </div>
     </div>
   );
