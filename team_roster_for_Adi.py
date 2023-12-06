@@ -45,8 +45,9 @@ for each_team_id_index in range(start_team_index, end_team_index):
         players_dict = team_roster.get_dict()['resultSets'][0]['rowSet']
         for each_player in players_dict:
             current_player_id = each_player[14]
-            if current_player_id in player_ids:
-                player_team_season += "(" + str(current_player_id) + ",\'" + each_season + "\'," + str(team_ids[each_team_id_index]) + "),"
+            current_player_team_season = "(" + str(current_player_id) + ",\'" + each_season + "\'," + str(team_ids[each_team_id_index]) + "),"
+            if (current_player_id in player_ids) and (current_player_team_season not in player_team_season):
+                player_team_season += current_player_team_season
         coaches_dict = team_roster.get_dict()['resultSets'][1]['rowSet']
         for each_coach in coaches_dict:
             if each_coach[7] == "Head Coach":
