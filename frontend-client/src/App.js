@@ -5,6 +5,7 @@ import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
 import TeamHome from "./Components/TeamHome/TeamHome";
+import CRUD from "./Components/CRUD";
 
 function App() {
   const customTheme = {
@@ -34,6 +35,7 @@ function App() {
   return (
     <>
       <Grommet theme={customTheme}>
+        <CRUD />
         <Router>
           <Routes>
             <Route path="/" element={<LoginPage />} />

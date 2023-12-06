@@ -24,7 +24,7 @@ export default function PlayerHeader(props) {
   };
 
   return (
-    <Box elevation="large" justify="end" align="start" >
+    <Box elevation="large" >
       {/* Main grid */}
       <Grid columns={["1/2", "1/2"]}>
 

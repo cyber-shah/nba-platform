@@ -30,7 +30,6 @@ export default function PlayerHome(props) {
   return (
     <div >
       <PlayerHeader playerId={playerId} />
-      <Graphics playerId={playerId} />
     </div>
   );
 }
