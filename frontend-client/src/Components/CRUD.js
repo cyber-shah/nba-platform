@@ -4,10 +4,23 @@ import { Box, Select, Grid, Text } from "grommet";
 export default function CRUD() {
   return (
     <Box pad="medium" elevation="large" round="small">
-      <Grid columns={["small", "small", "small", "small", "small"]} gap="small">
-        <Text size="large" color="brand">
-          CRUD Operations
+      <Grid
+        columns={[
+          "xsmall",
+          "small",
+          "xsmall",
+          "small",
+          "xsmall",
+          "small",
+          "xsmall",
+          "small",
+        ]}
+        gap="small"
+      >
+        <Text textAlign="end" size="medium" color="brand" alignSelf="center">
+          Create
         </Text>
+
         <Select
           options={[
             "Create new game",
@@ -18,6 +31,10 @@ export default function CRUD() {
           value={"Create operations"}
           onChange={() => {}}
         />
+
+        <Text textAlign="end" size="medium" color="brand" alignSelf="center">
+          Read
+        </Text>
 
         <Select
           options={[
@@ -30,6 +47,9 @@ export default function CRUD() {
           onChange={() => {}}
         />
 
+        <Text textAlign="end" size="medium" color="brand" alignSelf="center">
+          Update
+        </Text>
         <Select
           options={[
             "Delete game",
@@ -41,6 +61,9 @@ export default function CRUD() {
           onChange={() => {}}
         />
 
+        <Text textAlign="end" size="medium" color="brand" alignSelf="center">
+          Delete
+        </Text>
         <Select
           options={["Read game", "Read player", "Read season", "Read team"]}
           value={"Read operations"}
