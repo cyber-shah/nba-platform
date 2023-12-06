@@ -4,7 +4,7 @@ import { getSeasonPlayers } from '../../../API/MySQL/LeagueAPI';
 import SeasonPTable from './SeasonPTable';
 import { Box, Text } from 'grommet';
 
-export default function SeasonPlayers() {
+export default function SeasonPlayers(props) {
   const [players, setPlayers] = useState(null);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function SeasonPlayers() {
   }, []);
 
   const fetchData = async () => {
-    const result = await getSeasonPlayers();
+    const result = await getSeasonPlayers(props.seasonYear);
     setPlayers(result.resultSets);
   }
 
@@ -24,12 +24,11 @@ export default function SeasonPlayers() {
           Season Leaders
         </Text>
 
-      {players !== null && players.map((season, index) => (
+        {players !== null && players.map((table, index) => (
         <SeasonPTable
-          margin="medium"
             key={index}
-            headers={season.headers}
-            data={season.rowSet}
+            headers={table.headers}
+            data={table.rowSet}
           />
         ))} 
           </Box>

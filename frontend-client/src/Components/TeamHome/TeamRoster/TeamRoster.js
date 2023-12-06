@@ -17,7 +17,7 @@ export default function TeamRoster(props) {
     fetchData();
   }, []);
 
-      const handlePlayerClick = (playerId) => {
+    const handlePlayerClick = (playerId) => {
       navigate(`/PlayerHome/${playerId}`);
     };
 
@@ -74,8 +74,9 @@ export default function TeamRoster(props) {
       { property: "college", header: "College" },
       { property: "Acquired", header: "Acquired via" },
     ];
-    console.log(columns);
 
+
+    
     return (
       <Box align="center" elevation="large" pad="large" round="large">
         <DataTable

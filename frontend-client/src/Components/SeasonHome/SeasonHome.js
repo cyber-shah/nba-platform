@@ -6,6 +6,9 @@ import SeasonHeader from "./SeasonHeader";
 import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 import SeasonPlayers from "./SeasonPlayers/SeasonPlayers";
 
+
+
+
 export default function SeasonHome(props) {
   // For Season Header --------------------------------------------------------------------------------------------------------------------
   // seasons
@@ -13,6 +16,8 @@ export default function SeasonHome(props) {
   // tabs
   const [selectedTab, setTab] = useState(1);
   const onActive = (index) => setTab(index);
+  // use effect so that whenver seasonYear changes, it will update the data
+
 
   return (
     <div>
