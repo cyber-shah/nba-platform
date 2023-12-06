@@ -32,17 +32,7 @@ city varchar(255),
 state varchar(255),
 primary key (city, state)
 );
-INSERT INTO `cities` VALUES ('Atlanta','Georgia'),('Boston','Massachusetts'),
-('Cleveland','Ohio'),('New Orleans','Louisiana'),('Chicago','Illinois'),
-('Dallas','Texas'),('Denver','Colorado'),('San Francisco','California'),
-('Houston','Texas'),('Los Angeles','California'),('Miami','Florida'),
-('Milwaukee','Wisconsin'),('Minneapolis','Minnesota'),('Brooklyn','New York'),
-('New York','New York'),('Orlando','Florida'),('Indianapolis','Indiana'),
-('Philadelphia','Pennsylvania'),('Phoenix','Arizona'),('Portland','Oregon'),
-('Sacramento','California'),('San Antonio','Texas'),('Oklahoma City','Oklahoma'),
-('Toronto','Ontario'),('Salt Lake City','Utah'),('Memphis','Tennessee'),
-('Washington','District of Columbia'),('Detroit','Michigan'),
-('Charlotte','North Carolina');
+INSERT INTO `cities` VALUES ('Atlanta','Georgia'),('Boston','Massachusetts'),('Cleveland','Ohio'),('New Orleans','Louisiana'),('Chicago','Illinois'),('Dallas','Texas'),('Denver','Colorado'),('San Francisco','California'),('Houston','Texas'),('Los Angeles','California'),('Miami','Florida'),('Milwaukee','Wisconsin'),('Minneapolis','Minnesota'),('Brooklyn','New York'),('New York','New York'),('Orlando','Florida'),('Indianapolis','Indiana'),('Philadelphia','Pennsylvania'),('Phoenix','Arizona'),('Portland','Oregon'),('Sacramento','California'),('San Antonio','Texas'),('Oklahoma City','Oklahoma'),('Toronto','Ontario'),('Salt Lake City','Utah'),('Memphis','Tennessee'),('Washington','District of Columbia'),('Detroit','Michigan'),('Charlotte','North Carolina');
 
 -- arenas table
 drop table if exists arenas;
@@ -54,21 +44,7 @@ state varchar(255),
 foreign key (city,state) references cities(city,state) on update cascade on delete restrict,
 check(capacity >= 0)
 );
-insert into arenas values ('American Airlines Center',19200,'Dallas','Texas'),
-('Amway Center',18846,'Orlando','Florida'),('Ball Arena',19520,'Denver','Colorado'),
-('Barclays Center',17732,'Brooklyn','New York'),('Capital One Arena',20356,'Washington','District of Columbia'),
-('Chase Center',18064,'San Francisco','California'),('Cryto.com Arena',19068,'Los Angeles','California'),
-('Delta Center',18306,'Salt Lake City','Utah'),('FedExForum',17794,'Memphis','Tennessee'),
-('Fiserv Forum',17500,'Milwaukee','Wisconsin'),('Footprint Center',17071,'Phoenix','Arizona'),
-('Frost Bank Center',18418,'San Antonio','Texas'),('Gainbridge Fieldhouse',17923,'Indianapolis','Indiana'),
-('Golden 1 Center',17583,'Sacramento','California'),('Kaseya Center',19600,'Miami','Florida'),
-('Little Caesars Arena',20332,'Detroit','Michigan'),('Madison Square Garden',19812,'New York','New York'),
-('Moda Center',19441,'Portland','Oregon'),('Paycom Center',18203,'Oklahoma City','Oklahoma'),
-('Rocket Mortgage FieldHouse',19432,'Cleveland','Ohio'),('Scotiabank Arena',19800,'Toronto','Ontario'),
-('Smoothie King Center',16867,'New Orleans','Louisiana'),('Spectrum Center',19077,'Charlotte','North Carolina'),
-('State Farm Arena',16600,'Atlanta','Georgia'),('Target Center',18978,'Minneapolis','Minnesota'),
-('TD Garden',19156,'Boston','Massachusetts'),('Toyota Center',18055,'Houston','Texas'),
-('United Center',20917,'Chicago','Illinois'),('Wells Fargo Center',20478,'Philadelphia','Pennsylvania');
+insert into arenas values ('American Airlines Center',19200,'Dallas','Texas'),('Amway Center',18846,'Orlando','Florida'),('Ball Arena',19520,'Denver','Colorado'),('Barclays Center',17732,'Brooklyn','New York'),('Capital One Arena',20356,'Washington','District of Columbia'),('Chase Center',18064,'San Francisco','California'),('Cryto.com Arena',19068,'Los Angeles','California'),('Delta Center',18306,'Salt Lake City','Utah'),('FedExForum',17794,'Memphis','Tennessee'),('Fiserv Forum',17500,'Milwaukee','Wisconsin'),('Footprint Center',17071,'Phoenix','Arizona'),('Frost Bank Center',18418,'San Antonio','Texas'),('Gainbridge Fieldhouse',17923,'Indianapolis','Indiana'),('Golden 1 Center',17583,'Sacramento','California'),('Kaseya Center',19600,'Miami','Florida'),('Little Caesars Arena',20332,'Detroit','Michigan'),('Madison Square Garden',19812,'New York','New York'),('Moda Center',19441,'Portland','Oregon'),('Paycom Center',18203,'Oklahoma City','Oklahoma'),('Rocket Mortgage FieldHouse',19432,'Cleveland','Ohio'),('Scotiabank Arena',19800,'Toronto','Ontario'),('Smoothie King Center',16867,'New Orleans','Louisiana'),('Spectrum Center',19077,'Charlotte','North Carolina'),('State Farm Arena',16600,'Atlanta','Georgia'),('Target Center',18978,'Minneapolis','Minnesota'),('TD Garden',19156,'Boston','Massachusetts'),('Toyota Center',18055,'Houston','Texas'),('United Center',20917,'Chicago','Illinois'),('Wells Fargo Center',20478,'Philadelphia','Pennsylvania');
 
 -- nba_season table
 drop table if exists nba_season;
@@ -183,7 +159,7 @@ foreign key (player_id) references nba_players(id) on update cascade on delete r
 foreign key (season_id) references nba_season(season_id) on update cascade on delete restrict,
 foreign key (game_id) references nba_games(game_id) on update cascade on delete restrict
 );
--- insert into player_season_per_game values ()
+-- insert into player_season_per_game values ();
 
 -- relationship between team_season and game table
 drop table if exists team_season_per_game;
