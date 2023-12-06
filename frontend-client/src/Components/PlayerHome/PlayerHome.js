@@ -1,6 +1,5 @@
 import React from "react";
 import Graphics from "./Graphics";
-import BasicData from "./Cards/Cards";
 import { generateColumns } from "../GlobalFunctions";
 import { useParams } from "react-router-dom";
 import { DataTable } from "grommet";
@@ -31,8 +30,8 @@ export default function PlayerHome(props) {
   return (
     <div style={style.main}>
       <div>
-        <Graphics data={props} />
-        <PlayerHeader playerId={playerId} />
+        <Graphics playerId={playerId} />
+        {/* <PlayerHeader playerId={playerId} /> */}
       </div>
     </div>
   );

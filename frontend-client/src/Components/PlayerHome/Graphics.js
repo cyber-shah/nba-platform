@@ -40,6 +40,7 @@ export default function Graphics(props) {
     },
   };
 
+  console.log(props.playerId);
   return (
     <div style={styles.container}>
       <div style={styles.background}></div>
@@ -54,7 +55,7 @@ export default function Graphics(props) {
           <Image
             style={styles.image}
             fit="contain"
-            src={getPlayerImageUrl(data.playerID)}
+            src={getPlayerImageUrl(props.playerId)}
           />
         </Box>
 
