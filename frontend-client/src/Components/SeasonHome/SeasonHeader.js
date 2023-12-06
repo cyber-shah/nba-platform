@@ -36,7 +36,7 @@ export default function SeasonHeader(props) {
             size="small"
             options={["2023", "2022", "2021"]}
             value={props.seasonYear}
-            onChange={({ seasonYear }) => props.setYear(seasonYear)}
+            onChange={({ value }) => props.setYear(value)}
           />
         </Box>
       </Box>

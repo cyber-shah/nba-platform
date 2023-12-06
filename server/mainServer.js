@@ -7,7 +7,7 @@ const port = 5555;
 const leagueRouter = require("./LeagueServer");
 const DBrouter = require("./DBServer");
 const teamRouter = require("./TeamsServer");
-
+const playerRouter = require("./PlayerServer");
 
 /**
  * CORS middleware configuration to handle cross-origin requests.
@@ -26,6 +26,7 @@ app.use(bodyParser.json());
 app.use("/api/league", leagueRouter);
 app.use("/api/teams", teamRouter);
 app.use("/api/db", DBrouter);
+app.use("/api/players", playerRouter);
 
 
 

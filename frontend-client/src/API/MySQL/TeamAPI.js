@@ -1,6 +1,6 @@
 const apiUrl = "http://localhost:5555";
 
-async function fetchTeamData(endpoint, seasonYear, teamID) {
+export async function fetchTeamData(endpoint, seasonYear, teamID) {
   console.log(`Request to ${endpoint} received by TeamServer successfully. 
     Season Year: ${seasonYear}, Team ID: ${teamID}`);
 

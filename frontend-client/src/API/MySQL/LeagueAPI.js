@@ -73,3 +73,24 @@ export async function getSeasonPlayers(seasonYear) {
   const seasonPlayers = await seasonPlayersResponse.json();
   return seasonPlayers;
 }
+
+
+export async function getSeasonGames(seasonYear) {
+  console.log("request for getSeasonGames received successfully ");
+  const seasonGamesResponse = await fetch(
+    `${apiUrl}/api/league/seasonGames`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ seasonYear: seasonYear }),
+    }
+  );
+  // Check if the response status is ok
+  if (!seasonGamesResponse.ok) {
+    throw new Error(`HTTP error! Status: ${seasonGamesResponse.status}`);
+  }
+  const seasonGames = await seasonGamesResponse.json();
+  return seasonGames;
+}

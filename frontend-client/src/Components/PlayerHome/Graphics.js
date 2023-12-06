@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Image, Heading } from "grommet";
+import { Grid, Box, Image, Heading, Text } from "grommet";
 import { getPlayerImageUrl, getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
 
 const data = {
@@ -40,6 +40,7 @@ export default function Graphics(props) {
     },
   };
 
+  console.log(props.playerId);
   return (
     <div style={styles.container}>
       <div style={styles.background}></div>
@@ -54,7 +55,7 @@ export default function Graphics(props) {
           <Image
             style={styles.image}
             fit="contain"
-            src={getPlayerImageUrl(data.playerID)}
+            src={getPlayerImageUrl(props.playerId)}
           />
         </Box>
 
@@ -76,15 +77,15 @@ export default function Graphics(props) {
 
             {/* 2.2 -- */}
             <Box pad="xsmall" justify="center">
-              <Heading level="2" margin="none">
+              <Text size="xxlarge" margin="none"  >
                 {data.firstName}
-              </Heading>
-              <Heading level="2" margin="none">
+              </Text>
+              <Text size="xxlarge" margin="none" weight="bold">
                 {data.lastName}
-              </Heading>
-              <Heading level="1" margin="none">
+              </Text>
+              <Text level="1" margin="none">
                 #{data.jersey}
-              </Heading>
+              </Text>
             </Box>
           </Grid>
         </Box>

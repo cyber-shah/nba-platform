@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataTable, Box, Text, Image, Anchor } from "grommet";
-import { getPlayerImageUrl } from "../../../API/EspnAPI/GetLogos";
 import { getTeamRoster } from "../../../API/MySQL/TeamAPI";
+import { generateColumns, renderPlayer } from "../../GlobalFunctions";
+
+
 
 export default function TeamRoster(props) {
   const [teamRoster, setTeamRoster] = React.useState(null);
-  const navigate = useNavigate();
+
 
   async function fetchData() {
     const teamRoster = await getTeamRoster(props.season, props.teamId);
@@ -17,7 +19,8 @@ export default function TeamRoster(props) {
     fetchData();
   }, []);
 
-      const handlePlayerClick = (playerId) => {
+    const navigate = useNavigate();
+    const handlePlayerClick = (playerId) => {
       navigate(`/PlayerHome/${playerId}`);
     };
 
@@ -35,51 +38,14 @@ export default function TeamRoster(props) {
       age: player[11],
       experience: player[12],
       college: player[13],
-      Acquired: player[15],
     }));
 
 
-
-    const columns = [
-      {
-        property: "fullName",
-        header: "Full Name",
-        // function that takes in the player object and renders the an image of the player
-        render: (player) => (
-          <Box direction="row" align="center">
-            <Image
-              src={getPlayerImageUrl(player.id)}
-              alt={`${player.fullName}'s Headshot`}
-              height="60px"
-              width="80px"
-              margin={{ right: "small" }}
-            />
-            <Anchor
-              color="black"
-              onClick={() => {
-                handlePlayerClick(player.id);
-              }}
-            >
-              {player.fullName}
-            </Anchor>
-          </Box>
-        ),
-      },
-      { property: "position", header: "Position" },
-      { property: "height", header: "Height" },
-      { property: "weight", header: "Weight" },
-      { property: "birthDate", header: "Birth Date" },
-      { property: "age", header: "Age" },
-      { property: "experience", header: "Experience" },
-      { property: "college", header: "College" },
-      { property: "Acquired", header: "Acquired via" },
-    ];
-    console.log(columns);
-
+    
     return (
       <Box align="center" elevation="large" pad="large" round="large">
         <DataTable
-          columns={columns}
+          columns= {generateColumns(transformedData, handlePlayerClick)}
           data={transformedData}
           pad={{ horizontal: "medium", vertical: "xsmall" }}
           background={{
