@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
-import { Image, Grid, Box, Text, Tabs, Tab } from "grommet";
+import { Image, Grid, Box, Text, Tabs, Tab, Select } from "grommet";
 import { getTeamDetails } from "../../API/MySQL/TeamAPI";
 
 /**
@@ -66,13 +66,13 @@ export default function TeamHeader(props) {
 
             {/* push this to the extreme right but horizontally in the same row as tabs */}
             {/* <Box direction="row" justify="end" gap="small">
-          <Select
-            size="xsmall"
-            options={["2023", "2022", "2021"]}
-            value={props.seasonYear}
-            onChange={({ seasonYear }) => props.setYear(seasonYear)}
-          />
-      </Box> */}
+              <Select
+                size="xsmall"
+                options={["2023", "2022", "2021"]}
+                value={props.seasonYear}
+                onChange={({ seasonYear }) => props.setYear(seasonYear)}
+              />
+            </Box> */}
           </Box>
         </Box>
       </Box>

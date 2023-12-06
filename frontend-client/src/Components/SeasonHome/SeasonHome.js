@@ -5,6 +5,7 @@ import TeamList from "./SeasonTeams/SeasonTList";
 import SeasonHeader from "./SeasonHeader";
 import SeasonsStandings from "./SeasonStandings/SeasonsStandings";
 import SeasonPlayers from "./SeasonPlayers/SeasonPlayers";
+import SeasonGames from "./SeasonGames/SeasonGames";
 
 
 
@@ -33,7 +34,7 @@ export default function SeasonHome(props) {
         <Box>
           <Grid columns={["2/3", "1/3"]}>
             <Box pad="small">
-              {selectedTab === 0 }
+              {selectedTab === 0 && <SeasonGames seasonYear={seasonYear} />}
               {selectedTab === 1 && <TeamList seasonYear={seasonYear} />}
               {selectedTab === 2 && <SeasonsStandings seasonYear={seasonYear} />}
               {selectedTab === 3 && <SeasonPlayers seasonYear={seasonYear} />}

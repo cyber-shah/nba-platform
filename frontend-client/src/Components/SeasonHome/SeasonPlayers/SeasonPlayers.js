@@ -7,6 +7,7 @@ import { Box, Text } from 'grommet';
 export default function SeasonPlayers(props) {
   const [players, setPlayers] = useState(null);
 
+
   useEffect(() => {
     fetchData();
   }, []);

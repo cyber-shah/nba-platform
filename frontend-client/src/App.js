@@ -40,7 +40,7 @@ function App() {
             <Route path="/SeasonHome" element={<SeasonHome />} />
             <Route path="/TeamHome/:teamId" element={<TeamHome />} />
             <Route
-              path="/PlayerHome"
+              path="/PlayerHome/:playerId"
               element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
             />
           </Routes>
