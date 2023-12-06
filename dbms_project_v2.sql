@@ -202,11 +202,14 @@ CREATE TABLE player_season_per_game (
     player_id INT NOT NULL,
     season_id VARCHAR(255) NOT NULL,
     game_id INT NOT NULL,
+    player_minutes int default 0,
     player_points INT DEFAULT 0,
+	player_fg_percent FLOAT DEFAULT 0.0,
     player_rebounds INT DEFAULT 0,
     player_assists INT DEFAULT 0,
-    player_fg_percent FLOAT DEFAULT 0.0,
-    player_three_pt_fg_percent FLOAT DEFAULT 0.0,
+    player_steal int default 0,
+    player_block int default 0,
+    player_turnover int default 0,
     PRIMARY KEY (player_id , season_id , game_id),
     FOREIGN KEY (player_id)
         REFERENCES nba_players (player_id)
