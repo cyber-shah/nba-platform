@@ -464,5 +464,13 @@ begin
     where season_id = season_id_p and player_id = player_id_p;
 end $$
 
--- trigger when an NBA team is added
+-- procedure to create team and add it to the nba_teams table
+drop procedure if exists create_team;
+delimiter $$
+create procedure create_team(in team_id_p int, in full_name_p varchar(255), in abbreviation_p varchar(255), in year_founded_p int, in conference_p varchar(255))
+begin
+    select team_id
+    from nba_teams;
+end $$
 
+-- trigger when an NBA team is added
