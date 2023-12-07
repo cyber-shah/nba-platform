@@ -293,7 +293,7 @@ CREATE TABLE team_season_per_game (
 );
 -- insert into team_season_per_game values ();
 
--- procedure that gets all teams
+-- procedure that gets all teams (done)
 drop procedure if exists get_all_teams;
 delimiter $$
 create procedure get_all_teams()
@@ -305,7 +305,7 @@ end $$
 delimiter ;
 call get_all_teams();
 
--- procedure to get all games in a season (need to get game data first)
+-- procedure to get all games in a season
 drop procedure if exists get_season_games;
 delimiter $$
 create procedure get_season_games(in season_id_p varchar(255))
@@ -316,7 +316,7 @@ end $$
 delimiter ;
 call get_season_games('2022-23');
 
--- procedure to get season standings in a season (haven't gotten the data for this yet)
+-- procedure to get season standings in a season
 drop procedure if exists get_season_standings;
 delimiter $$
 create procedure get_season_standings(in season_id_p varchar(255), in conference varchar(255))
@@ -327,7 +327,7 @@ end $$
 delimiter ;
 call get_season_standings('2022-23','Western');
 
--- procedure to get points season leaders in a season (haven't gotten the data for this yet)
+-- procedure to get points season leaders in a season
 drop procedure if exists get_season_points_leaders;
 delimiter $$
 create procedure get_season_points_leaders(in season_id_p varchar(255))
@@ -340,7 +340,7 @@ end $$
 delimiter ;
 call get_season_points_leaders('2022-23');
 
--- procedure to get assists season leaders in a season (haven't gotten the data for this yet)
+-- procedure to get assists season leaders in a season
 drop procedure if exists get_season_assist_leaders;
 delimiter $$
 create procedure get_season_assist_leaders(in season_id_p varchar(255))
@@ -353,7 +353,7 @@ end $$
 delimiter ;
 call get_season_assists_leaders('2022-23');
 
--- procedure to get rebounds season leaders in a season (haven't gotten the data for this yet)
+-- procedure to get rebounds season leaders in a season
 drop procedure if exists get_season_rebounds_leaders;
 delimiter $$
 create procedure get_season_rebounds_leaders(in season_id_p varchar(255))
@@ -366,7 +366,7 @@ end $$
 delimiter ;
 call get_season_rebounds_leaders('2022-23');
 
--- procedure to get steals season leaders in a season (haven't gotten the data for this yet)
+-- procedure to get steals season leaders in a season
 drop procedure if exists get_season_steals_leaders;
 delimiter $$
 create procedure get_season_steals_leaders(in season_id_p varchar(255))
@@ -379,7 +379,7 @@ end $$
 delimiter ;
 call get_season_steals_leaders('2022-23');
 
--- procedure to get blocks season leaders in a season (haven't gotten the data for this yet)
+-- procedure to get blocks season leaders in a season
 drop procedure if exists get_season_blocks_leaders;
 delimiter $$
 create procedure get_season_blocks_leaders(in season_id_p varchar(255))
@@ -392,7 +392,7 @@ end $$
 delimiter ;
 call get_season_blocks_leaders('2022-23');
 
--- procedure to get season minutes leaders in a season (haven't gotten the data for this yet)
+-- procedure to get season minutes leaders in a season
 drop procedure if exists get_season_minutes_leaders;
 delimiter $$
 create procedure get_season_minutes_leaders(in season_id_p varchar(255))
@@ -405,7 +405,7 @@ end $$
 delimiter ;
 call get_season_minutes_leaders('2022-23');
 
--- procedure to get season turnovers leaders in a season (haven't gotten the data for this yet)
+-- procedure to get season turnovers leaders in a season
 drop procedure if exists get_season_turnovers_leaders;
 delimiter $$
 create procedure get_season_turnovers_leaders(in season_id_p varchar(255))
