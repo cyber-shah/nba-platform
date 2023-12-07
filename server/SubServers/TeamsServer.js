@@ -19,7 +19,7 @@ app.post("/teamRoster", async (req, res) => {
 
     // TODO : Implement the logic here to get the data from the database
     try {
-        const filePath = path.join(__dirname, "./../jsons/fromNBA/team_roster.json");
+        const filePath = path.join(__dirname, "./../../jsons/fromNBA/team_roster.json");
         res.sendFile(filePath);
     }
     catch (error) {
@@ -47,7 +47,7 @@ app.post("/teamDetails", async (req, res) => {
 
     // TODO : Implement the logic here to get the data from the database
     try {
-        const filePath = path.join(__dirname, "./../jsons/fromNBA/team_details.json");
+        const filePath = path.join(__dirname, "./../../jsons/fromNBA/team_details.json");
         res.sendFile(filePath);
     } catch (error) {
         console.error('Error sending JSON file:', error);

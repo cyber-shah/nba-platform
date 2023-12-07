@@ -7,7 +7,7 @@ app.post("/seasonTeams", async (req, res) => {
   console.log("From LeagueServer: sending Teams");
   // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../jsons/fromNBA/all_teams.json");
+    const filePath = path.join(__dirname, "./../../jsons/fromNBA/all_teams.json");
     res.sendFile(filePath);
   } catch (error) {
     console.error('Error sending JSON file:', error);
@@ -19,7 +19,7 @@ app.post("/seasonStandings", async (req, res) => {
   console.log("From LeagueServer: sending season standings");
   // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../jsons/fromNBA/league_standings.json");
+    const filePath = path.join(__dirname, "./../../jsons/fromNBA/league_standings.json");
     res.sendFile(filePath);
   } catch (error) {
     console.error('Error sending JSON file:', error);
@@ -32,7 +32,7 @@ app.post("/seasonPlayers", async (req, res) => {
   console.log("From LeagueServer: sending player leaders data");
   // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../jsons/fromNBA/leaders_players.json");
+    const filePath = path.join(__dirname, "./../../jsons/fromNBA/leaders_players.json");
     res.sendFile(filePath);
   } catch (error) {
     console.error('Error sending JSON file:', error);

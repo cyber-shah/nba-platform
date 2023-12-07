@@ -21,22 +21,22 @@ const CrudBar = () => {
   const operations = [
     {
       label: "Create",
-      options: ["game", "player", "arena", "team"],
+      options: ["Game", "Player", "Arena", "Team"],
       value: "Create operations",
     },
     {
       label: "Read",
-      options: ["game", "player", "standings", "team"],
+      options: ["Game", "Player", "Standings", "Team"],
       value: "Read operations",
     },
     {
       label: "Update",
-      options: ["game", "player", "arena", "team"],
+      options: ["Game", "Player", "Arena", "Team"],
       value: "Update operations",
     },
     {
       label: "Delete",
-      options: ["game", "player", "arena", "team"],
+      options: ["Game", "Player", "Arena", "Team"],
       value: "Delete operations",
     },
   ];

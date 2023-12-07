@@ -8,7 +8,7 @@ app.post("/playerHeader"),
     try {
       const filePath = path.join(
         __dirname,
-        "./../jsons/fromNBA/all_players.json"
+        "./../../jsons/fromNBA/all_players.json"
       );
       res.sendFile(filePath);
     } catch (error) {
