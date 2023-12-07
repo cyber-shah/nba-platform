@@ -440,6 +440,7 @@ begin
     from team_season_per_game
     where team_id = team_id_p and season_id = season_id_p;
 end $$
+delimiter ;
 call get_team_stats('2022-23', 1610612738)
 
 -- procedure to get team schedule for a season
@@ -451,6 +452,7 @@ begin
     from team_season_per_game
     where season_id = season_id_p and team_id = team_id_p;
 end $$
+delimiter ;
 call get_team_schedule('2022-23',1610612738)
 
 -- procedure to get player stats per season
@@ -463,6 +465,7 @@ begin
     from player_season_per_game
     where season_id = season_id_p and player_id = player_id_p;
 end $$
+delimiter ;
 
 -- procedure to create team and add it to the nba_teams table
 drop procedure if exists create_team;
@@ -472,6 +475,7 @@ begin
     select team_id
     from nba_teams;
 end $$
+delimiter ;
 
 -- procedure to create player and add it to the nba_players table
 drop procedure if exists create_player;
@@ -481,6 +485,7 @@ begin
     select player_id
     from nba_players;
 end $$
+delimiter ;
 
 -- procedure to create game and add it to the nba_games table
 drop procedure if exists create_game;
@@ -490,6 +495,7 @@ begin
     select game_id
     from nba_games;
 end $$
+delimiter ;
 
 -- procedure to create season and add it to nba_seasons table
 drop procedure if exists create_season;
@@ -499,6 +505,7 @@ begin
     select season_id
     from nba_season;
 end $$
+delimiter ;
 
 -- procedure to update everything in a team in the nba_teams table
 drop procedure if exists update_team;
@@ -506,3 +513,52 @@ delimiter $$
 create procedure update_team(in team_id_p int, in team_name_p varchar(255), in year_founded_p int, in city_p varchar(255), in state_p varchar(255))
 begin
 end $$
+delimiter ;
+
+-- procedure to update everything in a player in nba_players table
+drop procedure if exists update_player;
+delimiter $$
+create procedure update_player(in player_id_p int, in first_name_p varchar(255), in last_name_p varchar(255), in is_active_p int)
+begin
+end $$
+delimiter ;
+
+-- procedure to update everything in a game in nba_games table
+drop procedure if exists update_game;
+delimiter $$
+create procedure update_game(in game_id_p varchar(255), in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int, in season_id_p varchar(255), in stadium_p varchar(255), in city_p varchar(255), in state_p varchar(255))
+begin
+end $$
+delimiter;
+
+-- procedure to delete team from nba_teams table
+drop procedure if exists delete_team;
+delimiter $$
+create procedure delete_team(in team_id_p int)
+begin
+end $$
+delimiter;
+
+-- procedure to delete player from nba_players table
+drop procedure if exists delete_player;
+delimiter $$
+create procedure delete_player(in player_id_p int)
+begin
+end $$
+delimeter ;
+
+-- procedure to delete game from nba_games table
+drop procedure if exists delete_game;
+delimiter $$
+create procedure delete_game(in game_id_p varchar(255))
+begin
+end $$
+delimiter ;
+
+-- procedure to delete season from nba_seasons table
+drop procedure if exists delete_season;
+delimiter $$
+create procedure delete_season(in season_id_p varchar(255))
+begin
+end $$
+delimiter ;
