@@ -142,3 +142,26 @@
 
 2. get team stats - returns columns
    1. 
+
+3. get team schedule - return columns
+   1. date
+   2. opponent_id
+   3. opponent_name
+   4. result
+   5. home_team_score
+   6. away_team_score
+
+
+## Player Home
+1. get player stats
+   1. player_id
+   2. player_name
+   3. team_id
+   4. team_name
+   5. games played
+   6. minutes
+   7. points
+   8. rebounds
+   9. assists
+   10. steals
+   11. 
