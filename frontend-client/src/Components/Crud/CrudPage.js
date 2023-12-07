@@ -1,5 +1,5 @@
 import React from "react";
-import { FormField, TextInput, Button, Box, Form } from "grommet";
+import { FormField, TextInput, Button, Box, Form, Text } from "grommet";
 import {
   getUpdateForm,
   getDeleteForm,
@@ -13,9 +13,9 @@ export default function CrudPage(props) {
   console.log(label, option);
 
   // 2. Use the label and option to get the correct form data
-    const [labelsArray, setLabelsArray] = React.useState(null);
-    
-    // 3. Refresh the form data whenever the label or option changes
+  const [labelsArray, setLabelsArray] = React.useState(null);
+
+  // 3. Refresh the form data whenever the label or option changes
   React.useEffect(() => {
     fetchData();
   }, [label, option]);
@@ -29,22 +29,41 @@ export default function CrudPage(props) {
     } else {
       crudData = await getDeleteForm(option);
     }
-      setLabelsArray(crudData);
-      console.log(crudData)
+    setLabelsArray(crudData);
+    console.log(crudData);
   };
 
   return (
-        <Box pad="medium">
-      {labelsArray !== null && (
-        <Form>
-          {labelsArray.map((label, index) => (
-            <FormField key={index} label={label}>
-              <TextInput />
-            </FormField>
-          ))}
-          <Button primary label="Submit" />
-        </Form>
-      )}
-    </Box>
+    <>
+      <Box
+        pad="large"
+        width="medium"
+        margin={{
+          top: "large",
+          bottom: "large",
+          left: "auto",
+          right: "auto",
+        }}
+        elevation="medium"
+        round="medium"
+      >
+        <Text size="xxlarge" margin="medium" color="brand" alignSelf="center">
+          {label} {option}
+        </Text>
+
+        {labelsArray !== null && (
+          <Form>
+            <br />
+
+            {labelsArray.map((label, index) => (
+              <FormField key={index} label={label}>
+                <TextInput />
+              </FormField>
+            ))}
+            <Button primary label="Submit" />
+          </Form>
+        )}
+      </Box>
+    </>
   );
 }
