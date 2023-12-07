@@ -1,19 +1,6 @@
 // Import required modules
 const mysql = require("mysql2");
 
-/*
-const readline = require('readline');
-
-// Create an interface for reading user input
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-*/
-
-// Initialize a variable to store the MySQL connection
-// and then use this con object everywhere like :
-// con.query("select ....")
 let con;
 
 function connect(username, password) {
@@ -26,7 +13,7 @@ function connect(username, password) {
       host: "localhost",
       user: username,
       password: password,
-      database: "musicshahp",
+      database: "nba",
     });
     console.log(username, password);
     // Connect to MySQL and log the status
@@ -40,28 +27,6 @@ function connect(username, password) {
     });
   });
 }
-
-/*
-// Prompt the user for MySQL username and password
-rl.question('Enter MySQL username: ', (user) => {
-  rl.question('Enter MySQL password: ', (password) => {
-    // Create a MySQL connection using user input
-    con = mysql.createConnection({
-      host: 'localhost',
-      user: user,
-      password: password,
-      database: 'musicshahp'
-    });
-
-    // Connect to MySQL and log the status
-    con.connect((err) => {
-      if (err) throw err;
-      console.log('Connected to MySQL!');
-      rl.close();
-    });
-  });
-});
-*/
 
 /**
  * Execute a MySQL query
