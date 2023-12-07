@@ -88,15 +88,18 @@
 # List of Procedures
 
 ## Season Home
-1. **Get All Teams:**
+1. **Get All Teams: (get_all_teams)**
    - Returns:
      1. team_id
      2. team_name
-     3. founded
-     4. city
-     5. state
+     3. division
+     4. founded
+     5. city
+     6. state
 
-2. **Get All Games:**
+2. **Get All Games for a Specific Season: (get_specific_season_games)**
+   - Parameters:
+     1. season_id
    - Returns:
      1. game_id
      2. home_team_id
@@ -106,22 +109,22 @@
      6. home_team_score
      7. away_team_score
      8. date
-     9. time
      10. stadium
      11. city
      12. state
 
-3. **Get Standings:**
-   - Western and Eastern Conference
+4. **Get Standings for Specific Conference and Season: (get_specific_season_standings)**
+   - Parameters:
+       1. conference: Western or Eastern Conference
+       2. season_id
    - Returns Columns:
      1. team_id
      2. team_name
      3. wins
      4. losses
      5. win_percentage
-     6. games_behind
 
-4. **Get Season Leaders:**
+6. **Get Season Leaders:**
    - For assists, points, rebounds, steals, blocks
    - Returns Columns:
      1. player_id
