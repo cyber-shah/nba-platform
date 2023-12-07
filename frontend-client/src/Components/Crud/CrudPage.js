@@ -39,7 +39,7 @@ export default function CrudPage(props) {
         pad="large"
         width="medium"
         margin={{
-          top: "large",
+          top: "xlarge",
           bottom: "large",
           left: "auto",
           right: "auto",
