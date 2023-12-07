@@ -316,9 +316,3 @@
      3. start_date
      4. end_date
      5. current_season
-
-
-## 
-
-   
-   
