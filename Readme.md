@@ -139,11 +139,6 @@
    - Returns Columns:
      1. player_id
      2. player_name
-     3. position
-     4. height
-     5. weight
-     6. age
-     7. experience
 
 2. **Get Team Stats:**
    - Returns Columns:
@@ -165,7 +160,6 @@
      2. player_name
      3. team_id
      4. team_name
-     5. games played
      6. minutes
      7. points
      8. rebounds

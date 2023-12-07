@@ -274,10 +274,12 @@ CREATE TABLE team_season_per_game (
     season_id VARCHAR(255) NOT NULL,
     game_id varchar(255) NOT NULL,
     team_points INT DEFAULT 0,
+	team_fg_percent FLOAT DEFAULT 0.0,
     team_rebounds INT DEFAULT 0,
     team_assists INT DEFAULT 0,
-    team_fg_percent FLOAT DEFAULT 0.0,
-    team_three_pt_fg_percent FLOAT DEFAULT 0.0,
+    team_steal int default 0,
+    team_block int default 0,
+    team_turnover int default 0,
     PRIMARY KEY (team_id , season_id , game_id),
     FOREIGN KEY (team_id)
         REFERENCES nba_teams (team_id)
@@ -301,7 +303,6 @@ begin
     on nba_teams.team_id = team_season.team_id and team_season.arena_name = arenas.arena_name;
 end $$
 delimiter ;
-
 call get_all_teams();
 
 -- procedure to get all games in a season (need to get game data first)
@@ -313,7 +314,6 @@ begin
     from nba_games;
 end $$
 delimiter ;
-
 call get_season_games('2022-23');
 
 -- procedure to get season standings in a season (haven't gotten the data for this yet)
@@ -325,7 +325,6 @@ begin
     from nba_games;
 end $$
 delimiter ;
-
 call get_season_standings('2022-23','Western');
 
 -- procedure to get points season leaders in a season (haven't gotten the data for this yet)
@@ -339,7 +338,6 @@ begin
     order by season_points desc limit 10;
 end $$
 delimiter ;
-
 call get_season_points_leaders('2022-23');
 
 -- procedure to get assists season leaders in a season (haven't gotten the data for this yet)
@@ -353,7 +351,6 @@ begin
     order by season_assists desc limit 10;
 end $$
 delimiter ;
-
 call get_season_assists_leaders('2022-23');
 
 -- procedure to get rebounds season leaders in a season (haven't gotten the data for this yet)
@@ -367,7 +364,6 @@ begin
     order by season_rebounds desc limit 10;
 end $$
 delimiter ;
-
 call get_season_rebounds_leaders('2022-23');
 
 -- procedure to get steals season leaders in a season (haven't gotten the data for this yet)
@@ -381,7 +377,6 @@ begin
     order by season_steals desc limit 10;
 end $$
 delimiter ;
-
 call get_season_steals_leaders('2022-23');
 
 -- procedure to get blocks season leaders in a season (haven't gotten the data for this yet)
@@ -395,10 +390,9 @@ begin
     order by season_blocks desc limit 10;
 end $$
 delimiter ;
-
 call get_season_blocks_leaders('2022-23');
 
--- procedure to get blocks season minutes in a season (haven't gotten the data for this yet)
+-- procedure to get season minutes leaders in a season (haven't gotten the data for this yet)
 drop procedure if exists get_season_minutes_leaders;
 delimiter $$
 create procedure get_season_minutes_leaders(in season_id_p varchar(255))
@@ -409,10 +403,9 @@ begin
     order by season_minutes desc limit 10;
 end $$
 delimiter ;
-
 call get_season_minutes_leaders('2022-23');
 
--- procedure to get blocks season turnovers in a season (haven't gotten the data for this yet)
+-- procedure to get season turnovers leaders in a season (haven't gotten the data for this yet)
 drop procedure if exists get_season_turnovers_leaders;
 delimiter $$
 create procedure get_season_turnovers_leaders(in season_id_p varchar(255))
@@ -423,5 +416,53 @@ begin
     order by season_turnovers desc limit 10;
 end $$
 delimiter ;
-
 call get_season_turnovers_leaders('2022-23');
+
+-- procedure to get team roster for a season
+drop procedure if exists get_team_roster;
+delimiter $$
+create procedure get_team_roster(in team_id_p int, in season_id_p varchar(255))
+begin
+    select player_team_season.player_id, nba_players.player_name
+    from player_team_season inner join nba_players
+    on player_team_season.player_id = nba_players.player_id
+    where season_id = season_id_p and team_id = team_id_p;
+end $$
+delimeter ;
+call get_team_roster('2022-23', 1610612738);
+
+-- procedure to get team stats for a season
+drop procedure if exists get_team_stats;
+delimiter $$
+create procedure get_team_stats(in season_id_p varchar(255), in team_id_p int)
+begin
+    select team_points, team_rebounds, team_assists, team_steal, team_block, team_turnover
+    from team_season_per_game
+    where team_id = team_id_p and season_id = season_id_p;
+end $$
+call get_team_stats('2022-23', 1610612738)
+
+-- procedure to get team schedule for a season
+drop procedure if exists get_team_schedule;
+delimiter $$
+create procedure get_team_schedule(in season_id_p varchar(255), in team_id_p int)
+begin
+    select game_date, opponent_id, opponent_name, win_or_loss, home_team_score, away_team_score
+    from team_season_per_game
+    where season_id = season_id_p and team_id = team_id_p;
+end $$
+call get_team_schedule('2022-23',1610612738)
+
+-- procedure to get player stats per season
+drop procedure if exists get_player_stats_per_year;
+delimiter $$
+create procedure get_player_stats_per_year(in season_id_p varchar(255), in player_id_p int)
+begin
+    select player_minutes, player_points, player_fg_percent, player_rebounds, player_assists,
+    player_steal, player_block, player_turnover
+    from player_season_per_game
+    where season_id = season_id_p and player_id = player_id_p;
+end $$
+
+-- trigger when an NBA team is added
+
