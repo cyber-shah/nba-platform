@@ -92,12 +92,12 @@
    - Returns:
      1. team_id
      2. team_name
-     3. division
-     4. founded
+     3. conference
+     4. year_founded
      5. city
      6. state
 
-2. **Get All Games for a Specific Season: (get_specific_season_games)**
+2. **Get All Games for a Specific Season: (get_season_games)**
    - Parameters:
      1. season_id
    - Returns:
@@ -113,7 +113,7 @@
      11. city
      12. state
 
-4. **Get Standings for Specific Conference and Season: (get_specific_season_standings)**
+4. **Get Standings for Specific Conference and Season: (get_season_standings)**
    - Parameters:
        1. conference: Western or Eastern Conference
        2. season_id
@@ -124,7 +124,7 @@
      4. losses
      5. win_percentage
 
-6. **Get Season Leaders:**
+6. **Get Season Leaders: (get_season_points_leaders, get_season_assist_leaders, get_season_rebounds_leaders, get_season_steals_leaders, get_season_blocks_leaders, get_season_minutes_leaders, get_season_turnovers_leaders)**
    - For assists, points, rebounds, steals, blocks
    - Returns Columns:
      1. player_id
@@ -135,16 +135,16 @@
      6. stat_type
 
 ## Team Home
-1. **Get Team Roster:**
+1. **Get Team Roster: (get_team_roster)**
    - Returns Columns:
      1. player_id
      2. player_name
 
-2. **Get Team Stats:**
+2. **Get Team Stats: (get_team_stats)**
    - Returns Columns:
      1. [Specify the columns]
 
-3. **Get Team Schedule:**
+3. **Get Team Schedule: (get_team_schedule)**
    - Returns Columns:
      1. date
      2. opponent_id
@@ -154,7 +154,7 @@
      6. away_team_score
 
 ## Player Home
-1. **Get Player Stats:**
+1. **Get Player Stats: (get_player_stats_per_year)**
    - Returns Columns:
      1. player_id
      2. player_name
@@ -169,7 +169,7 @@
 
 
 ## Create Operations
-1. **Create Team:**
+1. **Create Team: (create_team)**
    - Parameters:
      1. team_name
      2. founded
@@ -178,7 +178,7 @@
    - Returns:
      1. team_id
 
-2. **Create Player:**
+2. **Create Player: (create_player)**
    - Parameters:
      1. player_name
      2. position
@@ -187,7 +187,7 @@
      5. age
      6. experience
 
-3. **Create Game:**
+3. **Create Game: (create_game)**
    - Parameters:
      1. home_team_id
      2. away_team_id
@@ -199,13 +199,13 @@
      8. city
      9. state
 
-4. **Create Season**
+4. **Create Season (create_season)**
    - Parameters:
      1. season_name
 
 
 ## Update Operations
-1. **Update Team:**
+1. **Update Team: (update_team)**
    - Parameters:
      1. team_id
      2. team_name
@@ -213,7 +213,7 @@
      4. city
      5. state
 
-2. **Update Player:**
+2. **Update Player: (update_player)**
    - Parameters:
      1. player_id
      2. player_name
@@ -223,7 +223,7 @@
      6. age
      7. experience
 
-3. **Update Game:**
+3. **Update Game: (update_game)**
    - Parameters:
      1. game_id
      2. home_team_id
@@ -237,34 +237,22 @@
      10. city
      11. state
 
-4. **Update Schedule:**
-   - Parameters:
-      1. game_id
-      2. date
-      3. home_team_id
-      4. away_team_id
-      5. stadium
-      6. city
-      7. state
-      8. time
-
-
 ## Delete Operations
-1. **Delete Team:**
+1. **Delete Team: (delete_team)**
    - Parameters:
      1. team_id
 
-2. **Delete Player:**
+2. **Delete Player: (delete_player)**
     - Parameters:
       1. player_id
 
 
-3. **Delete Game:**
+3. **Delete Game: (delete_game)**
    - Parameters:
      1. game_id
 
 
-4. **Delete Season:**
+4. **Delete Season: (delete_season)**
    - Parameters:
      1. season_id
 
