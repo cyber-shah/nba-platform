@@ -133,7 +133,6 @@
      4. team_name
      5. stat
      6. stat_type
-     7. rank
 
 ## Team Home
 1. **Get Team Roster:**
