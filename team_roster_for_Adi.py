@@ -31,8 +31,8 @@ for i in range(y, 2025):
     x += 1
     y += 1
 
-start_team_index = 6
-end_team_index = 7
+start_team_index = 12
+end_team_index = 13
 player_team_season = ""
 head_coach_season = ""
 assistant_coach_season = ""
