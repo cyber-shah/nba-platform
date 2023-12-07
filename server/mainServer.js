@@ -4,10 +4,11 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const port = 5555;
-const leagueRouter = require("./LeagueServer");
-const DBrouter = require("./DBServer");
-const teamRouter = require("./TeamsServer");
-const playerRouter = require("./PlayerServer");
+const leagueRouter = require("./SubServers/LeagueServer");
+const DBrouter = require("./SubServers/DBServer");
+const teamRouter = require("./SubServers/TeamsServer");
+const playerRouter = require("./SubServers/PlayerServer");
+const crudRouter = require("./SubServers/CrudServer");
 
 /**
  * CORS middleware configuration to handle cross-origin requests.
@@ -27,7 +28,7 @@ app.use("/api/league", leagueRouter);
 app.use("/api/teams", teamRouter);
 app.use("/api/db", DBrouter);
 app.use("/api/players", playerRouter);
-
+app.use("/api/crud", crudRouter);
 
 
 

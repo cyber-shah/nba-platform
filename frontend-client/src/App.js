@@ -1,11 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Grommet, Tabs, Tab } from "grommet";
+import { Grommet } from "grommet";
 import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
 import TeamHome from "./Components/TeamHome/TeamHome";
-import CRUD from "./Components/CRUD";
+import CrudBar from "./Components/Crud/CrudBar";
+import CrudPage from "./Components/Crud/CrudPage";
 
 function App() {
   const customTheme = {
@@ -35,16 +36,15 @@ function App() {
   return (
     <>
       <Grommet theme={customTheme}>
-        <CRUD />
+
         <Router>
+          <CrudBar />
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/SeasonHome" element={<SeasonHome />} />
             <Route path="/TeamHome/:teamId" element={<TeamHome />} />
-            <Route
-              path="/PlayerHome/:playerId"
-              element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
-            />
+            <Route path="/PlayerHome/:playerId" element={<PlayerHome />} />
+            <Route path= "/CrudPage/:label/:option" element = {<CrudPage />} />
           </Routes>
         </Router>
       </Grommet>
