@@ -473,4 +473,36 @@ begin
     from nba_teams;
 end $$
 
--- trigger when an NBA team is added
+-- procedure to create player and add it to the nba_players table
+drop procedure if exists create_player;
+delimiter $$
+create procedure create_player(in player_id_p int, in first_name_p varchar(255), in last_name_p varchar(255), in is_active_p int)
+begin
+    select player_id
+    from nba_players;
+end $$
+
+-- procedure to create game and add it to the nba_games table
+drop procedure if exists create_game;
+delimiter $$
+create procedure create_game(in game_id_p int, in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int)
+begin
+    select game_id
+    from nba_games;
+end $$
+
+-- procedure to create season and add it to nba_seasons table
+drop procedure if exists create_season;
+delimiter $$
+create procedure create_season(in season_id_p varchar(255))
+begin
+    select season_id
+    from nba_season;
+end $$
+
+-- procedure to update everything in a team in the nba_teams table
+drop procedure if exists update_team;
+delimiter $$
+create procedure update_team(in team_id_p int, in team_name_p varchar(255), in year_founded_p int, in city_p varchar(255), in state_p varchar(255))
+begin
+end $$
