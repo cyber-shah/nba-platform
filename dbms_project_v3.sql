@@ -331,7 +331,7 @@ begin
 	select distinct nba_teams.team_id, nba_teams.full_name, nba_teams.conference, year_founded, city, state
     from nba_teams inner join team_season inner join arenas 
     on nba_teams.team_id = team_season.team_id and team_season.arena_name = arenas.arena_name;
-end $$
+end$$
 delimiter ;
 -- call get_all_teams();
 
@@ -343,7 +343,7 @@ begin
 	select nba_games.game_id, nba_games.home_team_id, nba_teams.full_name as home_team_name, nba_games.visting_team_id, nba_teams.full_name as visiting_team_name, nba_games.home_team_points, nba_games.visiting_team_points, nba_games.game_date, nba_arenas.arena_name, nba_arenas.city, nba_arenas.state
     from nba_games inner join team_season_per_game inner join nba_teams
     where nba_games.game_id = team_season_per_game.game_id and nba_games.home_team_id = nba_teams.team_id and nba_games.visiting_team_id = nba_teams.team_id and season_id_p = team_season_per_game.season_id;
-end $$
+end$$
 delimiter ;
 
 -- procedure to get season standings in a season
@@ -353,7 +353,7 @@ create procedure get_season_standings(in season_id_p varchar(255))
 begin
     select team_id, team_name, wins, losses, win_percentage
     from nba_games;
-end $$
+end$$
 delimiter ;
 
 -- procedure to get points season leaders in a season
@@ -367,7 +367,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_points desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_points_leaders('2022-23');
 
@@ -382,7 +382,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_assists desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_assists_leaders('2022-23');
 
@@ -397,7 +397,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_rebounds desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_rebounds_leaders('2022-23');
 
@@ -412,7 +412,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_steals desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_steals_leaders('2022-23');
 
@@ -427,7 +427,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_blocks desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_blocks_leaders('2022-23');
 
@@ -442,7 +442,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_minutes desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_minutes_leaders('2022-23');
 
@@ -457,7 +457,7 @@ begin
     where player_season_per_game.season_id = season_id_p
     group by player_id, first_name, last_name, team_id, team_name
     order by season_turnovers desc limit 10;
-end $$
+end$$
 delimiter ;
 -- call get_season_turnovers_leaders('2022-23');
 
@@ -470,7 +470,7 @@ begin
     from player_team_season inner join nba_players
     on player_team_season.player_id = nba_players.player_id
     where player_team_season.season_id = season_id_p and player_team_season.team_id = team_id_p;
-end $$
+end$$
 delimeter ;
 -- call get_team_roster(1610612738,'2022-23');
 
@@ -487,7 +487,7 @@ begin
     select team_points, team_rebounds, team_assists, team_steal, team_block, team_turnover
     from team_season_per_game
     where team_id = team_id_p and season_id = season_id_p;
-end $$
+end$$
 delimiter ;
 
 -- procedure to get team schedule for a season
@@ -498,7 +498,7 @@ begin
     select game_date, opponent_id, opponent_name, win_or_loss, home_team_score, away_team_score
     from team_season_per_game
     where season_id = season_id_p and team_id = team_id_p;
-end $$
+end$$
 delimiter ;
 
 -- procedure to get player stats per season
@@ -510,7 +510,7 @@ begin
     player_steal, player_block, player_turnover
     from player_season_per_game
     where season_id = season_id_p and player_id = player_id_p;
-end $$
+end$$
 delimiter ;
 
 -- procedure to create team and add it to the nba_teams table
@@ -520,7 +520,7 @@ create procedure create_team(in team_id_p int, in full_name_p varchar(255), in a
 begin
     select team_id
     from nba_teams;
-end $$
+end$$
 delimiter ;
 
 -- procedure to create player and add it to the nba_players table
@@ -530,7 +530,7 @@ create procedure create_player(in player_id_p int, in first_name_p varchar(255),
 begin
     select player_id
     from nba_players;
-end $$
+end$$
 delimiter ;
 
 -- procedure to create game and add it to the nba_games table
@@ -540,7 +540,7 @@ create procedure create_game(in game_id_p int, in game_date_p date, in home_team
 begin
     select game_id
     from nba_games;
-end $$
+end$$
 delimiter ;
 
 -- procedure to create season and add it to nba_seasons table
@@ -550,7 +550,7 @@ create procedure create_season(in season_id_p varchar(255))
 begin
     select season_id
     from nba_season;
-end $$
+end$$
 delimiter ;
 
 -- procedure to update everything in a team in the nba_teams table
@@ -558,7 +558,7 @@ drop procedure if exists update_team;
 delimiter $$
 create procedure update_team(in team_id_p int, in team_name_p varchar(255), in year_founded_p int, in city_p varchar(255), in state_p varchar(255))
 begin
-end $$
+end$$
 delimiter ;
 
 -- procedure to update everything in a player in nba_players table
@@ -566,7 +566,7 @@ drop procedure if exists update_player;
 delimiter $$
 create procedure update_player(in player_id_p int, in first_name_p varchar(255), in last_name_p varchar(255), in is_active_p int)
 begin
-end $$
+end$$
 delimiter ;
 
 -- procedure to update everything in a game in nba_games table
@@ -574,7 +574,7 @@ drop procedure if exists update_game;
 delimiter $$
 create procedure update_game(in game_id_p varchar(255), in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int, in season_id_p varchar(255), in stadium_p varchar(255), in city_p varchar(255), in state_p varchar(255))
 begin
-end $$
+end$$
 delimiter;
 
 -- procedure to delete team from nba_teams table
@@ -582,7 +582,7 @@ drop procedure if exists delete_team;
 delimiter $$
 create procedure delete_team(in team_id_p int)
 begin
-end $$
+end$$
 delimiter;
 
 -- procedure to delete player from nba_players table
@@ -590,7 +590,7 @@ drop procedure if exists delete_player;
 delimiter $$
 create procedure delete_player(in player_id_p int)
 begin
-end $$
+end$$
 delimeter ;
 
 -- procedure to delete game from nba_games table
@@ -598,7 +598,7 @@ drop procedure if exists delete_game;
 delimiter $$
 create procedure delete_game(in game_id_p varchar(255))
 begin
-end $$
+end$$
 delimiter ;
 
 -- procedure to delete season from nba_seasons table
@@ -606,5 +606,5 @@ drop procedure if exists delete_season;
 delimiter $$
 create procedure delete_season(in season_id_p varchar(255))
 begin
-end $$
+end$$
 delimiter ;
