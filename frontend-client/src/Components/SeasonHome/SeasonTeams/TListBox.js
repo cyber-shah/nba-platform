@@ -7,7 +7,7 @@ export default function TListBox(props) {
   const navigate = useNavigate();
 
   const handleTeamClick = () => {
-    navigate(`/TeamHome/${props.team.id}`);
+    navigate(`/TeamHome/${props.team.team_id}`);
   };
 
   return (

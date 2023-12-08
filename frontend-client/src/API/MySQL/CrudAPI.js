@@ -1,58 +1,29 @@
 const apiUrl = "http://localhost:5555";
 
-export async function getCreateForm(crudType) {
-    const crudDataResponse = await fetch(
-        `${apiUrl}/api/crud/create/${crudType}`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body : JSON.stringify({crudType : crudType}),
-        }
-    );
-    // Check if the response status is ok
-    if (!crudDataResponse.ok) {
-        throw new Error(`HTTP error! Status: ${crudDataResponse.status}`);
+async function sendCrudForm(endpoint, crudType, formData) {
+    const response = await fetch(`${apiUrl}/api/crud/${endpoint}/${crudType}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    });
+    console.log("Recieved form data:", formData);
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    const crudData = await crudDataResponse.json();
-    return crudData;
+
+    return response.json();
 }
 
-export async function getUpdateForm(crudType) {
-    const crudDataResponse = await fetch(
-        `${apiUrl}/api/crud/update/${crudType}`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body : JSON.stringify({crudType : crudType}),
-        }
-    );
-    // Check if the response status is ok
-    if (!crudDataResponse.ok) {
-        throw new Error(`HTTP error! Status: ${crudDataResponse.status}`);
-    }
-    const crudData = await crudDataResponse.json();
-    return crudData;
+export async function createRecord(crudType, formData) {
+    return sendCrudForm("create", crudType, formData);
 }
 
-export async function getDeleteForm(crudType) {
-    const crudDataResponse = await fetch(
-        `${apiUrl}/api/crud/delete/${crudType}`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body : JSON.stringify({crudType : crudType}),
-        }
-    );
-    // Check if the response status is ok
-    if (!crudDataResponse.ok) {
-        throw new Error(`HTTP error! Status: ${crudDataResponse.status}`);
-    }
-    const crudData = await crudDataResponse.json();
-    return crudData;
+export async function updateRecord(crudType, formData) {
+    return sendCrudForm("update", crudType, formData);
+}
+
+export async function deleteRecord(crudType, formData) {
+    return sendCrudForm("delete", crudType, formData);
 }
