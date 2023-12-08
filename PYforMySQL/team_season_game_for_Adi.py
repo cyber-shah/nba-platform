@@ -11,7 +11,7 @@ import pymysql
 
 start_row_interval = 0
 end_row_interval = 100
-folder_path = "C:/Users/Adi/OneDrive/Desktop/NBA Data/player_game"
+folder_path = "C:/Users/Adi/OneDrive/Desktop/NBA Data/team_game"
 
 user_password = input("Enter password for MySQL: ")
 
@@ -81,17 +81,20 @@ try:
             elif "@" in each_game[3]:
                 is_home = 0
             
-            current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id
-            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(team_minutes) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + "),"
+            current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'"
+            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(is_home) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + ")" 
             game_primary_key = "(" + game_id + ",\'" + game_date "\')"
             if current_primary_key not in team_season_per_game_string:
                 team_season_per_game_string += current_team_season_per_game
             if game_primary_key not in game_string:
                 game_string += game_primary_key
         time.sleep(0.600)
-    player_season_game_file_name = folder_path + "/player_season_game.txt"
-    with open(player_season_game_file_name, 'w') as f:
-        f.write(player_season_per_game_string)
+    team_season_game_file_name = folder_path + "/team_season_game.txt"
+    game_string_file_name = folder_path + "/game.txt"
+    with open(team_season_game_file_name, 'w') as f:
+        f.write(team_season_per_game_string)
+    with open(game_string_file_name, 'w') as f:
+        f.write(game_string)
 
 finally:
     connection.close()
