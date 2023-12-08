@@ -17,7 +17,7 @@ const handleProcedure = async (
   try {
     // Call the stored procedure with the appropriate name and parameters
     const results = await db.executeStoredProcedure(procedureName, [
-      teamId,
+      teamId, "2023-24"
     ]);
     console.log("Stored procedure results:", results);
     res.json(results[0]);
