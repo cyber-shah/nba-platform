@@ -153,6 +153,13 @@
      5. home_team_score
      6. away_team_score
 
+4. **Get Team Details: (get_team_details)**
+   - parameters:
+     1. team_id
+   - Returns Columns:
+     1. team_id
+     2. team_name
+
 ## Player Home
 1. **Get Player Stats: (get_player_stats_per_year)**
    - Returns Columns:
@@ -160,12 +167,20 @@
      2. player_name
      3. team_id
      4. team_name
-     6. minutes
-     7. points
-     8. rebounds
-     9. assists
-     10. steals
-     11. [Specify additional columns]
+     5. minutes
+     6. points
+     7. rebounds
+     8. assists
+     9.  steals
+     10. [Specify additional columns]
+
+2. **Get Player Details: (get_player_details)**
+   - Parameters:
+     1. player_id
+  - Returns Columns:
+     1. player_id
+     2. player_name
+     3. team_id
 
 
 ## Create Operations
