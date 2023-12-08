@@ -166,11 +166,12 @@ insert into player_team_season values (76483,'1988-89',1610612748),(236,'1988-89
 -- nba_owners table
 drop table if exists nba_owners;
 CREATE TABLE nba_owners (
-    staff_id INT PRIMARY KEY,
+    staff_id INT,
     season_id VARCHAR(255),
     team_id INT,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
+    primary key (staff_id, season_id, team_id, first_name, last_name),
     FOREIGN KEY (team_id)
         REFERENCES nba_teams (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
@@ -183,11 +184,12 @@ CREATE TABLE nba_owners (
 -- nba_gms table
 drop table if exists nba_gms;
 CREATE TABLE nba_gms (
-    staff_id INT PRIMARY KEY,
+    staff_id INT,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     team_id INT,
 	season_id VARCHAR(255),
+    primary key (staff_id, first_name, last_name, team_id, season_id),
     FOREIGN KEY (team_id)
         REFERENCES nba_teams (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
