@@ -17,16 +17,14 @@ function generateColumns(queryResults, handleClick) {
       property: key,
       header: key,
       render: (datum) => {
-        // Assuming 'id' is the property you want to reference
-        if (index === 0 && datum.id) {
+        if (key === 'player_id') {
           return renderPlayer(datum, handleClick);
-        } 
-        else if (index === 1 && datum.id) {
+        } else if (key === 'first_name' && datum.player_id) {
           return (
             <Anchor
               color="black"
               onClick={() => {
-                handleClick(datum.id);
+                handleClick(datum.player_id);
               }}
             >
               {datum[key]}
@@ -53,7 +51,7 @@ function renderPlayer(player, handleClick) {
   return (
     <Box direction="row" align="center">
       <Image
-        src={getPlayerImageUrl(player.id)}
+        src={getPlayerImageUrl(player.player_id)}
         alt={`${player.fullName}'s Headshot`}
         height="60px"
         width="80px"

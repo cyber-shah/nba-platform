@@ -15,7 +15,7 @@ export default function TeamHeader(props) {
   async function fetchData() {
     try {
       const teamDetails = await getTeamDetails(props.season, props.team_id);
-      setTeamDetails(teamDetails);
+      setTeamDetails(teamDetails[0][0]);
     } catch (error) {
       console.error(error);
     }

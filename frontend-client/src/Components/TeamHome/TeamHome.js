@@ -21,7 +21,7 @@ export default function TeamHome(props) {
   // NOTE: single source to edit the season
   const season = "2023-24";
 
-  console.log(team_id);
+  console.log("From Team Home: " + team_id);
 
 
 
@@ -43,8 +43,8 @@ export default function TeamHome(props) {
       }
 
       <Box width="1500px" justify="center" margin="auto" pad="medium">
-        {selectedTab === 0 && <TeamRoster teamId={team_id} season={season} />}
-        {selectedTab === 1 && <TeamStats teamId={team_id} season={season} />}
+        {selectedTab === 0 && <TeamRoster team_id={team_id} season={season} />}
+        {selectedTab === 1 && <TeamStats team_id={team_id} season={season} />}
         {/* {selectedTab === 3 && <TeamSchedule teamId={team_id} season={2024}/>} */}
       </Box>
     </div>
