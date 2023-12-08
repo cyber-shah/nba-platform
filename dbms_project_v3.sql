@@ -333,8 +333,9 @@ drop procedure if exists get_season_games;
 delimiter $$
 create procedure get_season_games(in season_id_p varchar(255))
 begin
-	select game_id, home_team_id, home_team_name, away_team_id, away_team_name, home_team_score, away_team_score, game_date, stadium, city, state
-    from nba_games;
+	select nba_games.game_id, nba_games.home_team_id, nba_teams.full_name as home_team_name, nba_games.visting_team_id, nba_teams.full_name as visiting_team_name, nba_games.home_team_points, nba_games.visiting_team_points, nba_games.game_date, nba_arenas.arena_name, nba_arenas.city, nba_arenas.state
+    from nba_games inner join team_season_per_game inner join nba_teams
+    where nba_games.game_id = team_season_per_game.game_id and nba_games.home_team_id = nba_teams.team_id and nba_games.visiting_team_id = nba_teams.team_id and season_id_p = team_season_per_game.season_id;
 end $$
 delimiter ;
 -- call get_season_games('2022-23');
