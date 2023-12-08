@@ -68,8 +68,24 @@ const Update = {
 };
 
 
+const Delete = {
+  Team: [
+    { label: 'Team ID', name: 'team_id', type: 'text' },
+  ],
+  Player: [
+    { label: 'Player ID', name: 'player_id', type: 'text' },
+  ],
+  Game: [
+    { label: 'Game ID', name: 'game_id', type: 'text' },
+  ],
+  Arena: [
+    { label: 'Arena ID', name: 'arena_id', type: 'text' },
+  ],
+};
+
 
 export const CrudForms = {
     Create: Create,
     Update: Update,
+    Delete: Delete,
 };
