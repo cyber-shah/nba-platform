@@ -42,8 +42,8 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/SeasonHome" element={<SeasonHome />} />
-            <Route path="/TeamHome/:teamId" element={<TeamHome />} />
-            <Route path="/PlayerHome/:playerId" element={<PlayerHome />} />
+            <Route path="/TeamHome/:team_id" element={<TeamHome />} />
+            <Route path="/PlayerHome/:player_id" element={<PlayerHome />} />
             <Route path= "/CrudPage/:label/:option" element = {<CrudPage />} />
           </Routes>
         </Router>

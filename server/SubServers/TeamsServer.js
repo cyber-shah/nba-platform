@@ -11,8 +11,10 @@ const handleProcedure = async (
   logMessage,
 ) => {
   console.log(`From TeamServer: ${logMessage}`);
+  console.log("Request body:", req.body);
   // get team id and season from request body
   const teamId = req.body.teamId;
+  const seasonYear = req.body.seasonYear;
 
   try {
     // Call the stored procedure with the appropriate name and parameters
@@ -44,7 +46,6 @@ app.post("/teamRoster", async (req, res) => {
     res,
     "get_team_roster",
     "request received by teamRoster server successfully",
-    "team_roster.json"
   );
 });
 
@@ -65,7 +66,6 @@ app.post("/teamDetails", async (req, res) => {
     res,
     "get_team_details",
     "request received by teamDetails server successfully",
-    "team_details.json"
   );
 });
 

@@ -1,35 +1,22 @@
 import React from "react";
-import Graphics from "./Graphics";
+import Graphics from "./Cards/Graphics";
 import { generateColumns } from "../GlobalFunctions";
 import { useParams } from "react-router-dom";
 import { DataTable, Box } from "grommet";
 import PlayerHeader from "./PlayerHeader";
+import { get_player_details } from "../../API/MySQL/PlayerAPI";
 
 export default function PlayerHome(props) {
-  const { playerId } = useParams();
+  const { player_id } = useParams();
+  console.log(player_id);
 
-  const [playerData, setPlayerData] = React.useState(null);
+  // NOTE: single source to edit the season
+  const season = "2023-24";
 
-  React.useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async (playerId) => {
-    
-  };
-
-  console.log(playerId);
-
-  props = "../../../../jsons/fromNBA/career_stats.json";
-  const style = {
-    main: {
-      maxWidth: "1200px",
-      margin: "auto",
-    },
-  };
   return (
     <div >
-      <PlayerHeader playerId={playerId} />
+      <PlayerHeader season={season} player_id={player_id} />
+
     </div>
   );
 }

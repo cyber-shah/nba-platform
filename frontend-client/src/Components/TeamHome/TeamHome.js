@@ -17,8 +17,13 @@ import { useParams } from "react-router-dom";
  * @returns 
  */
 export default function TeamHome(props) {
-  const { teamId } = useParams();
-  console.log(teamId);
+  const { team_id } = useParams();
+  // NOTE: single source to edit the season
+  const season = "2023-24";
+
+  console.log(team_id);
+
+
 
   // tabs --------------------------------------------------------------------
   const [selectedTab, setTab] = useState(1);
@@ -27,20 +32,20 @@ export default function TeamHome(props) {
 
   return (
     <div>
-      {/* TODO: extract season year from this to be able to pass it into props */}
       {
         <TeamHeader
-          teamID ={teamId}
+          team_id ={team_id}
           selectedTab={selectedTab}
           onActive={onActive}
           setTab={setTab}
+          season = {season}
         />
       }
 
       <Box width="1500px" justify="center" margin="auto" pad="medium">
-        {selectedTab === 1 && <TeamRoster teamId={teamId} season={2024} />}
-        {selectedTab === 2 && <TeamStats teamId={teamId} season={2024} />}
-        {selectedTab === 3 && <TeamSchedule teamId={teamId} season={2024}/>}
+        {selectedTab === 0 && <TeamRoster teamId={team_id} season={season} />}
+        {selectedTab === 1 && <TeamStats teamId={team_id} season={season} />}
+        {/* {selectedTab === 3 && <TeamSchedule teamId={team_id} season={2024}/>} */}
       </Box>
     </div>
   );

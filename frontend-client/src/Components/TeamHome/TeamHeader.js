@@ -10,11 +10,11 @@ import { getTeamDetails } from "../../API/MySQL/TeamAPI";
  */
 export default function TeamHeader(props) {
   const [teamDetails, setTeamDetails] = React.useState(null);
+  console.log(props.team_id);
 
   async function fetchData() {
     try {
-      // TODO : pass the team id and season from the props
-      const teamDetails = await getTeamDetails(2024, props.id);
+      const teamDetails = await getTeamDetails(props.season, props.team_id);
       setTeamDetails(teamDetails);
     } catch (error) {
       console.error(error);

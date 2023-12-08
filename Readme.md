@@ -161,6 +161,9 @@
 
 ## Player Home
 1. **Get Player Stats: (get_player_stats_per_year)**
+   - Parameters:
+    1. Season
+    2. player_id
    - Returns Columns:
      1. player_id
      2. player_name
@@ -180,6 +183,7 @@
      1. player_id
      2. player_name
      3. team_id
+     4. team_name
 
 
 ## Create Operations

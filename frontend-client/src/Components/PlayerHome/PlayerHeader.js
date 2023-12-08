@@ -1,15 +1,7 @@
 import React from "react";
 import { Box, Image, Grid, Text } from "grommet";
-import { fetchPlayerData } from "../../API/MySQL/PlayerAPI";
+import { get_player_details } from "../../API/MySQL/PlayerAPI";
 import { getPlayerImageUrl, getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
-
-const result = {
-  playerID: 977,
-  firstName: "KOBE",
-  lastName: "BRYANT",
-  jersey: "24",
-  TeamID: 1610612747,
-};
 
 export default function PlayerHeader(props) {
   const [playerData, setPlayerData] = React.useState(null);
@@ -18,10 +10,14 @@ export default function PlayerHeader(props) {
     fetchData();
   }, []);
 
-  const fetchData = async (playerId) => {
-    // const result = await fetchPlayerData(playerId);
-    setPlayerData(result);
-  };
+    async function fetchData() {
+    try {
+      const result = await get_player_details(props.season, props.player_id);
+      setPlayerData(result);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <Box elevation="large" >
@@ -45,9 +41,9 @@ export default function PlayerHeader(props) {
                 <Text size="xxlarge" margin="none" weight="bold">
                   {playerData.lastName}
                 </Text>
-                <Text level="1" margin="none">
+                {/* <Text level="1" margin="none">
                   #{playerData.jersey}
-                </Text>
+                </Text> */}
               </Box>
             </>
           )}

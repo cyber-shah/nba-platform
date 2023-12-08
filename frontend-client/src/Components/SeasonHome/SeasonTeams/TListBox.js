@@ -3,6 +3,10 @@ import { Text, Anchor, Image, Box } from "grommet";
 import { getTeamLogoUrl } from "../../../API/EspnAPI/GetLogos";
 import { useNavigate } from "react-router-dom";
 
+/**
+ * @param {*} props Team: the team object that contains the team's information
+ * @returns a list box component that contains the team's logo, name, and year founded
+ */
 export default function TListBox(props) {
   const navigate = useNavigate();
 
