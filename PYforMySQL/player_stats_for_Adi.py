@@ -11,6 +11,10 @@ from nba_api.stats.static import players
 
 #creating insert statement for player_season table
 players = players.get_players()
+player_ids = []
+for each_player in players:
+    player_ids.append(each_player['id'])
+    
 player_counter = 0
 file_counter = 1
 max_range = 0
@@ -28,14 +32,13 @@ while player_counter < end_player_index:
     elif player_counter + 50 >= len(players):
         max_range = len(players)
     for each_player_index in range(player_counter, max_range):
-        current_player = players[each_player_index]
-        player_id_num = current_player['id']
-        player_career = playercareerstats.PlayerCareerStats(player_id = player_id_num)
+        current_player_id = player_ids[each_player_index]
+        player_career = playercareerstats.PlayerCareerStats(player_id = current_player_id)
         player_career_dict = player_career.get_dict()
         regular_season_stats = player_career_dict['resultSets'][0]['rowSet']
         for each_season in regular_season_stats:
             season = each_season[1]
-            current_player_season_string = "(" + str(player_id_num) + ",\'" + str(season) + "\'),"
+            current_player_season_string = "(" + str(current_player_id) + ",\'" + str(season) + "\'),"
             if current_player_season_string not in player_year:
                 player_year += current_player_season_string
         time.sleep(0.600)
