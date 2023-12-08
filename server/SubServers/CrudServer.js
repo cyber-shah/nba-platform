@@ -8,13 +8,15 @@ async function crudOperation(req, res, operation, crudType) {
     `From CrudServer: updating the database with ${operation} form for ${crudType}`
   );
     try {
-      console.log("updating database with form", req.body)
-    // const formData = req.body;
+        const formData = Object.values(req.body);
+        console.log("updating database with form", formData);
+        
+
     // const results = await db.executeStoredProcedure(
     //   `${operation}_${crudType}`,
-    //   [formData]
+    //   formData
     // );
-    res.json();
+    res.json({ message: `Successfully ${operation}d ${crudType}` });
   } catch (error) {
     console.error("Error sending JSON file:", error);
     res.status(500).json({ error: "Internal Server Error" });
