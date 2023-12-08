@@ -267,15 +267,7 @@ insert into nba_assistant_coaches values (1647,'Kenny','Gattison',1610612737,'19
 drop table if exists nba_games;
 CREATE TABLE nba_games (
     game_id varchar(255) PRIMARY KEY,
-<<<<<<< HEAD
     game_date varchar(255) NOT NULL
-=======
-    game_date varchar(255) NOT NULL,
-    home_team_id INT,
-    home_team_points INT, -- maybe remove this
-    visiting_team_id INT,
-    visiting_team_points INT -- maybe remove this
->>>>>>> d8d3ac0675dc998404fa3b9f445be1d3e64000fc
 );
 -- insert into nba_games values ();
 
