@@ -58,10 +58,10 @@ export default function TeamHeader(props) {
               alignControls="center"
               margin="auto"
             >
-              <Tab title="Home"></Tab>
+              {/* <Tab title="Home"></Tab> */}
               <Tab title="Roster"></Tab>
               <Tab title="Stats"></Tab>
-              <Tab title="Schedule"></Tab>
+              {/* <Tab title="Schedule"></Tab> */}
             </Tabs>
 
             {/* push this to the extreme right but horizontally in the same row as tabs */}

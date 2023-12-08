@@ -6,14 +6,12 @@ const db = require("./db");
 const handleProcedure = async (req, res, procedureName, logMessage) => {
   console.log(`From TeamServer: ${logMessage}`);
   // get team id and season from request body
-  const teamId = req.body.teamId;
-  const season = req.body.season;
+  const playerID = req.body.playerID;
 
   try {
     // Call the stored procedure with the appropriate name and parameters
     const results = await db.executeStoredProcedure(procedureName, [
-      teamId,
-      season,
+      playerID
     ]);
     console.log("Stored procedure results:", results);
     res.json(results[0]);

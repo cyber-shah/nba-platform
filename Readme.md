@@ -113,10 +113,9 @@
      11. city
      12. state
 
-4. **Get Standings for Specific Conference and Season: (get_season_standings)**
+3. **Get Standings: (get_season_standings)**
    - Parameters:
-       1. conference: Western or Eastern Conference
-       2. season_id
+       1. season_id
    - Returns Columns:
      1. team_id
      2. team_name
@@ -124,7 +123,7 @@
      4. losses
      5. win_percentage
 
-6. **Get Season Leaders: (get_season_points_leaders, get_season_assist_leaders, get_season_rebounds_leaders, get_season_steals_leaders, get_season_blocks_leaders, get_season_minutes_leaders, get_season_turnovers_leaders)**
+<!-- 5. **Get Season Leaders: (get_season_points_leaders)**
    - For assists, points, rebounds, steals, blocks
    - Returns Columns:
      1. player_id
@@ -132,7 +131,7 @@
      3. team_id
      4. team_name
      5. stat
-     6. stat_type
+     6. stat_type -->
 
 ## Team Home
 1. **Get Team Roster: (get_team_roster)**
@@ -144,7 +143,7 @@
    - Returns Columns:
      1. [Specify the columns]
 
-3. **Get Team Schedule: (get_team_schedule)**
+<!-- 3. **Get Team Schedule: (get_team_schedule)** -->
    - Returns Columns:
      1. date
      2. opponent_id
@@ -153,7 +152,7 @@
      5. home_team_score
      6. away_team_score
 
-4. **Get Team Details: (get_team_details)**
+3. **Get Team Details: (get_team_details)**
    - parameters:
      1. team_id
    - Returns Columns:
@@ -252,6 +251,13 @@
      10. city
      11. state
 
+4. **Update Arena: (update_arena)**
+   - Parameters:
+     1. arena_id
+     2. arena_name
+     3. city
+     4. state
+   
 ## Delete Operations
 1. **Delete Team: (delete_team)**
    - Parameters:
