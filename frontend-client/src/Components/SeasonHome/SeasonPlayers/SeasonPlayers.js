@@ -23,7 +23,7 @@ export default function SeasonPlayers(props) {
           Season Leaders
         </Text>
 
-        {players !== null &&
+        {players !== null && players.length === 0 && 
           players.map((table, index) => (
             <SeasonPTable
               key={index}

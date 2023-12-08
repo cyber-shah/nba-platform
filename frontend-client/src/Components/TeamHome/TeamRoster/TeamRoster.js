@@ -21,8 +21,8 @@ export default function TeamRoster(props) {
     navigate(`/PlayerHome/${playerId}`);
   };
 
-  if (teamRoster !== null) {
-    const players = teamRoster.resultSets[0].rowSet;
+  if (teamRoster !== null && teamRoster.length === 0) {
+    const players = teamRoster;
 
     // translate the data from the API into a format that we want to use
     const transformedData = players.map((player) => ({

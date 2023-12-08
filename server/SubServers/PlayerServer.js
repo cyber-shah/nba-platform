@@ -17,7 +17,7 @@ const handleProcedure = async (req, res, procedureName, logMessage) => {
     res.json(results[0]);
   } catch (error) {
     console.error("Error handling procedure:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.json({ error: "Internal Server Error" });
   }
 };
 

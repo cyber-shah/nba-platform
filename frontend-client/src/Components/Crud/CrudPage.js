@@ -30,7 +30,7 @@ export default function CrudPage(props) {
   useEffect(() => {
     const fetchData = () => {
       if (label === "Read") {
-        if (option === "Team") navigate("/TeamHome");
+        if (option === "Team") navigate("/TeamHome/1610612737");
         else if (option === "Player") navigate("/PlayerHome");
         else navigate("/SeasonHome");
       } else {
