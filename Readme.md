@@ -88,7 +88,7 @@
 # List of Procedures
 
 ## Season Home
-1. **Get All Teams: (get_all_teams)**
+1. **Get All Teams: (get_all_teams) done**
    - Returns:
      1. team_id
      2. team_name
@@ -134,7 +134,7 @@
      6. stat_type -->
 
 ## Team Home
-1. **Get Team Roster: (get_team_roster)**
+1. **Get Team Roster: (get_team_roster) done**
    - Returns Columns:
      1. player_id
      2. player_name
