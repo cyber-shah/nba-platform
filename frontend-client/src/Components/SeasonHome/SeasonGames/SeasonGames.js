@@ -10,7 +10,7 @@ export default function SeasonGames(props) {
   }, []);
 
   const fetchData = async () => {
-    const result = await getSeasonGames(props.seasonYear);
+    const result = await getSeasonGames(props.season);
     setSeasonGames(result);
   };
 
@@ -22,18 +22,20 @@ export default function SeasonGames(props) {
         </Text>
       </Box>
 
-      <DataTable
-        margin="medium"
-        columns={null}
-        data={null}
-        pad={{ horizontal: "medium", vertical: "xsmall" }}
-        background={{
-          header: { color: "white", opacity: "strong" },
-          body: ["light-1", "white"],
-          footer: { color: "dark-1", opacity: "strong" },
-        }}
-        border={{ body: "bottom" }}
-      />
+      {seasonGames !== null && (
+        <DataTable
+          margin="medium"
+          columns={seasonGames}
+          data={seasonGames}
+          pad={{ horizontal: "medium", vertical: "xsmall" }}
+          background={{
+            header: { color: "white", opacity: "strong" },
+            body: ["light-1", "white"],
+            footer: { color: "dark-1", opacity: "strong" },
+          }}
+          border={{ body: "bottom" }}
+        />
+      )}
     </div>
   );
 }

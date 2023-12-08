@@ -12,19 +12,18 @@ import SeasonGames from "./SeasonGames/SeasonGames";
 
 export default function SeasonHome(props) {
   // For Season Header --------------------------------------------------------------------------------------------------------------------
-  // seasons
-  const [seasonYear, setYear] = useState("2023");
   // tabs
   const [selectedTab, setTab] = useState(1);
-  const onActive = (index) => setTab(index);
-  // use effect so that whenver seasonYear changes, it will update the data
-
+  const onActive = (index) => setTab(index); 
+ 
+  // NOTE: single source for editing season year
+  const season = "2023-24";
 
   return (
     <div>
       <SeasonHeader
-        seasonYear={seasonYear}
-        setYear={setYear}
+        season={season}
+        // setYear={setYear}
         selectedTab={selectedTab}
         onActive={onActive}
         setTab={setTab}
@@ -34,10 +33,10 @@ export default function SeasonHome(props) {
         <Box>
           <Grid columns={["2/3", "1/3"]}>
             <Box pad="small">
-              {selectedTab === 0 && <SeasonGames seasonYear={seasonYear} />}
-              {selectedTab === 1 && <TeamList seasonYear={seasonYear} />}
-              {selectedTab === 2 && <SeasonsStandings seasonYear={seasonYear} />}
-              {selectedTab === 3 && <SeasonPlayers seasonYear={seasonYear} />}
+              {selectedTab === 0 && <SeasonGames season={season} />}
+              {selectedTab === 1 && <TeamList season={season} />}
+              {selectedTab === 2 && <SeasonsStandings season={season} />}
+              {selectedTab === 3 && <SeasonPlayers season={season} />}
             </Box>
 
             {/* News side bar */}

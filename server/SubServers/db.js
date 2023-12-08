@@ -11,11 +11,11 @@ function connect(username, password) {
   return new Promise((resolve, reject) => {
     con = mysql.createConnection({
       host: "localhost",
-      user: username,
-      password: password,
+      user: "root",
+      password: "aH24fkWu*}Q",
       database: "nba",
     });
-    console.log(username, password);
+    // console.log(username, password);
     // Connect to MySQL and log the status
     con.connect((err) => {
       if (err) {

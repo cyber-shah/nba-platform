@@ -27,18 +27,18 @@ export default function SeasonHeader(props) {
           <Tab title="Games" />
           <Tab title="Teams" />
           <Tab title="Standings" />
-          {/* <Tab title="Players" /> */}
+          <Tab title="Players" />
         </Tabs>
 
         {/* 3. Select Year */}
-        <Box direction="row" align="center" gap="small">
+        {/* <Box direction="row" align="center" gap="small">
           <Select
             size="small"
             options={["2023", "2022", "2021"]}
             value={props.seasonYear}
             onChange={({ value }) => props.setYear(value)}
           />
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

@@ -4,14 +4,11 @@ import { DataTable, Box, Text, Image, Anchor } from "grommet";
 import { getTeamRoster } from "../../../API/MySQL/TeamAPI";
 import { generateColumns, renderPlayer } from "../../GlobalFunctions";
 
-
-
 export default function TeamRoster(props) {
   const [teamRoster, setTeamRoster] = React.useState(null);
 
-
   async function fetchData() {
-    const teamRoster = await getTeamRoster(props.season, props.teamId);
+    const teamRoster = await getTeamRoster(props.season, props.team_id);
     setTeamRoster(teamRoster);
   }
 
@@ -19,10 +16,10 @@ export default function TeamRoster(props) {
     fetchData();
   }, []);
 
-    const navigate = useNavigate();
-    const handlePlayerClick = (playerId) => {
-      navigate(`/PlayerHome/${playerId}`);
-    };
+  const navigate = useNavigate();
+  const handlePlayerClick = (playerId) => {
+    navigate(`/PlayerHome/${playerId}`);
+  };
 
   if (teamRoster !== null) {
     const players = teamRoster.resultSets[0].rowSet;
@@ -40,12 +37,10 @@ export default function TeamRoster(props) {
       college: player[13],
     }));
 
-
-    
     return (
       <Box align="center" elevation="large" pad="large" round="large">
         <DataTable
-          columns= {generateColumns(transformedData, handlePlayerClick)}
+          columns={generateColumns(transformedData, handlePlayerClick)}
           data={transformedData}
           pad={{ horizontal: "medium", vertical: "xsmall" }}
           background={{

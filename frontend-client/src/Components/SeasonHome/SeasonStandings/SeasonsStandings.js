@@ -15,7 +15,7 @@ export default function SeasonsStandings(props) {
 
   // fetch data from the API
   const fetchData = async () => {
-    const result = await getSeasonStandings(props.seasonYear);
+    const result = await getSeasonStandings(props.season);
     setStandingsData(result);
   };
 
