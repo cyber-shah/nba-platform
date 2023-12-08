@@ -6,10 +6,11 @@ const db = require("./db");
 
 app.post("/seasonTeams", async (req, res) => {
   console.log("From LeagueServer: sending Teams");
-  // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../../jsons/fromNBA/all_teams.json");
-    res.sendFile(filePath);
+    const results = await db.executeStoredProcedure(
+      "get_all_teams");
+    console.log("Stored procedure results:", results);
+    res.json(results[0]);
   } catch (error) {
     console.error('Error sending JSON file:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -18,10 +19,11 @@ app.post("/seasonTeams", async (req, res) => {
 
 app.post("/seasonStandings", async (req, res) => {
   console.log("From LeagueServer: sending season standings");
-  // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../../jsons/fromNBA/league_standings.json");
-    res.sendFile(filePath);
+    const results = await db.executeStoredProcedure(
+      "get_season_standings");
+    console.log("Stored procedure results:", results);
+    res.json(results[0]);
   } catch (error) {
     console.error('Error sending JSON file:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -33,8 +35,10 @@ app.post("/seasonPlayers", async (req, res) => {
   console.log("From LeagueServer: sending player leaders data");
   // TODO: Implement the logic here to get the data from the database
   try {
-    const filePath = path.join(__dirname, "./../../jsons/fromNBA/leaders_players.json");
-    res.sendFile(filePath);
+    const results = await db.executeStoredProcedure(
+      "get_season_points_leaders");
+    console.log("Stored procedure results:", results);
+    res.json(results[0]);
   } catch (error) {
     console.error('Error sending JSON file:', error);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -43,9 +47,17 @@ app.post("/seasonPlayers", async (req, res) => {
 
 
 app.post("/seasonGames", async (req, res) => {
-  console.log("From LeagueServer: sending season games data");
+  console.log("From LeagueServer: sending player leaders data");
   // TODO: Implement the logic here to get the data from the database
-  res.json({ message: "From LeagueServer: sending season games data" });
+  try {
+    const results = await db.executeStoredProcedure(
+      "get_season_games");
+    console.log("Stored procedure results:", results);
+    res.json(results[0]);
+  } catch (error) {
+    console.error('Error sending JSON file:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
 });
 
 

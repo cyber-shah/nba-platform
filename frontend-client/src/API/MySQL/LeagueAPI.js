@@ -36,7 +36,7 @@ export async function getSeasonsTeams(seasonYear) {
   }
 
   const teamList = await teamListResponse.json();
-
+  console.log("Team List:", teamList);
   return teamList;
 }
 

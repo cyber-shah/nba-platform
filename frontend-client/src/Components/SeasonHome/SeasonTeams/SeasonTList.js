@@ -13,6 +13,7 @@ export default function TeamList(props) {
   const fetchData = async () => {
     const result = await getSeasonsTeams();
     setTeamData(result);
+    console.log("Team Data:", result);
   };
 
   return (
@@ -24,7 +25,7 @@ export default function TeamList(props) {
 
         <Box>
           {teamData !== null &&
-            teamData.map((team) => <TListBox key={team.id} team={team} />)}
+            teamData.map((team) => <TListBox key={team.team_id} team={team} />)}
         </Box>
       </Box>
     </div>

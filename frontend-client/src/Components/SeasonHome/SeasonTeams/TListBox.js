@@ -20,7 +20,7 @@ export default function TListBox(props) {
         }}
       >
         {/* Logo on the left with fixed size */}
-        <Image src={getTeamLogoUrl(props.team.id)} width="75" height="75" />
+        <Image src={getTeamLogoUrl(props.team.team_id)} width="75" height="75" />
 
         {/* The other half */}
         <div>
