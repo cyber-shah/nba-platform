@@ -13,7 +13,6 @@ async function fetchData(endpoint, bodyData) {
     console.log(`HTTP error! Status: ${response.json()}`);
     return null;
   }
-
   return response.json();
 }
 

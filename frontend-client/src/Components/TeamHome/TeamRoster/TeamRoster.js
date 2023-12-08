@@ -9,7 +9,7 @@ export default function TeamRoster(props) {
 
   async function fetchData() {
     const teamRoster = await getTeamRoster(props.season, props.team_id);
-    setTeamRoster(teamRoster);
+    setTeamRoster(teamRoster[0]);
   }
 
   useEffect(() => {
@@ -21,27 +21,21 @@ export default function TeamRoster(props) {
     navigate(`/PlayerHome/${playerId}`);
   };
 
-  if (teamRoster !== null && teamRoster.length === 0) {
+  if (teamRoster !== null && teamRoster.length > 0) {
     const players = teamRoster;
 
-    // translate the data from the API into a format that we want to use
-    const transformedData = players.map((player) => ({
-      id: player[14],
-      fullName: player[3],
-      position: player[7],
-      height: player[8],
-      weight: player[9],
-      birthDate: player[10],
-      age: player[11],
-      experience: player[12],
-      college: player[13],
-    }));
-
     return (
-      <Box align="center" elevation="large" pad="large" round="large">
+      <Box
+        align="center"
+        elevation="large"
+        pad="large"
+        round="large"
+        width="30%"
+        margin="auto"
+      >
         <DataTable
-          columns={generateColumns(transformedData, handlePlayerClick)}
-          data={transformedData}
+          columns={generateColumns(teamRoster, handlePlayerClick)}
+          data={teamRoster}
           pad={{ horizontal: "medium", vertical: "xsmall" }}
           background={{
             header: { color: "white", opacity: "strong" },

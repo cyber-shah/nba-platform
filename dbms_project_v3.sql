@@ -395,7 +395,7 @@ begin
     -- order by season_assists desc limit 10;
 end$$
 delimiter ;
-call get_season_assists_leaders('2022-23');
+-- call get_season_assists_leaders('2022-23');
 
 -- procedure to get rebounds season leaders in a season
 drop procedure if exists get_season_rebounds_leaders;
@@ -410,7 +410,7 @@ begin
     -- order by season_rebounds desc limit 10;
 end$$
 delimiter ;
-call get_season_rebounds_leaders('2022-23');
+-- call get_season_rebounds_leaders('2022-23');
 
 -- procedure to get steals season leaders in a season
 drop procedure if exists get_season_steals_leaders;
@@ -425,7 +425,7 @@ begin
     -- order by season_steals desc limit 10;
 end$$
 delimiter ;
-call get_season_steals_leaders('2022-23');
+-- call get_season_steals_leaders('2022-23');
 
 -- procedure to get blocks season leaders in a season
 drop procedure if exists get_season_blocks_leaders;
@@ -440,7 +440,7 @@ begin
     -- order by season_blocks desc limit 10;
 end$$
 delimiter ;
-call get_season_blocks_leaders('2022-23');
+-- call get_season_blocks_leaders('2022-23');
 
 -- procedure to get season minutes leaders in a season
 drop procedure if exists get_season_minutes_leaders;
@@ -455,7 +455,7 @@ begin
     -- order by season_minutes desc limit 10;
 end$$
 delimiter ;
-call get_season_minutes_leaders('2022-23');
+-- call get_season_minutes_leaders('2022-23');
 
 -- procedure to get season turnovers leaders in a season
 drop procedure if exists get_season_turnovers_leaders;
@@ -470,7 +470,7 @@ begin
     -- order by season_turnovers desc limit 10;
 end$$
 delimiter ;
-call get_season_turnovers_leaders('2022-23');
+-- call get_season_turnovers_leaders('2022-23');
 
 -- procedure to get team roster for a season (done)
 drop procedure if exists get_team_roster;
@@ -484,6 +484,18 @@ begin
 end$$
 delimiter ;
 call get_team_roster(1610612738,'2022-23');
+
+drop procedure if exists get_team_details;
+delimiter $$
+create procedure get_team_details(in team_id_p int, in season_id_p varchar(255))
+begin
+	select team_id, full_name, abbreviation, year_founded, conference
+    from nba_teams
+    where nba_teams.team_id = team_id_p;
+end$$
+delimiter ;
+call get_team_details(1610612738,'2022-23');
+
 
 -- procedure to get team stats for a season
 drop procedure if exists get_team_stats;
@@ -567,21 +579,21 @@ end$$
 delimiter ;
 
 -- procedure to create game and add it to the nba_games table (wrote it but haven't tested it yet)
-drop procedure if exists create_game;
-delimiter $$
-create procedure create_game(in game_id_p int, in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int)
-begin
-	declare game_id_var int;
-	select player_id into player_id_var from nba_players where player_id = player_id_p;
-    if player_id_var is not null then
-		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
-	end if;
-    if is_active_p < 0 or is_active_p > 1 then
-		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
-	end if;
-	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
-end$$
-delimiter ;
+-- drop procedure if exists create_game;
+-- delimiter $$
+-- create procedure create_game(in game_id_p int, in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int)
+-- begin
+-- 	declare game_id_var int;
+-- 	select player_id into player_id_var from nba_players where player_id = player_id_p;
+--     if player_id_var is not null then
+-- 		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
+-- 	end if;
+--     if is_active_p < 0 or is_active_p > 1 then
+-- 		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
+-- 	end if;
+-- 	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
+-- end$$
+-- delimiter ;
 
 -- procedure to create season and add it to nba_seasons table
 drop procedure if exists create_season;

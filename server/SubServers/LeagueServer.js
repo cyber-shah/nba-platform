@@ -11,7 +11,6 @@ const handleStoredProcedure = async (
   logMessage,
   inputs
 ) => {
-  console.log(`From LeagueServer: ${logMessage}`);
   try {
     var results;
     if (!inputs) {
@@ -19,8 +18,9 @@ const handleStoredProcedure = async (
     else {
        results = await db.executeStoredProcedure(procedureName, [inputs]);
     }
+    console.log(`From LeagueServer: ${logMessage}`);
     console.log("Stored procedure results:", results);
-    res.json(results[0]);
+    res.json(results);
   } catch (error) {
     console.error("Error sending JSON file:", error);
     res.json({ error: "Internal Server Error" });
@@ -61,7 +61,7 @@ app.post("/seasonGames", async (req, res) => {
     req,
     res,
     "get_season_games",
-    "sending player leaders data",
+    "sending games data",
     "2023-24"
   );
 });
