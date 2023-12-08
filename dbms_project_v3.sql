@@ -523,8 +523,17 @@ drop procedure if exists create_team;
 delimiter $$
 create procedure create_team(in team_id_p int, in full_name_p varchar(255), in abbreviation_p varchar(255), in year_founded_p int, in conference_p varchar(255))
 begin
-    select team_id
-    from nba_teams;
+	declare team_id_var int;
+    declare year_founded_var int;
+    declare conference_var varchar(255);
+	select team_id into team_id_var from nba_teams where team_id = team_id_p;
+    if team_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered team_id is already inside the nba_teams table";
+	end if;
+    if year_founded_var < 1946 then
+		signal sqlstate '45000' set message_text = "The entered year_founded is not valid";
+	end if;
+	insert into nba_teams values (team_id_p, full_name_p, abbreviation_p, year_founded_p, conference_p);
 end$$
 delimiter ;
 
