@@ -12,7 +12,7 @@ import time
 import pymysql
 
 start_row_interval = 0
-end_row_interval = 3
+end_row_interval = 100
 folder_path = "C:/Users/19782/Desktop/NE_ALIGN_Program/Second_Year_Coursework/CS_5200/Group_project_data/"
 
 user_password = input("Enter password for MySQL: ")
