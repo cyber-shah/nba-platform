@@ -12,7 +12,7 @@ function connect(username, password) {
     con = mysql.createConnection({
       host: "localhost",
       user: username,
-      password: "aH24fkWu*}Q",
+      password: password,
       database: "nba",
     });
     console.log(username, password);
