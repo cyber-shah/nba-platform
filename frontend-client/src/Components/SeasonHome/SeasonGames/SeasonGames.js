@@ -22,7 +22,7 @@ export default function SeasonGames(props) {
         </Text>
       </Box>
 
-      {seasonGames !== null && (
+      {seasonGames !== null && seasonGames.length === 0 && (
         <DataTable
           margin="medium"
           columns={seasonGames}

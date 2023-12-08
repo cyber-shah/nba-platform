@@ -19,13 +19,13 @@ const handleProcedure = async (
   try {
     // Call the stored procedure with the appropriate name and parameters
     const results = await db.executeStoredProcedure(procedureName, [
-      teamId, "2023-24"
+      teamId, seasonYear
     ]);
     console.log("Stored procedure results:", results);
     res.json(results[0]);
   } catch (error) {
     console.error("Error handling procedure:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.json({ error: "Internal Server Error" });
   }
 };
 

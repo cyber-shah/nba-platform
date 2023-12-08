@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Select, Grid, Text } from "grommet";
+import { Box, Select, Grid, Text, Button } from "grommet";
 import { useNavigate } from "react-router-dom";
 
 const CRUDOperation = ({ label, options, value, onSelect }) => (
@@ -49,6 +49,7 @@ const CrudBar = () => {
     <Box pad="medium" elevation="large" round="small" align="center">
       <Grid
         columns={[
+                    "small",
           "xsmall",
           "small",
           "xsmall",
@@ -60,6 +61,7 @@ const CrudBar = () => {
         ]}
         gap="small"
       >
+        <Button primary label="Home" pad="small" href="/SeasonHome"/>
         {operations.map((operation, index) => (
           <CRUDOperation
             key={index}
@@ -71,6 +73,7 @@ const CrudBar = () => {
             }
           />
         ))}
+        
       </Grid>
     </Box>
   );

@@ -12,7 +12,8 @@ export async function get_player_details(seasonYear, playerID) {
   });
 
   if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
+    console.log(`HTTP error! Status: ${response.json()}`);
+    return null;
   }
 
   return response.json();

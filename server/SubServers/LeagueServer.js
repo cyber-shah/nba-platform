@@ -23,7 +23,7 @@ const handleStoredProcedure = async (
     res.json(results[0]);
   } catch (error) {
     console.error("Error sending JSON file:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.json({ error: "Internal Server Error" });
   }
 };
 
@@ -43,18 +43,17 @@ app.post("/seasonStandings", async (req, res) => {
   );
 });
 
-// NOTE: This is not used in the frontend
 
 // Route to handle /seasonPlayers
-// app.post("/seasonPlayers", async (req, res) => {
-//   await handleStoredProcedure(
-//     req,
-//     res,
-//     "get_season_points_leaders",
-//     "sending player leaders data",
-//     "2023-24"
-//   );
-// });
+app.post("/seasonPlayers", async (req, res) => {
+  await handleStoredProcedure(
+    req,
+    res,
+    "get_season_points_leaders",
+    "sending player leaders data",
+    "2023-24"
+  );
+});
 
 // Route to handle /seasonGames
 app.post("/seasonGames", async (req, res) => {

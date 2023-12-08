@@ -1,10 +1,6 @@
 import React from "react";
-import Graphics from "./Cards/Graphics";
-import { generateColumns } from "../GlobalFunctions";
 import { useParams } from "react-router-dom";
-import { DataTable, Box } from "grommet";
 import PlayerHeader from "./PlayerHeader";
-import { get_player_details } from "../../API/MySQL/PlayerAPI";
 
 export default function PlayerHome(props) {
   const { player_id } = useParams();
