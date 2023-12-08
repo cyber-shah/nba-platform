@@ -53,8 +53,37 @@ const executeQuery = (query, values = []) => {
   });
 };
 
+
+
+const executeStoredProcedure = (procedureName, params = []) => {
+  return new Promise((resolve, reject) => {
+    // Check if the connection is established before executing the stored procedure
+    if (!con) {
+      reject(new Error("Connection not established."));
+      return;
+    }
+
+    // Build the stored procedure call
+    const callStatement = `CALL ${procedureName}(${params.map(() => "?").join(",")})`;
+
+    // Execute the stored procedure and handle the results
+    con.query(callStatement, params, (err, results) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(results);
+    });
+  });
+};
+
+
 // Export the MySQL connection and executeQuery function for external use
 module.exports = {
   connect: connect,
   executeQuery: executeQuery,
+  executeStoredProcedure: executeStoredProcedure,
 };
+
+
+
