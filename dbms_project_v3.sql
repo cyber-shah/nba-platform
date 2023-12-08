@@ -361,7 +361,7 @@ drop procedure if exists get_season_points_leaders;
 delimiter $$
 create procedure get_season_points_leaders(in season_id_p varchar(255))
 begin
-    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_points) as total_points
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_points) as season_points
     from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
     on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
     where player_season_per_game.season_id = season_id_p
@@ -376,9 +376,11 @@ drop procedure if exists get_season_assist_leaders;
 delimiter $$
 create procedure get_season_assist_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_assists
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_assists) as season_assists
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_assists desc limit 10;
 end $$
 delimiter ;
@@ -389,9 +391,11 @@ drop procedure if exists get_season_rebounds_leaders;
 delimiter $$
 create procedure get_season_rebounds_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_rebounds
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_rebounds) as season_rebounds
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_rebounds desc limit 10;
 end $$
 delimiter ;
@@ -402,9 +406,11 @@ drop procedure if exists get_season_steals_leaders;
 delimiter $$
 create procedure get_season_steals_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_steals
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_steals) as season_steals
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_steals desc limit 10;
 end $$
 delimiter ;
@@ -415,9 +421,11 @@ drop procedure if exists get_season_blocks_leaders;
 delimiter $$
 create procedure get_season_blocks_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_blocks
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_blocks) as season_blocks
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_blocks desc limit 10;
 end $$
 delimiter ;
@@ -428,9 +436,11 @@ drop procedure if exists get_season_minutes_leaders;
 delimiter $$
 create procedure get_season_minutes_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_minutes
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_minutes) as season_minutes
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_minutes desc limit 10;
 end $$
 delimiter ;
@@ -441,9 +451,11 @@ drop procedure if exists get_season_turnovers_leaders;
 delimiter $$
 create procedure get_season_turnovers_leaders(in season_id_p varchar(255))
 begin
-    select player_id, player_name, team_id, team_name, season_turnovers
-    from player_season
-    where player_season.season_id = season_id_p
+    select player_season_per_game.player_id as player_id, first_name, last_name, nba_teams.team_id as team_id, full_name as team_name, sum(player_turnovers) as season_turnovers
+    from player_season_per_game inner join player_team_season inner join nba_teams inner join nba_players
+    on player_season_per_game.player_id = player_team_season.player_id and player_season_per_game.season_id = player_team_season.season_id and nba_teams.team_id = player_team_season.team_id and nba_players.player_id = player_team_season.player_id
+    where player_season_per_game.season_id = season_id_p
+    group by player_id, first_name, last_name, team_id, team_name
     order by season_turnovers desc limit 10;
 end $$
 delimiter ;
