@@ -128,13 +128,13 @@ CREATE TABLE player_team_season (
     team_id int,
     PRIMARY KEY (player_id , season_id , team_id),
     FOREIGN KEY (player_id)
-        REFERENCES nba_players (player_id)
+        REFERENCES player_season (player_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (season_id)
-        REFERENCES nba_season (season_id)
+        REFERENCES team_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (team_id)
-        REFERENCES nba_teams (team_id)
+        REFERENCES team_season (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
 -- Team 0
@@ -166,12 +166,11 @@ insert into player_team_season values (76483,'1988-89',1610612748),(236,'1988-89
 -- nba_owners table
 drop table if exists nba_owners;
 CREATE TABLE nba_owners (
-    staff_id INT,
-    season_id VARCHAR(255),
-    team_id INT,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
-    primary key (staff_id, season_id, team_id, first_name, last_name),
+    team_id INT,
+    season_id VARCHAR(255),
+    primary key (season_id, team_id, first_name, last_name),
     FOREIGN KEY (team_id)
         REFERENCES nba_teams (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
@@ -179,17 +178,16 @@ CREATE TABLE nba_owners (
         REFERENCES nba_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
--- insert into nba_owners values ();
+insert into nba_owners values ('Ben','Kerner',1610612737,'1946-47'),('Ben','Kerner',1610612737,'1947-48'),('Ben','Kerner',1610612737,'1948-49'),('Ben','Kerner',1610612737,'1949-50'),('Ben','Kerner',1610612737,'1950-51'),('Ben','Kerner',1610612737,'1951-52'),('Ben','Kerner',1610612737,'1952-53'),('Ben','Kerner',1610612737,'1953-54'),('Ben','Kerner',1610612737,'1954-55'),('Ben','Kerner',1610612737,'1955-56'),('Ben','Kerner',1610612737,'1956-57'),('Ben','Kerner',1610612737,'1957-58'),('Ben','Kerner',1610612737,'1958-59'),('Ben','Kerner',1610612737,'1959-60'),('Ben','Kerner',1610612737,'1960-61'),('Ben','Kerner',1610612737,'1961-62'),('Ben','Kerner',1610612737,'1962-63'),('1963-64',1610612737,'Ben','Kerner'),('1964-65',1610612737,'Ben','Kerner'),('1965-66',1610612737,'Ben','Kerner'),('1966-67',1610612737,'Ben','Kerner'),('1967-68',1610612737,'Ben','Kerner'),('1946-47',1610612738,'Boston Garden Arena Corporation',''),('1947-48',1610612738,'Boston Garden Arena Corporation',''),('1948-49',1610612738,'Boston Garden Arena Corporation',''),('1949-50',1610612738,'Boston Garden Arena Corporation',''),('1966-67',1610612741,'Dick','Klein'),('1967-68',1610612741,'Dick','Klein'),('1968-69',1610612741,'Dick','Klein'),('1969-70',1610612741,'Dick','Klein'),('1970-71',1610612741,'Dick','Klein'),('1971-72',1610612741,'Dick','Klein'),('1988-89',1610612748,'Ted','Arison'),('1990-91',1610612748,'Ted','Arison'),('1991-92',1610612748,'Ted','Arison'),('1992-93',1610612748,'Ted','Arison'),('1993-94',1610612748,'Ted','Arison'),('1994-95',1610612748,'Ted','Arison'),('1989-1990',1610612753,'William','duPont III'),('1990-1991',1610612753,'William','duPont III');
 
 -- nba_gms table
 drop table if exists nba_gms;
 CREATE TABLE nba_gms (
-    staff_id INT,
     first_name VARCHAR(255) NOT NULL,
     last_name VARCHAR(255) NOT NULL,
     team_id INT,
 	season_id VARCHAR(255),
-    primary key (staff_id, first_name, last_name, team_id, season_id),
+    primary key (first_name, last_name, team_id, season_id),
     FOREIGN KEY (team_id)
         REFERENCES nba_teams (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
@@ -197,7 +195,7 @@ CREATE TABLE nba_gms (
         REFERENCES nba_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
--- insert into nba_gms values ();
+insert into nba_gms values ();
 
 -- nba_head_coaches table
 drop table if exists nba_head_coaches;
