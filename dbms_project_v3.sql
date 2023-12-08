@@ -496,7 +496,6 @@ end$$
 delimiter ;
 call get_team_details(1610612738,'2022-23');
 
-
 -- procedure to get team stats for a season
 drop procedure if exists get_team_stats;
 delimiter $$
@@ -688,3 +687,14 @@ create procedure delete_season(in season_id_p varchar(255))
 begin
 end$$
 delimiter ;
+
+drop procedure if exists get_player_details;
+delimiter $$
+create procedure get_player_details(in season_id_p varchar(255), in player_id_p int)
+begin
+	select player_id, first_name, last_name
+    from nba_players
+    where player_id = player_id_p;
+end$$
+delimiter ;
+call get_player_details('2023-24', 201143);
