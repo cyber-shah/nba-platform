@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Box } from "grommet";
 import TeamHeader from "./TeamHeader";
 import { useState } from "react";
-import TeamSchedule from "./TeamSchedule/TeamSchedule";
 import TeamStats from "./TeamStats/TeamStats";
 import TeamRoster from "./TeamRoster/TeamRoster";
 import { useParams } from "react-router-dom";

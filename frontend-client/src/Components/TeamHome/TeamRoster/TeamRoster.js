@@ -21,24 +21,30 @@ export default function TeamRoster(props) {
     navigate(`/PlayerHome/${playerId}`);
   };
 
-  if (teamRoster !== null && teamRoster.length > 0 ) {
+  if (teamRoster !== null && teamRoster.length > 0) {
     const players = teamRoster;
 
     return (
-<Box align="center" elevation="large" pad="large" round="large" width="50%" margin="auto">
+      <Box
+        align="center"
+        elevation="large"
+        pad="large"
+        round="large"
+        width="30%"
+        margin="auto"
+      >
         <DataTable
-    columns={generateColumns(teamRoster, handlePlayerClick)}
-    data={teamRoster}
-    pad={{ horizontal: "medium", vertical: "xsmall" }}
-    background={{
-      header: { color: "white", opacity: "strong" },
-      body: ["light-1", "white"],
-      footer: { color: "dark-1", opacity: "strong" },
-    }}
-    border={{ body: "bottom" }}
-  />
-</Box>
-
+          columns={generateColumns(teamRoster, handlePlayerClick)}
+          data={teamRoster}
+          pad={{ horizontal: "medium", vertical: "xsmall" }}
+          background={{
+            header: { color: "white", opacity: "strong" },
+            body: ["light-1", "white"],
+            footer: { color: "dark-1", opacity: "strong" },
+          }}
+          border={{ body: "bottom" }}
+        />
+      </Box>
     );
   }
 }

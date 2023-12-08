@@ -20,7 +20,7 @@ const handleStoredProcedure = async (
     }
     console.log(`From LeagueServer: ${logMessage}`);
     console.log("Stored procedure results:", results);
-    res.json(results[0]);
+    res.json(results);
   } catch (error) {
     console.error("Error sending JSON file:", error);
     res.json({ error: "Internal Server Error" });

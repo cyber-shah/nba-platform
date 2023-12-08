@@ -12,7 +12,7 @@ export default function TeamList(props) {
 
   const fetchData = async () => {
     const result = await getSeasonsTeams(props.season);
-    setTeamData(result);
+    setTeamData(result[0]);
   };
 
   return (
