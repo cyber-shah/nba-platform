@@ -470,7 +470,7 @@ end$$
 delimiter ;
 call get_season_turnovers_leaders('2022-23');
 
--- procedure to get team roster for a season
+-- procedure to get team roster for a season (done)
 drop procedure if exists get_team_roster;
 delimiter $$
 create procedure get_team_roster(in team_id_p int, in season_id_p varchar(255))
@@ -586,16 +586,26 @@ drop procedure if exists create_season;
 delimiter $$
 create procedure create_season(in season_id_p varchar(255))
 begin
-    select season_id
-    from nba_season;
+	declare season_id_var varchar(255);
+    select season_id into season_id_var from nba_seasons where season_id = season_id_p;
+	if season_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered season_id is already inside the nba_seasons table";
+	end if;
+	insert into nba_seasons values (season_id_p);
 end$$
 delimiter ;
 
 -- procedure to update everything in a team in the nba_teams table
 drop procedure if exists update_team;
 delimiter $$
-create procedure update_team(in team_id_p int, in team_name_p varchar(255), in year_founded_p int, in city_p varchar(255), in state_p varchar(255))
+create procedure update_team(in team_id_p int, in year_founded_p int, in conference varchar(255), in city_p varchar(255), in state_p varchar(255))
 begin
+	declare team_id_var int;
+	select team_id into team_id_var from nba_teams where team_id = team_id_p;
+    if team_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered team_id is already inside the nba_players table";
+	end if;
+	insert into nba_teams values(team_id_p,year_founded_p, conference, city_p, state_p);
 end$$
 delimiter ;
 
