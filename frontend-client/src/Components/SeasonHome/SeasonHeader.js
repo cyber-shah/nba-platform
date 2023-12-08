@@ -27,7 +27,7 @@ export default function SeasonHeader(props) {
           <Tab title="Games" />
           <Tab title="Teams" />
           <Tab title="Standings" />
-          <Tab title="Players" />
+          {/* <Tab title="Players" /> */}
         </Tabs>
 
         {/* 3. Select Year */}
