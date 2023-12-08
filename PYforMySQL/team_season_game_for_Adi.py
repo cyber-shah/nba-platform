@@ -11,7 +11,7 @@ import pymysql
 
 start_row_interval = 0
 end_row_interval = 100
-folder_path = "C:/Users/Adi/OneDrive/Desktop/NBA Data/player_game"
+folder_path = "C:/Users/Adi/OneDrive/Desktop/NBA Data/team_game"
 
 user_password = input("Enter password for MySQL: ")
 
@@ -89,9 +89,12 @@ try:
             if game_primary_key not in game_string:
                 game_string += game_primary_key
         time.sleep(0.600)
-    player_season_game_file_name = folder_path + "/player_season_game.txt"
-    with open(player_season_game_file_name, 'w') as f:
-        f.write(player_season_per_game_string)
+    team_season_game_file_name = folder_path + "/team_season_game.txt"
+    game_string_file_name = folder_path + "/game.txt"
+    with open(team_season_game_file_name, 'w') as f:
+        f.write(team_season_per_game_string)
+    with open(game_string_file_name, 'w') as f:
+        f.write(game_string)
 
 finally:
     connection.close()
