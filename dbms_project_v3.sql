@@ -279,10 +279,10 @@ CREATE TABLE player_season_per_game (
     player_turnover int default 0,
     PRIMARY KEY (player_id , season_id , game_id),
     FOREIGN KEY (player_id)
-        REFERENCES nba_players (player_id)
+        REFERENCES player_season (player_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (season_id)
-        REFERENCES nba_season (season_id)
+        REFERENCES player_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (game_id)
         REFERENCES nba_games (game_id)
@@ -305,10 +305,10 @@ CREATE TABLE team_season_per_game (
     team_turnover int default 0,
     PRIMARY KEY (team_id , season_id , game_id),
     FOREIGN KEY (team_id)
-        REFERENCES nba_teams (team_id)
+        REFERENCES team_season (team_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (season_id)
-        REFERENCES nba_season (season_id)
+        REFERENCES team_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT,
     FOREIGN KEY (game_id)
         REFERENCES nba_games (game_id)
