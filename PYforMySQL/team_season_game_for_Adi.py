@@ -9,8 +9,8 @@ from nba_api.stats.endpoints import teamgamelog
 import time
 import pymysql
 
-start_row_interval = 0
-end_row_interval = 100
+start_row_interval = 100
+end_row_interval = 1000
 folder_path = "C:/Users/Adi/OneDrive/Desktop/NBA Data/team_game"
 
 user_password = input("Enter password for MySQL: ")
@@ -37,7 +37,7 @@ try:
         current_team_log = teamgamelog.TeamGameLog(team_id = current_team, season = current_season, season_type_all_star = "Regular Season")
         current_team_dict = current_team_log.get_dict()['resultSets'][0]['rowSet']
         for each_game in current_team_dict:
-            game_id = each_game[2]
+            game_id = each_game[1]
             
             team_points = each_game[26]
             if team_points == None or team_points == "":
@@ -82,8 +82,8 @@ try:
                 is_home = 0
             
             current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'"
-            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(is_home) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + ")" 
-            game_primary_key = "(" + game_id + ",\'" + game_date "\')"
+            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(is_home) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + ")," 
+            game_primary_key = "(" + game_id + ",\'" + game_date + "\'),"
             if current_primary_key not in team_season_per_game_string:
                 team_season_per_game_string += current_team_season_per_game
             if game_primary_key not in game_string:

@@ -29,6 +29,7 @@ try:
     cursor.execute(select_query)
     rows = cursor.fetchall()
     player_season_per_game_string = ""
+
     #for each_player_season in player_season_list_records:
     for i in range(start_row_interval, end_row_interval):
         #current_player = each_player_season[0]
@@ -88,8 +89,11 @@ try:
                 player_season_per_game_string += current_player_season_per_game
         time.sleep(0.600)
     player_season_game_file_name = folder_path + "/player_season_game.txt"
+    game_file_name = folder_path + "/game.txt"
     with open(player_season_game_file_name, 'w') as f:
         f.write(player_season_per_game_string)
+    with open(player_season_game_file_name, 'w') as f:
+        f.write(game_string)
 
 finally:
     connection.close()
