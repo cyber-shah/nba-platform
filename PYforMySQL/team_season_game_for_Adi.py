@@ -81,8 +81,8 @@ try:
             elif "@" in each_game[3]:
                 is_home = 0
             
-            current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id
-            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(team_minutes) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + "),"
+            current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'"
+            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(is_home) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + ")" 
             game_primary_key = "(" + game_id + ",\'" + game_date "\')"
             if current_primary_key not in team_season_per_game_string:
                 team_season_per_game_string += current_team_season_per_game
