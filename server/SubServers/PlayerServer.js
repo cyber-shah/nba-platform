@@ -1,20 +1,46 @@
 const express = require("express");
 const app = express();
-const path = require("path");
+const db = require("./db");
 
-app.post("/playerHeader"),
-  async (req, res) => {
-    console.log("From PlayerServer: sending player header data");
-    try {
-      const filePath = path.join(
-        __dirname,
-        "./../../jsons/fromNBA/all_players.json"
-      );
-      res.sendFile(filePath);
-    } catch (error) {
-      console.error("Error sending JSON file:", error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  };
+// Function to handle the common logic for different routes
+const handleProcedure = async (req, res, procedureName, logMessage) => {
+  console.log(`From TeamServer: ${logMessage}`);
+  // get team id and season from request body
+  const teamId = req.body.teamId;
+  const season = req.body.season;
+
+  try {
+    // Call the stored procedure with the appropriate name and parameters
+    const results = await db.executeStoredProcedure(procedureName, [
+      teamId,
+      season,
+    ]);
+    console.log("Stored procedure results:", results);
+    res.json(results[0]);
+  } catch (error) {
+    console.error("Error handling procedure:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+// Route to handle /playerHeader
+app.post("/playerHeader", async (req, res) => {
+  await handleProcedure(
+    req,
+    res,
+    "get_player_details",
+    "request received by teamSchedule server successfully"
+  );
+});
+
+app.post("/playerStats", async (req, res) => {
+  await handleProcedure(
+    req,
+    res,
+    "get_player_stats_per_year",
+    "request received by teamSchedule server successfully"
+  );
+});
+
 
 module.exports = app;

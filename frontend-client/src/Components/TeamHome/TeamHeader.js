@@ -28,8 +28,8 @@ export default function TeamHeader(props) {
   // TODO: check if this is correct way to do it
   if (teamDetails !== null) {
     console.log(teamDetails);
-    const teamID = teamDetails.resultSets[0].rowSet[0][0];
-    const teamName = teamDetails.resultSets[0].rowSet[0][4];
+    const teamID = teamDetails.team_id;
+    const teamName = teamDetails.full_name;
 
     return (
       <Box elevation="large" justify="end" align="start">
