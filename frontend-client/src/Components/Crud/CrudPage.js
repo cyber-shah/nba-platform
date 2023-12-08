@@ -1,37 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FormField, TextInput, Button, Box, Form, Text } from "grommet";
-import {
-  getUpdateForm,
-  getDeleteForm,
-  getCreateForm,
-} from "../../API/MySQL/CrudAPI";
+import { CrudForms } from "./CrudForms";
 import { useParams } from "react-router-dom";
 
 export default function CrudPage(props) {
-  // 1. Get the label and option from the URL
+  // State to store the array of labels
+  const [labelsArray, setLabelsArray] = useState([]);
+
+  // Get the label and option from the URL
   const { label, option } = useParams();
-  console.log(label, option);
+  console.log(label);
+  console.log(option);
 
-  // 2. Use the label and option to get the correct form data
-  const [labelsArray, setLabelsArray] = React.useState(null);
-
-  // 3. Refresh the form data whenever the label or option changes
-  React.useEffect(() => {
+  // Fetch the array of labels from CrudForms when label or option changes
+  useEffect(() => {
+    const fetchData = () => {
+        const labels = CrudForms[label][option];
+        setLabelsArray(labels);
+        console.log(labelsArray);
+    };
     fetchData();
-  }, [label, option]);
-
-  const fetchData = async () => {
-    var crudData = null;
-    if (label === "Create") {
-      crudData = await getCreateForm(option);
-    } else if (label === "Update") {
-      crudData = await getUpdateForm(option);
-    } else {
-      crudData = await getDeleteForm(option);
-    }
-    setLabelsArray(crudData);
-    console.log(crudData);
-  };
+  }, [option]);
 
   return (
     <>
@@ -51,13 +40,13 @@ export default function CrudPage(props) {
           {label} {option}
         </Text>
 
-        {labelsArray !== null && (
+        {labelsArray.length > 0 && (
           <Form>
             <br />
 
-            {labelsArray.map((label, index) => (
-              <FormField key={index} label={label}>
-                <TextInput />
+            {labelsArray.map((field, index) => (
+              <FormField key={index} label={field.label}>
+                <TextInput name={field.name} type={field.type} />
               </FormField>
             ))}
             <Button primary label="Submit" />
