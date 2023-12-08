@@ -5,7 +5,8 @@ import { getPlayerImageUrl, getTeamLogoUrl } from "../../API/EspnAPI/GetLogos";
 
 export default function PlayerHeader(props) {
   const [playerData, setPlayerData] = React.useState(null);
-
+  console.log("From Player Header: " + props.player_id);
+  console.log("From Player Header: " + props.season);
   React.useEffect(() => {
     fetchData();
   }, []);
@@ -13,7 +14,8 @@ export default function PlayerHeader(props) {
     async function fetchData() {
     try {
       const result = await get_player_details(props.season, props.player_id);
-      setPlayerData(result);
+      setPlayerData(result[0]);
+      // console.log(result[0]);
     } catch (error) {
       console.error(error);
     }
@@ -30,16 +32,17 @@ export default function PlayerHeader(props) {
             <>
               <Box>
                 <Image 
-                  src={getPlayerImageUrl(props.playerId)} />
+                  src={getPlayerImageUrl(props.player_id)} />
                 
               </Box>
 
               <Box pad="xsmall" justify="center">
                 <Text size="xxlarge" margin="none">
-                  {playerData.firstName}
+                  {playerData.first_name}
+                  
                 </Text>
                 <Text size="xxlarge" margin="none" weight="bold">
-                  {playerData.lastName}
+                  {playerData.last_name}
                 </Text>
                 {/* <Text level="1" margin="none">
                   #{playerData.jersey}

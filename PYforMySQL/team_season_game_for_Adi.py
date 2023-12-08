@@ -26,6 +26,14 @@ try:
     select_query = "select * from team_season;"
     cursor.execute(select_query)
     rows = cursor.fetchall()
+    select_query_2 = "select game_id from nba_games;"
+    cursor.execute(select_query_2)
+    already_stored_games = cursor.fetchall()
+    all_games = ""
+    for each_row in already_stored_games:
+        each_game = each_row['game_id']
+        each_date = each_row['game_date']
+        all_games += "(\'" + each_game + "\',\'" + game_date + "\')"
     team_season_per_game_string = ""
     game_string = ""
     #for each_player_season in player_season_list_records:
@@ -84,7 +92,7 @@ try:
             current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'"
             current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(is_home) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + ")," 
             game_primary_key = "(" + game_id + ",\'" + game_date + "\'),"
-            if current_primary_key not in team_season_per_game_string:
+            if (current_primary_key not in team_season_per_game_string) and (current_primary_key not in all_games):
                 team_season_per_game_string += current_team_season_per_game
             if game_primary_key not in game_string:
                 game_string += game_primary_key
