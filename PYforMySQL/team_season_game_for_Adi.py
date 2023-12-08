@@ -5,10 +5,7 @@ Created on Fri Dec  8 16:12:44 2023
 @author: Adi
 """
 
-
-from nba_api.stats.static import players
 from nba_api.stats.endpoints import teamgamelog
-from nba_api.stats.endpoints import playercareerstats
 import time
 import pymysql
 
@@ -29,7 +26,8 @@ try:
     select_query = "select * from team_season;"
     cursor.execute(select_query)
     rows = cursor.fetchall()
-    player_season_per_game_string = ""
+    team_season_per_game_string = ""
+    game_string = ""
     #for each_player_season in player_season_list_records:
     for i in range(start_row_interval, end_row_interval):
         #current_player = each_player_season[0]
@@ -38,55 +36,58 @@ try:
         current_season = rows[i]['season_id']
         current_team_log = teamgamelog.TeamGameLog(team_id = current_team, season = current_season, season_type_all_star = "Regular Season")
         current_team_dict = current_team_log.get_dict()['resultSets'][0]['rowSet']
-        for each_game in current_player_dict:
+        for each_game in current_team_dict:
             game_id = each_game[2]
             
-            player_minutes = each_game[6]
-            if player_minutes == None or player_minutes == "":
-                player_minutes = 0
-                #print("Player minutes were null for game_id " + str(game_id) + ", player_id " + str(current_player))
-            
-            player_points = each_game[24]
-            if player_points == None or player_points == "":
-                player_points = 0
+            team_points = each_game[26]
+            if team_points == None or team_points == "":
+                team_points = 0
                 #print("Player points were null for game_id " + str(game_id) + ", player_id " + str(current_player))
             
-            player_fg_percent = each_game[9]
-            if player_fg_percent == None or player_fg_percent == "":
-                player_fg_percent = 0
+            team_fg_percent = each_game[11]
+            if team_fg_percent == None or team_fg_percent == "":
+                team_fg_percent = 0
                 #print("Player fg_percent were null for game_id " + str(game_id) + ", player_id " + str(current_player))
                 
-            player_rebounds = each_game[18]
-            if player_rebounds == None or player_rebounds == "":
-                player_rebounds = 0
+            team_rebounds = each_game[20]
+            if team_rebounds == None or team_rebounds == "":
+                team_rebounds = 0
                 #print("Player rebounds were null for game_id " + str(game_id) + ", player_id " + str(current_player))
                 
-            player_assists = each_game[19]
-            if player_assists == None or player_assists == "":
-                player_assists = 0
+            team_assists = each_game[21]
+            if team_assists == None or team_assists == "":
+                team_assists = 0
                 #print("Player assists were null for game_id " + str(game_id) + ", player_id " + str(current_player))
             
-            player_steal = each_game[20]
-            if player_steal == None or player_steal == "":
-                player_steal = 0
+            team_steal = each_game[22]
+            if team_steal == None or team_steal == "":
+                team_steal = 0
                 #print("Player steal were null for game_id " + str(game_id) + ", player_id " + str(current_player))
             
-            player_block = each_game[21]
-            if player_block == None or player_block == "":
-                player_block = 0
+            team_block = each_game[23]
+            if team_block == None or team_block == "":
+                team_block = 0
                 #print("Player block were null for game_id " + str(game_id) + ", player_id " + str(current_player))
                 
-            player_turnover = each_game[22]
-            if player_turnover == None or player_turnover == "":
-                player_turnover = 0
+            team_turnover = each_game[24]
+            if team_turnover == None or team_turnover == "":
+                team_turnover = 0
                 #print("Player turnover were null for game_id " + str(game_id) + ", player_id " + str(current_player))
             
+            game_date = each_game[2]
             
+            if "vs." in each_game[3]:
+                is_home = 1
+            elif "@" in each_game[3]:
+                is_home = 0
             
-            current_primary_key = str(current_player) + ",\'" + current_season + "\',\'" + game_id
-            current_player_season_per_game = "(" + str(current_player) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(player_minutes) + "," + str(player_points) + "," + str(player_fg_percent) + "," + str(player_rebounds) + "," + str(player_assists) + "," + str(player_steal) + "," + str(player_block) + "," + str(player_turnover) + "),"
-            if current_primary_key not in player_season_per_game_string:
-                player_season_per_game_string += current_player_season_per_game
+            current_primary_key = str(current_team) + ",\'" + current_season + "\',\'" + game_id
+            current_team_season_per_game = "(" + str(current_team) + ",\'" + current_season + "\',\'" + game_id + "\'," + str(team_minutes) + "," + str(team_points) + "," + str(team_fg_percent) + "," + str(team_rebounds) + "," + str(team_assists) + "," + str(team_steal) + "," + str(team_block) + "," + str(team_turnover) + "),"
+            game_primary_key = "(" + game_id + ",\'" + game_date "\')"
+            if current_primary_key not in team_season_per_game_string:
+                team_season_per_game_string += current_team_season_per_game
+            if game_primary_key not in game_string:
+                game_string += game_primary_key
         time.sleep(0.600)
     player_season_game_file_name = folder_path + "/player_season_game.txt"
     with open(player_season_game_file_name, 'w') as f:
