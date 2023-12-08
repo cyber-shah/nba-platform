@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec  6 12:13:22 2023
+Created on Fri Dec  8 16:12:44 2023
 
-@author: 19782
+@author: Adi
 """
 
+
 from nba_api.stats.static import players
-from nba_api.stats.endpoints import playergamelog
+from nba_api.stats.endpoints import teamgamelog
 from nba_api.stats.endpoints import playercareerstats
 import time
 import pymysql
@@ -25,18 +26,18 @@ except pymysql.err.OperationalError as e:
 
 try:
     cursor = connection.cursor()
-    select_query = "select * from player_season;"
+    select_query = "select * from team_season;"
     cursor.execute(select_query)
     rows = cursor.fetchall()
     player_season_per_game_string = ""
     #for each_player_season in player_season_list_records:
     for i in range(start_row_interval, end_row_interval):
         #current_player = each_player_season[0]
-        current_player = rows[i]['player_id']
+        current_team = rows[i]['team_id']
         #current_season = each_player_season[1]
         current_season = rows[i]['season_id']
-        current_player_log = playergamelog.PlayerGameLog(player_id = current_player, season = current_season, season_type_all_star = "Regular Season")
-        current_player_dict = current_player_log.get_dict()['resultSets'][0]['rowSet']
+        current_team_log = teamgamelog.TeamGameLog(team_id = current_team, season = current_season, season_type_all_star = "Regular Season")
+        current_team_dict = current_team_log.get_dict()['resultSets'][0]['rowSet']
         for each_game in current_player_dict:
             game_id = each_game[2]
             
@@ -93,16 +94,3 @@ try:
 
 finally:
     connection.close()
- 
-'''
-This is just test stuff to extract all games for 1 player in 1 season
-#players = players.get_players()
-'''
-'''
-player_game_log = playergamelog.PlayerGameLog(player_id = 76007, season = '1946-47', season_type_all_star = "Regular Season")
-player_game_log_dict = player_game_log.get_dict()['resultSets'][0]['rowSet']
-print(player_game_log.get_dict()['resultSets'][0]['headers'])
-print(player_game_log_dict)
-'''
-#player_career_stats = playercareerstats.PlayerCareerStats(76007).get_dict()
-#print(player_career_stats)
