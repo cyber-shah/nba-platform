@@ -195,7 +195,7 @@ CREATE TABLE nba_gms (
         REFERENCES nba_season (season_id)
         ON UPDATE CASCADE ON DELETE RESTRICT
 );
-insert into nba_gms values ();
+insert into nba_gms values ('Landry','Fields',1610612737,'2022-23'),('Landry','Fields',1610612737,'2023-24'),('Brad','Stevens',1610612738,'2021-22'),('Brad','Stevens',1610612738,'2022-23'),('Brad','Stevens',1610612738,'2023-24'),('Sean','Marks',1610612751,'2016-17'),('Sean','Marks',1610612751,'2017-18');
 
 -- nba_head_coaches table
 drop table if exists nba_head_coaches;
