@@ -18,11 +18,12 @@ INSERT INTO `nba_players` VALUES (76001,'Alaa','Abdelnaby',False),(76002,'Zaid',
 -- teams table
 DROP TABLE if exists nba_teams;
 CREATE TABLE nba_teams (
-    team_id INT PRIMARY KEY,
+    team_id INT,
     full_name VARCHAR(255) NOT NULL,
     abbreviation VARCHAR(255) NOT NULL,
     year_founded INT NOT NULL,
     conference varchar(255) not null,
+    primary key (team_id, full_name, abbreviation),
     CHECK (team_id >= 0),
     CHECK (year_founded >= 1946),
     check (conference = 'Eastern' or conference = 'Western')
@@ -518,42 +519,67 @@ begin
 end$$
 delimiter ;
 
--- procedure to create team and add it to the nba_teams table
+-- procedure to create team and add it to the nba_teams table (wrote it but haven't tested it yet)
 drop procedure if exists create_team;
 delimiter $$
 create procedure create_team(in team_id_p int, in full_name_p varchar(255), in abbreviation_p varchar(255), in year_founded_p int, in conference_p varchar(255))
 begin
 	declare team_id_var int;
-    declare year_founded_var int;
-    declare conference_var varchar(255);
-	select team_id into team_id_var from nba_teams where team_id = team_id_p;
+    declare full_name_var varchar(255);
+	declare abbreviation_var varchar(255);
+    select team_id into team_id_var from nba_teams where team_id = team_id_p;
     if team_id_var is not null then
 		signal sqlstate '45000' set message_text = "The entered team_id is already inside the nba_teams table";
 	end if;
-    if year_founded_var < 1946 then
+    select full_name into full_name_var from nba_teams where full_name = full_name_p;
+    if full_name_var is not null then
+		signal sqlstate '45000' set message_text = "The entered team name is already inside the nba_teams table";
+    end if;
+    select abbreviation into abbreviation_var from nba_teams where abbreviation = abbreviation_p;
+    if abbreviation_var is not null then
+		signal sqlstate '45000' set message_text = "The entered abbreviation is already inside the nba_teams table";
+    end if;
+    if year_founded_p < 1946 then
 		signal sqlstate '45000' set message_text = "The entered year_founded is not valid";
+	end if;
+    if conference_p <> 'Eastern' or conference_p <> 'Western' then
+		signal sqlstate '45000' set message_text = "The entered conference is not valid";
 	end if;
 	insert into nba_teams values (team_id_p, full_name_p, abbreviation_p, year_founded_p, conference_p);
 end$$
 delimiter ;
 
--- procedure to create player and add it to the nba_players table
+-- procedure to create player and add it to the nba_players table (wrote it but haven't tested it yet)
 drop procedure if exists create_player;
 delimiter $$
 create procedure create_player(in player_id_p int, in first_name_p varchar(255), in last_name_p varchar(255), in is_active_p int)
 begin
-    select player_id
-    from nba_players;
+	declare player_id_var int;
+	select player_id into player_id_var from nba_players where player_id = player_id_p;
+    if player_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
+	end if;
+    if is_active_p < 0 or is_active_p > 1 then
+		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
+	end if;
+	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
 end$$
 delimiter ;
 
--- procedure to create game and add it to the nba_games table
+-- procedure to create game and add it to the nba_games table (wrote it but haven't tested it yet)
 drop procedure if exists create_game;
 delimiter $$
 create procedure create_game(in game_id_p int, in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int)
 begin
-    select game_id
-    from nba_games;
+	declare game_id_var int;
+	select player_id into player_id_var from nba_players where player_id = player_id_p;
+    if player_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
+	end if;
+    if is_active_p < 0 or is_active_p > 1 then
+		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
+	end if;
+	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
 end$$
 delimiter ;
 
