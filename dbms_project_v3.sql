@@ -605,7 +605,7 @@ begin
     if team_id_var is not null then
 		signal sqlstate '45000' set message_text = "The entered team_id is already inside the nba_players table";
 	end if;
-	insert into nba_teams values(team_id_p,year_founded_p, conference, city_p, state_p);
+	insert into nba_teams values(team_id_p,year_founded_p, conference_p, city_p, state_p);
 end$$
 delimiter ;
 
@@ -614,6 +614,15 @@ drop procedure if exists update_player;
 delimiter $$
 create procedure update_player(in player_id_p int, in first_name_p varchar(255), in last_name_p varchar(255), in is_active_p int)
 begin
+	declare player_id_var int;
+	select player_id into player_id_var from nba_players where player_id = player_id_p;
+    if player_id_var is null then
+		signal sqlstate '45000' set message_text = "The entered player_id is not inside the nba_players table";
+	end if;
+    if is_active_p < 0 or is_active_p > 1 then
+		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
+	end if;
+	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
 end$$
 delimiter ;
 
@@ -622,6 +631,15 @@ drop procedure if exists update_game;
 delimiter $$
 create procedure update_game(in game_id_p varchar(255), in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int, in season_id_p varchar(255), in stadium_p varchar(255), in city_p varchar(255), in state_p varchar(255))
 begin
+	declare game_id_var int;
+	select player_id into player_id_var from nba_players where player_id = player_id_p;
+    if player_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
+	end if;
+    if is_active_p < 0 or is_active_p > 1 then
+		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
+	end if;
+	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
 end$$
 delimiter;
 
