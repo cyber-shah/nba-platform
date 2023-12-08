@@ -80,7 +80,7 @@ CREATE TABLE users (
     user_email VARCHAR(255) NOT NULL,
     user_password VARCHAR(255) NOT NULL
 );
--- insert into users values ();
+insert into users values ('whuang','mahgoodness123@gmail.com','duhhello'),('pshah','blahblah@gmail.com','balloon'),('asureka','gta6rules@gmail.com','gta6rules'),('jsmith','hah@gmail.com','heh'),('he-man','he-man@gmail.com','heyyeyeya');
 
 -- player_season table
 drop table if exists player_season;
