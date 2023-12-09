@@ -658,20 +658,62 @@ begin
 end$$
 delimiter;
 
+-- trigger when nba team is deleted
+drop trigger if exists delete_nba_team_trigger;
+delimiter $$
+create trigger delete_nba_team_trigger
+after delete on nba_teams
+for each row
+begin
+	delete from team_season where team_season.team_id = old.team_id;
+    delete from player_team_season where player_team_season.team_id = old.team_id;
+    delete from users_watch_teams where users_watch_teams.team_id = old.team_id;
+    delete from team_season_per_game where team_season_per_game.team_id = old.team_id;
+end $$
+delimiter ;
+
 -- procedure to delete team from nba_teams table
 drop procedure if exists delete_team;
 delimiter $$
 create procedure delete_team(in team_id_p int)
 begin
+	delete from nba_teams where team_id = team_id_p;
 end$$
 delimiter;
+
+-- trigger when nba player is deleted
+drop trigger if exists delete_nba_player_trigger;
+delimiter $$
+create trigger delete_nba_player_trigger
+after delete on nba_players
+for each row
+begin
+	delete from player_season where player_season.player_id = old.player_id;
+    delete from player_team_season where player_team_season.player_id = old.player_id;
+    delete from users_watch_players where users_watch_players.player_id = old.player_id;
+    delete from player_season_per_game where player_season_per_game.player_id = old.player_id;
+end $$
+delimiter ;
 
 -- procedure to delete player from nba_players table
 drop procedure if exists delete_player;
 delimiter $$
 create procedure delete_player(in player_id_p int)
 begin
+	delete from nba_players where player_id = player_id_p;
 end$$
+delimiter ;
+
+-- trigger when nba game is deleted
+drop trigger if exists delete_nba_game_trigger;
+delimiter $$
+create trigger delete_nba_game_trigger
+after delete on nba_games
+for each row
+begin
+    delete from player_season_per_game where player_season_per_game.game_id = old.game_id;
+    delete from team_season_per_game where team_season_per_game.game_id = old.game_id;
+end $$
 delimiter ;
 
 -- procedure to delete game from nba_games table
@@ -679,7 +721,23 @@ drop procedure if exists delete_game;
 delimiter $$
 create procedure delete_game(in game_id_p varchar(255))
 begin
+	delete from nba_games where game_id = game_id_p;
 end$$
+delimiter ;
+
+-- trigger when nba season is deleted
+drop trigger if exists delete_nba_season_trigger;
+delimiter $$
+create trigger delete_nba_season_trigger
+after delete on nba_season
+for each row
+begin
+    delete from player_season_per_game where player_season_per_game.season_id = old.season_id;
+    delete from team_season_per_game where team_season_per_game.season_id = old.season_id;
+    delete from player_team_season where player_team_season.season_id = old.season_id;
+    delete from team_season where team_season.season_id = old.season_id;
+    delete from player_season where player_season.season_id = old.season_id;
+end $$
 delimiter ;
 
 -- procedure to delete season from nba_seasons table
@@ -687,6 +745,7 @@ drop procedure if exists delete_season;
 delimiter $$
 create procedure delete_season(in season_id_p varchar(255))
 begin
+	delete from nba_season where season_id = season_id_p;
 end$$
 delimiter ;
 
