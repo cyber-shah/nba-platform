@@ -1,18 +1,23 @@
 const Create = {
-  Team: [
-    { label: 'Team Name', name: 'team_name', type: 'text' },
-    { label: 'Founded', name: 'founded', type: 'text' },
-    { label: 'City', name: 'city', type: 'text' },
-    { label: 'State', name: 'state', type: 'text' },
-  ],
-  Player: [
-    { label: 'Player Name', name: 'player_name', type: 'text' },
-    { label: 'Position', name: 'position', type: 'text' },
-    { label: 'Height', name: 'height', type: 'text' },
-    { label: 'Weight', name: 'weight', type: 'text' },
-    { label: 'Age', name: 'age', type: 'text' },
-    { label: 'Experience', name: 'experience', type: 'text' },
-  ],
+Team: [
+  { label: 'Team ID', name: 'team_id', type: 'text' },
+  { label: 'Team Name', name: 'team_name', type: 'text' },
+  { label: 'Founded', name: 'founded', type: 'text' },
+  { label: 'City', name: 'city', type: 'text' },
+  { label: 'State', name: 'state', type: 'text' },
+  { label: 'Full Name', name: 'full_name_p', type: 'text' },
+  { label: 'Abbreviation', name: 'abbreviation_p', type: 'text' },
+  { label: 'Year Founded', name: 'year_founded_p', type: 'text' },
+  { label: 'Conference', name: 'conference_p', type: 'text' },
+],
+
+Player: [
+  { label: 'Player ID', name: 'player_id_p', type: 'text' },
+  { label: 'First Name', name: 'first_name_p', type: 'text' },
+  { label: 'Last Name', name: 'last_name_p', type: 'text' },
+  { label: 'Is Active', name: 'is_active_p', type: 'text' },
+],
+
   Game: [
     { label: 'Home Team ID', name: 'home_team_id', type: 'text' },
     { label: 'Away Team ID', name: 'away_team_id', type: 'text' },
