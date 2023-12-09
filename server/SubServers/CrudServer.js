@@ -18,7 +18,7 @@ async function crudOperation(req, res, operation, crudType) {
     res.json({ message: `Successfully ${operation}d ${crudType}` });
   } catch (error) {
     console.error("Error sending JSON file:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    res.json({ error: error.sqlMessage });
   }
 }
 

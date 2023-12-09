@@ -1,34 +1,28 @@
 const Create = {
 Team: [
-  { label: 'Team ID', name: 'team_id', type: 'text' },
-  { label: 'Team Name', name: 'team_name', type: 'text' },
-  { label: 'Founded', name: 'founded', type: 'text' },
-  { label: 'City', name: 'city', type: 'text' },
-  { label: 'State', name: 'state', type: 'text' },
+  { label: 'Team ID', name: 'team_id', type: 'int' },
   { label: 'Full Name', name: 'full_name_p', type: 'text' },
   { label: 'Abbreviation', name: 'abbreviation_p', type: 'text' },
-  { label: 'Year Founded', name: 'year_founded_p', type: 'text' },
-  { label: 'Conference', name: 'conference_p', type: 'text' },
+  { label: 'Year Founded', name: 'year_founded_p', type: 'int' },
 ],
 
 Player: [
-  { label: 'Player ID', name: 'player_id_p', type: 'text' },
-  { label: 'First Name', name: 'first_name_p', type: 'text' },
-  { label: 'Last Name', name: 'last_name_p', type: 'text' },
-  { label: 'Is Active', name: 'is_active_p', type: 'text' },
+  { label: 'Player ID', name: 'player_id_p', type: 'int' },
+  { label: 'First Name', name: 'first_name_p', type: 'varchar(255)' },
+  { label: 'Last Name', name: 'last_name_p', type: 'varchar(255)' },
+  { label: 'Is Active', name: 'is_active_p', type: 'int' },
 ],
 
-  Game: [
-    { label: 'Home Team ID', name: 'home_team_id', type: 'text' },
-    { label: 'Away Team ID', name: 'away_team_id', type: 'text' },
-    { label: 'Home Team Score', name: 'home_team_score', type: 'text' },
-    { label: 'Away Team Score', name: 'away_team_score', type: 'text' },
-    { label: 'Date', name: 'date', type: 'text' },
-    { label: 'Time', name: 'time', type: 'text' },
-    { label: 'Stadium', name: 'stadium', type: 'text' },
-    { label: 'City', name: 'city', type: 'text' },
-    { label: 'State', name: 'state', type: 'text' },
-  ],
+
+Game: [
+  { label: 'Game ID', name: 'game_id_p', type: 'number' },
+  { label: 'Game Date', name: 'game_date_p', type: 'date' },
+  { label: 'Home Team ID', name: 'home_team_id_p', type: 'number' },
+  { label: 'Home Team Points', name: 'home_team_points_p', type: 'number' },
+  { label: 'Visiting Team ID', name: 'visiting_team_id_p', type: 'number' },
+  { label: 'Visiting Team Points', name: 'visiting_team_points_p', type: 'number' },
+],
+
   Season: [
     { label: 'Season Name', name: 'season_name', type: 'text' },
   ],
