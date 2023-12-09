@@ -13,6 +13,7 @@ export default function TeamList(props) {
   const fetchData = async () => {
     const result = await getSeasonsTeams(props.season);
     setTeamData(result[0]);
+    console.log("Team Data: ", result[0]);
   };
 
   return (

@@ -25,7 +25,7 @@ export default function TeamHome(props) {
 
 
   // tabs --------------------------------------------------------------------
-  const [selectedTab, setTab] = useState(1);
+  const [selectedTab, setTab] = useState(0);
   const onActive = (index) => setTab(index);
   // tabs --------------------------------------------------------------------
 

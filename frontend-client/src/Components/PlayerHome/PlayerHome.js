@@ -21,7 +21,7 @@ export default function PlayerHome(props) {
 
   async function fetchData() {
     try {
-      const result = await get_player_stats_per_year(season, player_id);
+      const result = await get_player_stats_per_year(season);
       setPlayerData(result[0]);
       // console.log(result[0]);
     } catch (error) {

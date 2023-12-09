@@ -35,8 +35,8 @@ export default function SeasonHome(props) {
             <Box pad="small">
               {selectedTab === 0 && <SeasonGames season={season} />}
               {selectedTab === 1 && <TeamList season={season} />}
-              {selectedTab === 2 && <SeasonsStandings season={season} />}
-              {selectedTab === 3 && <SeasonPlayers season={season} />}
+              {/* {selectedTab === 2 && <SeasonsStandings season={season} />} */}
+              {selectedTab === 2 && <SeasonPlayers season={season} />}
             </Box>
 
             {/* News side bar */}
