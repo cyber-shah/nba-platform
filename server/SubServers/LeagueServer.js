@@ -49,7 +49,7 @@ app.post("/seasonPlayers", async (req, res) => {
   await handleStoredProcedure(
     req,
     res,
-    "get_season_points_leaders",
+    "get_player_stats_per_year",
     "sending player leaders data",
     "2023-24"
   );

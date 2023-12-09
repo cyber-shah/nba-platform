@@ -49,7 +49,8 @@ const CrudBar = () => {
     <Box pad="medium" elevation="large" round="small" align="center">
       <Grid
         columns={[
-                    "small",
+          "xsmall",
+          "xsmall",
           "xsmall",
           "small",
           "xsmall",
@@ -61,7 +62,9 @@ const CrudBar = () => {
         ]}
         gap="small"
       >
-        <Button primary label="Home" pad="small" href="/SeasonHome"/>
+        <Button primary label="Home" pad="small" href="/SeasonHome" />
+        <Button secondary label="Login Page" pad="small" href="/"/>
+
         {operations.map((operation, index) => (
           <CRUDOperation
             key={index}
