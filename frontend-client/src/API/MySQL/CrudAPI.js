@@ -12,7 +12,7 @@ async function sendCrudForm(endpoint, crudType, formData) {
     if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
+    console.log("Recieved response:", response);
     return response.json();
 }
 
