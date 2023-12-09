@@ -24,7 +24,7 @@ export default function SeasonHeader(props) {
           alignControls="start"
           margin="small"
         >
-          <Tab title="Games" />
+          {/* <Tab title="Games" /> */}
           <Tab title="Teams" />
           {/* <Tab title="Standings" /> */}
           <Tab title="Players" />

@@ -33,10 +33,10 @@ export default function SeasonHome(props) {
         <Box>
           <Grid columns={["3/3", "1/3"]}>
             <Box pad="small">
-              {selectedTab === 0 && <SeasonGames season={season} />}
-              {selectedTab === 1 && <TeamList season={season} />}
+              {/* {selectedTab === 0 && <SeasonGames season={season} />} */}
+              {selectedTab === 0 && <TeamList season={season} />}
               {/* {selectedTab === 2 && <SeasonsStandings season={season} />} */}
-              {selectedTab === 2 && <SeasonPlayers season={season} />}
+              {selectedTab === 1 && <SeasonPlayers season={season} />}
             </Box>
 
             {/* News side bar */}
