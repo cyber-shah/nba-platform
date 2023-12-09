@@ -610,14 +610,14 @@ delimiter ;
 -- procedure to update everything in a team in the nba_teams table
 drop procedure if exists update_team;
 delimiter $$
-create procedure update_team(in team_id_p int, in year_founded_p int, in conference varchar(255), in city_p varchar(255), in state_p varchar(255))
+create procedure update_team(in team_id_p int, in year_founded_p int, in conference_p varchar(255))
 begin
 	declare team_id_var int;
 	select team_id into team_id_var from nba_teams where team_id = team_id_p;
-    if team_id_var is not null then
-		signal sqlstate '45000' set message_text = "The entered team_id is already inside the nba_players table";
+    if team_id_var is null then
+		signal sqlstate '45000' set message_text = "The entered team_id is not inside the nba_players table";
 	end if;
-	insert into nba_teams values(team_id_p,year_founded_p, conference_p, city_p, state_p);
+	update nba_teams set year_founded = year_founded_p, conference = conference_p where team_id = team_id_p;
 end$$
 delimiter ;
 
@@ -641,11 +641,11 @@ delimiter ;
 -- procedure to update everything in a game in nba_games table
 drop procedure if exists update_game;
 delimiter $$
-create procedure update_game(in game_id_p varchar(255), in game_date_p date)
+create procedure update_game(in game_id_p varchar(255), in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int, in season_id_p varchar(255), in stadium_p varchar(255), in city_p varchar(255), in state_p varchar(255))
 begin
 	declare game_id_var int;
 	select game_id into game_id_var from nba_games where game_id = game_id_p;
-    if game_id_var is not null then
+    if game_id_var is null then
 		signal sqlstate '45000' set message_text = "The entered game_id is already inside the nba_players table";
 	end if;
 	insert into nba_games values (game_id_p,game_date_p);
