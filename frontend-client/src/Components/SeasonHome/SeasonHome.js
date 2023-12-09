@@ -31,7 +31,7 @@ export default function SeasonHome(props) {
 
       <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
         <Box>
-          <Grid columns={["2/3", "1/3"]}>
+          <Grid columns={["3/3", "1/3"]}>
             <Box pad="small">
               {selectedTab === 0 && <SeasonGames season={season} />}
               {selectedTab === 1 && <TeamList season={season} />}
@@ -40,10 +40,10 @@ export default function SeasonHome(props) {
             </Box>
 
             {/* News side bar */}
-            <Box pad="small">
+            {/* <Box pad="small"> */}
               {/* pass league news here */}
-              <NewsSideBar />
-            </Box>
+              {/* <NewsSideBar /> */}
+            {/* </Box> */}
           </Grid>
         </Box>
       </Box>
