@@ -32,10 +32,7 @@ Game: [
 const Update = {
   Team: [
     { label: 'Team ID', name: 'team_id', type: 'text' },
-    { label: 'Team Name', name: 'team_name', type: 'text' },
     { label: 'Founded', name: 'founded', type: 'text' },
-    { label: 'City', name: 'city', type: 'text' },
-    { label: 'State', name: 'state', type: 'text' },
   ],
   Player: [
     { label: 'Player ID', name: 'player_id', type: 'text' },

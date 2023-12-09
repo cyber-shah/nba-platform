@@ -31,7 +31,7 @@ export default function CrudPage(props) {
     const fetchData = () => {
       if (label === "Read") {
         if (option === "Team") navigate("/TeamHome/1610612737");
-        else if (option === "Player") navigate("/PlayerHome");
+        else if (option === "Player") navigate("/PlayerHome/201988");
         else navigate("/SeasonHome");
       } else {
         const labels = CrudForms[label][option];
