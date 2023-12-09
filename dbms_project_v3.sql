@@ -641,17 +641,14 @@ delimiter ;
 -- procedure to update everything in a game in nba_games table
 drop procedure if exists update_game;
 delimiter $$
-create procedure update_game(in game_id_p varchar(255), in game_date_p date, in home_team_id_p int, in home_team_points_p int, in visiting_team_id_p int, in visiting_team_points_p int, in season_id_p varchar(255), in stadium_p varchar(255), in city_p varchar(255), in state_p varchar(255))
+create procedure update_game(in game_id_p varchar(255), in game_date_p date)
 begin
 	declare game_id_var int;
-	select player_id into player_id_var from nba_players where player_id = player_id_p;
-    if player_id_var is not null then
-		signal sqlstate '45000' set message_text = "The entered player_id is already inside the nba_players table";
+	select game_id into game_id_var from nba_games where game_id = game_id_p;
+    if game_id_var is not null then
+		signal sqlstate '45000' set message_text = "The entered game_id is already inside the nba_players table";
 	end if;
-    if is_active_p < 0 or is_active_p > 1 then
-		signal sqlstate '45000' set message_text = "The entered is_active parameter is not valid";
-	end if;
-	insert into nba_players values (player_id_p,first_name_p,last_name_p,is_active_p);
+	insert into nba_games values (game_id_p,game_date_p);
 end$$
 delimiter;
 
