@@ -4,6 +4,7 @@ Team: [
   { label: 'Full Name', name: 'full_name_p', type: 'text' },
   { label: 'Abbreviation', name: 'abbreviation_p', type: 'text' },
   { label: 'Year Founded', name: 'year_founded_p', type: 'int' },
+  // { label: 'Conference', name: 'conference_p', type: 'text' },
 ],
 
 Player: [
