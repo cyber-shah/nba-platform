@@ -1,0 +1,3332 @@
+{
+    "timestamp": "2023-11-30T04:09:09Z",
+    "status": "success",
+    "season": {
+        "year": 2024,
+        "type": 2,
+        "name": "Regular Season",
+        "displayName": "2023-24",
+        "half": 1
+    },
+    "team": {
+        "id": "1",
+        "abbreviation": "ATL",
+        "location": "Atlanta",
+        "name": "Hawks",
+        "displayName": "Atlanta Hawks",
+        "clubhouse": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+        "color": "c8102e",
+        "logo": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+        "recordSummary": "8-9",
+        "seasonSummary": "2023-24",
+        "standingSummary": "3rd in Southeast Division",
+        "groups": {
+            "id": "9",
+            "parent": {
+                "id": "5"
+            },
+            "isConference": false
+        }
+    },
+    "events": [
+        {
+            "id": "401591883",
+            "date": "2023-10-10T23:30Z",
+            "name": "Cleveland Cavaliers at Atlanta Hawks",
+            "shortName": "CLE @ ATL",
+            "season": {
+                "year": 2024,
+                "displayName": "2023-24"
+            },
+            "seasonType": {
+                "id": "1",
+                "type": 1,
+                "name": "Preseason",
+                "abbreviation": "pre"
+            },
+            "timeValid": true,
+            "competitions": [
+                {
+                    "id": "401591883",
+                    "date": "2023-10-10T23:30Z",
+                    "attendance": 11659,
+                    "type": {
+                        "id": "1",
+                        "text": "Standard",
+                        "abbreviation": "STD",
+                        "slug": "standard",
+                        "type": "standard"
+                    },
+                    "timeValid": true,
+                    "neutralSite": false,
+                    "boxscoreAvailable": true,
+                    "ticketsAvailable": false,
+                    "venue": {
+                        "fullName": "State Farm Arena",
+                        "address": {
+                            "city": "Atlanta",
+                            "state": "GA"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "1",
+                            "type": "team",
+                            "order": 0,
+                            "homeAway": "home",
+                            "winner": true,
+                            "team": {
+                                "id": "1",
+                                "location": "Atlanta",
+                                "abbreviation": "ATL",
+                                "displayName": "Atlanta Hawks",
+                                "shortDisplayName": "Hawks",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:23Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:21Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 108,
+                                "displayValue": "108"
+                            },
+                            "leaders": [
+                                {
+                                    "name": "points",
+                                    "displayName": "Points",
+                                    "abbreviation": "Pts",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "13",
+                                            "value": 13,
+                                            "athlete": {
+                                                "id": "4065656",
+                                                "lastName": "Forrest",
+                                                "displayName": "Trent Forrest",
+                                                "shortName": "T. Forrest",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4065656/trent-forrest"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assists",
+                                    "displayName": "Assists",
+                                    "abbreviation": "Ast",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "5",
+                                            "value": 5,
+                                            "athlete": {
+                                                "id": "4277905",
+                                                "lastName": "Young",
+                                                "displayName": "Trae Young",
+                                                "shortName": "T. Young",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4277905/trae-young"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rebounds",
+                                    "displayName": "Rebounds",
+                                    "abbreviation": "Reb",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "10",
+                                            "value": 10,
+                                            "athlete": {
+                                                "id": "3102529",
+                                                "lastName": "Capela",
+                                                "displayName": "Clint Capela",
+                                                "shortName": "C. Capela",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/3102529/clint-capela"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/3102529/clint-capela"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "1-0"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "type": "team",
+                            "order": 1,
+                            "homeAway": "away",
+                            "winner": false,
+                            "team": {
+                                "id": "5",
+                                "location": "Cleveland",
+                                "abbreviation": "CLE",
+                                "displayName": "Cleveland Cavaliers",
+                                "shortDisplayName": "Cavaliers",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/cle.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:27Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/cle.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:28Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/cle.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:28Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/cle.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:28Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/cle/cleveland-cavaliers",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 107,
+                                "displayValue": "107"
+                            },
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "0-1"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [],
+                    "broadcasts": [],
+                    "status": {
+                        "clock": 0,
+                        "displayClock": "0.0",
+                        "period": 4,
+                        "type": {
+                            "id": "3",
+                            "name": "STATUS_FINAL",
+                            "state": "post",
+                            "completed": true,
+                            "description": "Final",
+                            "detail": "Final",
+                            "shortDetail": "Final"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591883",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591883",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "now",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591883",
+                    "text": "Now",
+                    "shortText": "Now",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "teamstats",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/matchup?gameId=401591883",
+                    "text": "Team Stats",
+                    "shortText": "Team Stats",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/boxscore/_/gameId/401591883",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591883",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/gamecast?gameId=401591883",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "mobile",
+                        "event"
+                    ],
+                    "href": "http://m.espn.com/nba/gamecast?gameId=401591883&action=summary",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591883",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "pbp",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/playbyplay/_/gameId/401591883",
+                    "text": "Play-by-Play",
+                    "shortText": "Play-by-Play",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "videos",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/video?gameId=401591883",
+                    "text": "Videos",
+                    "shortText": "Videos",
+                    "isExternal": false,
+                    "isPremium": false
+                }
+            ]
+        },
+        {
+            "id": "401591896",
+            "date": "2023-10-12T23:30Z",
+            "name": "Memphis Grizzlies at Atlanta Hawks",
+            "shortName": "MEM @ ATL",
+            "season": {
+                "year": 2024,
+                "displayName": "2023-24"
+            },
+            "seasonType": {
+                "id": "1",
+                "type": 1,
+                "name": "Preseason",
+                "abbreviation": "pre"
+            },
+            "timeValid": true,
+            "competitions": [
+                {
+                    "id": "401591896",
+                    "date": "2023-10-12T23:30Z",
+                    "attendance": 12437,
+                    "type": {
+                        "id": "1",
+                        "text": "Standard",
+                        "abbreviation": "STD",
+                        "slug": "standard",
+                        "type": "standard"
+                    },
+                    "timeValid": true,
+                    "neutralSite": false,
+                    "boxscoreAvailable": true,
+                    "ticketsAvailable": false,
+                    "venue": {
+                        "fullName": "State Farm Arena",
+                        "address": {
+                            "city": "Atlanta",
+                            "state": "GA"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "1",
+                            "type": "team",
+                            "order": 0,
+                            "homeAway": "home",
+                            "winner": true,
+                            "team": {
+                                "id": "1",
+                                "location": "Atlanta",
+                                "abbreviation": "ATL",
+                                "displayName": "Atlanta Hawks",
+                                "shortDisplayName": "Hawks",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:23Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:21Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 103,
+                                "displayValue": "103"
+                            },
+                            "leaders": [
+                                {
+                                    "name": "points",
+                                    "displayName": "Points",
+                                    "abbreviation": "Pts",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "20",
+                                            "value": 20,
+                                            "athlete": {
+                                                "id": "4277905",
+                                                "lastName": "Young",
+                                                "displayName": "Trae Young",
+                                                "shortName": "T. Young",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4277905/trae-young"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assists",
+                                    "displayName": "Assists",
+                                    "abbreviation": "Ast",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "4",
+                                            "value": 4,
+                                            "athlete": {
+                                                "id": "4277952",
+                                                "lastName": "Fernando",
+                                                "displayName": "Bruno Fernando",
+                                                "shortName": "B. Fernando",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4277952/bruno-fernando"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4277952/bruno-fernando"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rebounds",
+                                    "displayName": "Rebounds",
+                                    "abbreviation": "Reb",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "6",
+                                            "value": 6,
+                                            "athlete": {
+                                                "id": "4712863",
+                                                "lastName": "Gueye",
+                                                "displayName": "Mouhamed Gueye",
+                                                "shortName": "M. Gueye",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4712863/mouhamed-gueye"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4712863/mouhamed-gueye"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "2-0"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "29",
+                            "type": "team",
+                            "order": 1,
+                            "homeAway": "away",
+                            "winner": false,
+                            "team": {
+                                "id": "29",
+                                "location": "Memphis",
+                                "abbreviation": "MEM",
+                                "displayName": "Memphis Grizzlies",
+                                "shortDisplayName": "Grizzlies",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/mem.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-28T18:49Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/mem.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T18:48Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/mem.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-28T18:50Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/mem.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T18:48Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/mem/memphis-grizzlies",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 102,
+                                "displayValue": "102"
+                            },
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "2-1"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [],
+                    "broadcasts": [
+                        {
+                            "type": {
+                                "id": "1",
+                                "shortName": "TV"
+                            },
+                            "market": {
+                                "id": "1",
+                                "type": "National"
+                            },
+                            "media": {
+                                "shortName": "NBA TV"
+                            },
+                            "lang": "en",
+                            "region": "us"
+                        }
+                    ],
+                    "status": {
+                        "clock": 0,
+                        "displayClock": "0.0",
+                        "period": 4,
+                        "type": {
+                            "id": "3",
+                            "name": "STATUS_FINAL",
+                            "state": "post",
+                            "completed": true,
+                            "description": "Final",
+                            "detail": "Final",
+                            "shortDetail": "Final"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591896",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591896",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "now",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591896",
+                    "text": "Now",
+                    "shortText": "Now",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "teamstats",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/matchup?gameId=401591896",
+                    "text": "Team Stats",
+                    "shortText": "Team Stats",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/boxscore/_/gameId/401591896",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591896",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/gamecast?gameId=401591896",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "mobile",
+                        "event"
+                    ],
+                    "href": "http://m.espn.com/nba/gamecast?gameId=401591896&action=summary",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591896",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "pbp",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/playbyplay/_/gameId/401591896",
+                    "text": "Play-by-Play",
+                    "shortText": "Play-by-Play",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "videos",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/video?gameId=401591896",
+                    "text": "Videos",
+                    "shortText": "Videos",
+                    "isExternal": false,
+                    "isPremium": false
+                }
+            ]
+        },
+        {
+            "id": "401591903",
+            "date": "2023-10-14T19:30Z",
+            "name": "New Orleans Pelicans at Atlanta Hawks",
+            "shortName": "NO @ ATL",
+            "season": {
+                "year": 2024,
+                "displayName": "2023-24"
+            },
+            "seasonType": {
+                "id": "1",
+                "type": 1,
+                "name": "Preseason",
+                "abbreviation": "pre"
+            },
+            "timeValid": true,
+            "competitions": [
+                {
+                    "id": "401591903",
+                    "date": "2023-10-14T19:30Z",
+                    "attendance": 3051,
+                    "type": {
+                        "id": "1",
+                        "text": "Standard",
+                        "abbreviation": "STD",
+                        "slug": "standard",
+                        "type": "standard"
+                    },
+                    "timeValid": true,
+                    "neutralSite": false,
+                    "boxscoreAvailable": true,
+                    "ticketsAvailable": false,
+                    "venue": {
+                        "fullName": "Gateway Center",
+                        "address": {
+                            "city": "College Park",
+                            "state": "GA"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "1",
+                            "type": "team",
+                            "order": 0,
+                            "homeAway": "home",
+                            "winner": true,
+                            "team": {
+                                "id": "1",
+                                "location": "Atlanta",
+                                "abbreviation": "ATL",
+                                "displayName": "Atlanta Hawks",
+                                "shortDisplayName": "Hawks",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:23Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:21Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 110,
+                                "displayValue": "110"
+                            },
+                            "leaders": [
+                                {
+                                    "name": "points",
+                                    "displayName": "Points",
+                                    "abbreviation": "Pts",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "18",
+                                            "value": 18,
+                                            "athlete": {
+                                                "id": "4431680",
+                                                "lastName": "Okongwu",
+                                                "displayName": "Onyeka Okongwu",
+                                                "shortName": "O. Okongwu",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4431680/onyeka-okongwu"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4431680/onyeka-okongwu"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assists",
+                                    "displayName": "Assists",
+                                    "abbreviation": "Ast",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "7",
+                                            "value": 7,
+                                            "athlete": {
+                                                "id": "4701230",
+                                                "lastName": "Johnson",
+                                                "displayName": "Jalen Johnson",
+                                                "shortName": "J. Johnson",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4701230/jalen-johnson"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4701230/jalen-johnson"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rebounds",
+                                    "displayName": "Rebounds",
+                                    "abbreviation": "Reb",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "7",
+                                            "value": 7,
+                                            "athlete": {
+                                                "id": "3907497",
+                                                "lastName": "Murray",
+                                                "displayName": "Dejounte Murray",
+                                                "shortName": "D. Murray",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/3907497/dejounte-murray"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/3907497/dejounte-murray"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "3-0"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "type": "team",
+                            "order": 1,
+                            "homeAway": "away",
+                            "winner": false,
+                            "team": {
+                                "id": "3",
+                                "location": "New Orleans",
+                                "abbreviation": "NO",
+                                "displayName": "New Orleans Pelicans",
+                                "shortDisplayName": "Pelicans",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/no.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-28T19:53Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/no.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T19:56Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/no.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2018-06-05T12:08Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/no.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T19:57Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 105,
+                                "displayValue": "105"
+                            },
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "0-3"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [],
+                    "broadcasts": [
+                        {
+                            "type": {
+                                "id": "1",
+                                "shortName": "TV"
+                            },
+                            "market": {
+                                "id": "1",
+                                "type": "National"
+                            },
+                            "media": {
+                                "shortName": "NBA TV"
+                            },
+                            "lang": "en",
+                            "region": "us"
+                        }
+                    ],
+                    "status": {
+                        "clock": 0,
+                        "displayClock": "0.0",
+                        "period": 4,
+                        "type": {
+                            "id": "3",
+                            "name": "STATUS_FINAL",
+                            "state": "post",
+                            "completed": true,
+                            "description": "Final",
+                            "detail": "Final",
+                            "shortDetail": "Final"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591903",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591903",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "now",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591903",
+                    "text": "Now",
+                    "shortText": "Now",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "teamstats",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/matchup?gameId=401591903",
+                    "text": "Team Stats",
+                    "shortText": "Team Stats",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/boxscore/_/gameId/401591903",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591903",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/gamecast?gameId=401591903",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "mobile",
+                        "event"
+                    ],
+                    "href": "http://m.espn.com/nba/gamecast?gameId=401591903&action=summary",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591903",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "pbp",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/playbyplay/_/gameId/401591903",
+                    "text": "Play-by-Play",
+                    "shortText": "Play-by-Play",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "videos",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/video?gameId=401591903",
+                    "text": "Videos",
+                    "shortText": "Videos",
+                    "isExternal": false,
+                    "isPremium": false
+                }
+            ]
+        },
+        {
+            "id": "401591913",
+            "date": "2023-10-16T23:00Z",
+            "name": "Atlanta Hawks at Indiana Pacers",
+            "shortName": "ATL @ IND",
+            "season": {
+                "year": 2024,
+                "displayName": "2023-24"
+            },
+            "seasonType": {
+                "id": "1",
+                "type": 1,
+                "name": "Preseason",
+                "abbreviation": "pre"
+            },
+            "timeValid": true,
+            "competitions": [
+                {
+                    "id": "401591913",
+                    "date": "2023-10-16T23:00Z",
+                    "attendance": 8976,
+                    "type": {
+                        "id": "1",
+                        "text": "Standard",
+                        "abbreviation": "STD",
+                        "slug": "standard",
+                        "type": "standard"
+                    },
+                    "timeValid": true,
+                    "neutralSite": false,
+                    "boxscoreAvailable": true,
+                    "ticketsAvailable": false,
+                    "venue": {
+                        "fullName": "Gainbridge Fieldhouse",
+                        "address": {
+                            "city": "Indianapolis",
+                            "state": "IN"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "11",
+                            "type": "team",
+                            "order": 0,
+                            "homeAway": "home",
+                            "winner": true,
+                            "team": {
+                                "id": "11",
+                                "location": "Indiana",
+                                "abbreviation": "IND",
+                                "displayName": "Indiana Pacers",
+                                "shortDisplayName": "Pacers",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/ind.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2018-06-05T12:08Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/ind.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-24T22:20Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/ind.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2018-06-05T12:08Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/ind.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-24T22:20Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/ind/indiana-pacers",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 116,
+                                "displayValue": "116"
+                            },
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "1-2"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1",
+                            "type": "team",
+                            "order": 1,
+                            "homeAway": "away",
+                            "winner": false,
+                            "team": {
+                                "id": "1",
+                                "location": "Atlanta",
+                                "abbreviation": "ATL",
+                                "displayName": "Atlanta Hawks",
+                                "shortDisplayName": "Hawks",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:23Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:21Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 112,
+                                "displayValue": "112"
+                            },
+                            "leaders": [
+                                {
+                                    "name": "points",
+                                    "displayName": "Points",
+                                    "abbreviation": "Pts",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "21",
+                                            "value": 21,
+                                            "athlete": {
+                                                "id": "4397136",
+                                                "lastName": "Bey",
+                                                "displayName": "Saddiq Bey",
+                                                "shortName": "S. Bey",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4397136/saddiq-bey"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assists",
+                                    "displayName": "Assists",
+                                    "abbreviation": "Ast",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "4",
+                                            "value": 4,
+                                            "athlete": {
+                                                "id": "4065656",
+                                                "lastName": "Forrest",
+                                                "displayName": "Trent Forrest",
+                                                "shortName": "T. Forrest",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4065656/trent-forrest"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4065656/trent-forrest"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rebounds",
+                                    "displayName": "Rebounds",
+                                    "abbreviation": "Reb",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "10",
+                                            "value": 10,
+                                            "athlete": {
+                                                "id": "4397136",
+                                                "lastName": "Bey",
+                                                "displayName": "Saddiq Bey",
+                                                "shortName": "S. Bey",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4397136/saddiq-bey"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4397136/saddiq-bey"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "3-1"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [],
+                    "broadcasts": [],
+                    "status": {
+                        "clock": 0,
+                        "displayClock": "0.0",
+                        "period": 4,
+                        "type": {
+                            "id": "3",
+                            "name": "STATUS_FINAL",
+                            "state": "post",
+                            "completed": true,
+                            "description": "Final",
+                            "detail": "Final",
+                            "shortDetail": "Final"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591913",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591913",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "now",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591913",
+                    "text": "Now",
+                    "shortText": "Now",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "teamstats",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/matchup?gameId=401591913",
+                    "text": "Team Stats",
+                    "shortText": "Team Stats",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/boxscore/_/gameId/401591913",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591913",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/gamecast?gameId=401591913",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "mobile",
+                        "event"
+                    ],
+                    "href": "http://m.espn.com/nba/gamecast?gameId=401591913&action=summary",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591913",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "pbp",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/playbyplay/_/gameId/401591913",
+                    "text": "Play-by-Play",
+                    "shortText": "Play-by-Play",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "videos",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/video?gameId=401591913",
+                    "text": "Videos",
+                    "shortText": "Videos",
+                    "isExternal": false,
+                    "isPremium": false
+                }
+            ]
+        },
+        {
+            "id": "401591936",
+            "date": "2023-10-20T23:00Z",
+            "name": "Atlanta Hawks at Philadelphia 76ers",
+            "shortName": "ATL @ PHI",
+            "season": {
+                "year": 2024,
+                "displayName": "2023-24"
+            },
+            "seasonType": {
+                "id": "1",
+                "type": 1,
+                "name": "Preseason",
+                "abbreviation": "pre"
+            },
+            "timeValid": true,
+            "competitions": [
+                {
+                    "id": "401591936",
+                    "date": "2023-10-20T23:00Z",
+                    "attendance": 20728,
+                    "type": {
+                        "id": "1",
+                        "text": "Standard",
+                        "abbreviation": "STD",
+                        "slug": "standard",
+                        "type": "standard"
+                    },
+                    "timeValid": true,
+                    "neutralSite": false,
+                    "boxscoreAvailable": true,
+                    "ticketsAvailable": false,
+                    "venue": {
+                        "fullName": "Wells Fargo Center",
+                        "address": {
+                            "city": "Philadelphia",
+                            "state": "PA"
+                        }
+                    },
+                    "competitors": [
+                        {
+                            "id": "20",
+                            "type": "team",
+                            "order": 0,
+                            "homeAway": "home",
+                            "winner": true,
+                            "team": {
+                                "id": "20",
+                                "location": "Philadelphia",
+                                "abbreviation": "PHI",
+                                "displayName": "Philadelphia 76ers",
+                                "shortDisplayName": "76ers",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/phi.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:12Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/phi.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:13Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/phi.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:12Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/phi.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-28T21:13Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/phi/philadelphia-76ers",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 120,
+                                "displayValue": "120"
+                            },
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "2-2"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1",
+                            "type": "team",
+                            "order": 1,
+                            "homeAway": "away",
+                            "winner": false,
+                            "team": {
+                                "id": "1",
+                                "location": "Atlanta",
+                                "abbreviation": "ATL",
+                                "displayName": "Atlanta Hawks",
+                                "shortDisplayName": "Hawks",
+                                "logos": [
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "default"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:22Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:23Z"
+                                    },
+                                    {
+                                        "href": "https://a.espncdn.com/i/teamlogos/nba/500-dark/scoreboard/atl.png",
+                                        "width": 500,
+                                        "height": 500,
+                                        "alt": "",
+                                        "rel": [
+                                            "full",
+                                            "scoreboard",
+                                            "dark"
+                                        ],
+                                        "lastUpdated": "2023-08-31T22:21Z"
+                                    }
+                                ],
+                                "links": [
+                                    {
+                                        "rel": [
+                                            "clubhouse",
+                                            "desktop",
+                                            "team"
+                                        ],
+                                        "href": "https://www.espn.com/nba/team/_/name/atl/atlanta-hawks",
+                                        "text": "Clubhouse"
+                                    }
+                                ]
+                            },
+                            "score": {
+                                "value": 106,
+                                "displayValue": "106"
+                            },
+                            "leaders": [
+                                {
+                                    "name": "points",
+                                    "displayName": "Points",
+                                    "abbreviation": "Pts",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "19",
+                                            "value": 19,
+                                            "athlete": {
+                                                "id": "4277905",
+                                                "lastName": "Young",
+                                                "displayName": "Trae Young",
+                                                "shortName": "T. Young",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4277905/trae-young"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "assists",
+                                    "displayName": "Assists",
+                                    "abbreviation": "Ast",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "10",
+                                            "value": 10,
+                                            "athlete": {
+                                                "id": "4277905",
+                                                "lastName": "Young",
+                                                "displayName": "Trae Young",
+                                                "shortName": "T. Young",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4277905/trae-young"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4277905/trae-young"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rebounds",
+                                    "displayName": "Rebounds",
+                                    "abbreviation": "Reb",
+                                    "leaders": [
+                                        {
+                                            "displayValue": "8",
+                                            "value": 8,
+                                            "athlete": {
+                                                "id": "4065732",
+                                                "lastName": "Hunter",
+                                                "displayName": "De'Andre Hunter",
+                                                "shortName": "D. Hunter",
+                                                "links": [
+                                                    {
+                                                        "rel": [
+                                                            "playercard",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "https://www.espn.com/nba/player/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "stats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/stats/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "splits",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/splits/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "gamelog",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/gamelog/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "news",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/news/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "bio",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/bio/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "overview",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/_/id/4065732/deandre-hunter"
+                                                    },
+                                                    {
+                                                        "rel": [
+                                                            "advancedstats",
+                                                            "desktop",
+                                                            "athlete"
+                                                        ],
+                                                        "href": "http://www.espn.com/nba/player/advancedstats/_/id/4065732/deandre-hunter"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "record": [
+                                {
+                                    "id": "900",
+                                    "abbreviation": "Game",
+                                    "displayName": "Record Year To Date",
+                                    "shortDisplayName": "YTD",
+                                    "description": "Overall Record",
+                                    "type": "total",
+                                    "displayValue": "3-2"
+                                },
+                                {
+                                    "id": "61",
+                                    "displayName": "CONF",
+                                    "shortDisplayName": "CONF",
+                                    "description": "Conference Record",
+                                    "type": "vsconf",
+                                    "displayValue": "0-0"
+                                }
+                            ]
+                        }
+                    ],
+                    "notes": [],
+                    "broadcasts": [
+                        {
+                            "type": {
+                                "id": "1",
+                                "shortName": "TV"
+                            },
+                            "market": {
+                                "id": "1",
+                                "type": "National"
+                            },
+                            "media": {
+                                "shortName": "NBA TV"
+                            },
+                            "lang": "en",
+                            "region": "us"
+                        }
+                    ],
+                    "status": {
+                        "clock": 0,
+                        "displayClock": "0.0",
+                        "period": 4,
+                        "type": {
+                            "id": "3",
+                            "name": "STATUS_FINAL",
+                            "state": "post",
+                            "completed": true,
+                            "description": "Final",
+                            "detail": "Final",
+                            "shortDetail": "Final"
+                        }
+                    }
+                }
+            ],
+            "links": [
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591936",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "summary",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591936",
+                    "text": "Gamecast",
+                    "shortText": "Summary",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "now",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/game/_/gameId/401591936",
+                    "text": "Now",
+                    "shortText": "Now",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "teamstats",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/matchup?gameId=401591936",
+                    "text": "Team Stats",
+                    "shortText": "Team Stats",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/boxscore/_/gameId/401591936",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "boxscore",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591936",
+                    "text": "Box Score",
+                    "shortText": "Box Score",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/gamecast?gameId=401591936",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "mobile",
+                        "event"
+                    ],
+                    "href": "http://m.espn.com/nba/gamecast?gameId=401591936&action=summary",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "gamecast",
+                        "sportscenter",
+                        "app",
+                        "event"
+                    ],
+                    "href": "sportscenter://x-callback-url/showGame?sportName=basketball&leagueAbbrev=nba&gameId=401591936",
+                    "text": "Gamecast",
+                    "shortText": "Gamecast",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "pbp",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/playbyplay/_/gameId/401591936",
+                    "text": "Play-by-Play",
+                    "shortText": "Play-by-Play",
+                    "isExternal": false,
+                    "isPremium": false
+                },
+                {
+                    "language": "en-US",
+                    "rel": [
+                        "videos",
+                        "desktop",
+                        "event"
+                    ],
+                    "href": "https://www.espn.com/nba/video?gameId=401591936",
+                    "text": "Videos",
+                    "shortText": "Videos",
+                    "isExternal": false,
+                    "isPremium": false
+                }
+            ]
+        }
+    ],
+    "requestedSeason": {
+        "year": 2024,
+        "type": 1,
+        "name": "Preseason",
+        "displayName": "2023-24"
+    }
+}

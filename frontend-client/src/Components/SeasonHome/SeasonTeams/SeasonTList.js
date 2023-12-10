@@ -18,7 +18,7 @@ export default function TeamList(props) {
 
   return (
     <div>
-      <Box elevation="xlarge" round="large">
+      <Box elevation="xlarge" round="large" width="50%" margin="auto">
         <Text size="xxlarge" margin="medium">
           NBA Teams
         </Text>
