@@ -10,7 +10,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
         <Route path="/Home" element={<TeamHome />} />
         <Route
           path="/PlayerHome"
