@@ -31,9 +31,9 @@ export default function TListBox(props) {
                 size="xsmall"
                 href={link.href}
                 margin="xxsmall"
-                color="brand"
+                color="dark-3"
               >
-                {link.text} |
+               ○ {link.text} 
               </Anchor>
             ))}
           </div>

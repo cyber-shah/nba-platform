@@ -9,6 +9,17 @@ import { colors } from "grommet/themes/base";
 
 function App() {
   const customTheme = {
+        global: {
+      colors: {
+        brand: "#FF0000",
+        placeholder: "#BDBDBD",
+        text: {
+          light: "#FFFFFF",
+          dark: "#000000",
+        },
+      },
+    },
+
     tab: {
       color: "placeholder", // default tab color
       border: {
@@ -16,28 +27,21 @@ function App() {
         color: "transparent",
       },
       active: {
-        color: "black",
+        color: "text.dark",
         border: {
           side: "bottom",
           color: "brand",
         },
       },
       hover: {
-        color: "text-strong",
+        color: "text.light",
         border: {
           side: "bottom",
           color: "transparent",
         },
       },
     },
-    colors: {
-      brand: "#FF0000",
-      placeholder: "#BDBDBD",
-      text: {
-        light: "#FFFFFF",
-        dark: "#000000",
-      },
-    }
+
   };
 
   return (
