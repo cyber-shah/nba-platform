@@ -2,22 +2,55 @@
 
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginPage from "./Components/LoginPage";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
-import TeamHome from "./Components/SeasonHome/SeasonHome";
+import SeasonHome from "./Components/SeasonHome/SeasonHome";
+import { Grommet } from "grommet";
+import { colors } from "grommet/themes/base";
 
 function App() {
+  const customTheme = {
+    tab: {
+      color: "placeholder", // default tab color
+      border: {
+        side: "bottom",
+        color: "transparent",
+      },
+      active: {
+        color: "black",
+        border: {
+          side: "bottom",
+          color: "brand",
+        },
+      },
+      hover: {
+        color: "text-strong",
+        border: {
+          side: "bottom",
+          color: "transparent",
+        },
+      },
+    },
+    colors: {
+      brand: "#FF0000",
+      placeholder: "#BDBDBD",
+      text: {
+        light: "#FFFFFF",
+        dark: "#000000",
+      },
+    }
+  };
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/Home" element={<TeamHome />} />
-        <Route
-          path="/PlayerHome"
-          // pass the player stats here
-          element={<PlayerHome stats={"../../jsons/career_stats.json"} />}
-        />
-      </Routes>
-    </Router>
+    <>
+      <Grommet theme={customTheme}>
+        <Router>
+          <Routes>
+            <Route path="/SeasonHome" element={<SeasonHome />} />
+            <Route path="/PlayerHome" element={<PlayerHome />} />
+          </Routes>
+        </Router>
+      </Grommet>
+    </>
   );
 }
 

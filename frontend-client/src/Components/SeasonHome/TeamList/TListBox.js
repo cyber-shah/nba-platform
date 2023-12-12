@@ -13,7 +13,7 @@ export default function TListBox(props) {
       >
 
         {/* Logo on the left with fixed size */}
-        <Image src={props.team.team.logos[0].href} width="75" height="75" />
+        <Image src={props.team.team.logos[0].href} width="100" height="100" />
 
         {/* The other half */}
         <div>
@@ -31,6 +31,7 @@ export default function TListBox(props) {
                 size="xsmall"
                 href={link.href}
                 margin="xxsmall"
+                color="brand"
               >
                 {link.text} |
               </Anchor>
