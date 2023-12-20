@@ -1,9 +1,3 @@
-import React from "react";
-import { Box, Image, Anchor, Text } from "grommet";
-import { getPlayerImageUrl } from "../EspnAPI/GetLogos";
-
-// TODO: understand all of these better
-// TODO: how to generate columns with images?
 /**
  * Dynamically generates columns for the table based
  * on the query results
@@ -12,6 +6,11 @@ import { getPlayerImageUrl } from "../EspnAPI/GetLogos";
  */
 function generateColumns(queryResults, handleClick) {
   if (queryResults.length > 0) {
+    // for each entry in standings
+    for (let i = 0; i < queryResults.length; i++) {
+      queryResults[i].team.displayName;
+
+    }
     const firstObjectKeys = Object.keys(queryResults[1]);
     return firstObjectKeys.map((key, index) => ({
       property: key,
@@ -20,27 +19,6 @@ function generateColumns(queryResults, handleClick) {
   } else {
     return [];
   }
-}
-
-
-/**
- * Renders
- * @param {*} player
- * @param {*} handleClick
- * @returns
- */
-function renderPlayer(player, handleClick) {
-  return (
-    <Box direction="row" align="center">
-      <Image
-        src={getPlayerImageUrl(player.player_id)}
-        alt={`${player.fullName}'s Headshot`}
-        height="60px"
-        width="80px"
-        margin={{ right: "small" }}
-      />
-    </Box>
-  );
 }
 
 export { generateColumns };
