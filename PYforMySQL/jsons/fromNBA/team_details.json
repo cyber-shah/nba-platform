@@ -1,0 +1,121 @@
+{
+  "resource": "teamdetails",
+  "parameters": { "TeamID": 1610612754 },
+  "resultSets": [
+    {
+      "name": "TeamBackground",
+      "headers": [
+        "TEAM_ID",
+        "ABBREVIATION",
+        "NICKNAME",
+        "YEARFOUNDED",
+        "CITY",
+        "ARENA",
+        "ARENACAPACITY",
+        "OWNER",
+        "GENERALMANAGER",
+        "HEADCOACH",
+        "DLEAGUEAFFILIATION"
+      ],
+      "rowSet": [
+        [
+          1610612754,
+          "IND",
+          "Pacers",
+          1976,
+          "Indiana",
+          "Gainbridge Fieldhouse ",
+          "18345",
+          "Herb Simon",
+          "Kevin Pritchard",
+          "Rick Carlisle",
+          "Fort Wayne Mad Ants"
+        ]
+      ]
+    },
+    {
+      "name": "TeamHistory",
+      "headers": [
+        "TEAM_ID",
+        "CITY",
+        "NICKNAME",
+        "YEARFOUNDED",
+        "YEARACTIVETILL"
+      ],
+      "rowSet": [[1610612754, "Indiana", "Pacers", 1976, 2023]]
+    },
+    {
+      "name": "TeamSocialSites",
+      "headers": ["ACCOUNTTYPE", "WEBSITE_LINK"],
+      "rowSet": [
+        ["Facebook", "https://www.facebook.com/pacers"],
+        ["Instagram", "https://instagram.com/pacers"],
+        ["Twitter", "https://twitter.com/Pacers"]
+      ]
+    },
+    {
+      "name": "TeamAwardsChampionships",
+      "headers": ["YEARAWARDED", "OPPOSITETEAM"],
+      "rowSet": []
+    },
+    {
+      "name": "TeamAwardsConf",
+      "headers": ["YEARAWARDED", "OPPOSITETEAM"],
+      "rowSet": [[2000, null]]
+    },
+    {
+      "name": "TeamAwardsDiv",
+      "headers": ["YEARAWARDED", "OPPOSITETEAM"],
+      "rowSet": [
+        [1995, null],
+        [1999, null],
+        [2000, null],
+        [2004, null],
+        [2013, null],
+        [2014, null]
+      ]
+    },
+    {
+      "name": "TeamHof",
+      "headers": [
+        "PLAYERID",
+        "PLAYER",
+        "POSITION",
+        "JERSEY",
+        "SEASONSWITHTEAM",
+        "YEAR"
+      ],
+      "rowSet": [
+        [896, "Tim Hardaway", "G", null, "2003", 2022],
+        [77532, "George McGinnis", "F", null, "1972-1975, 1980-1982", 2017],
+        [null, "Bobby \"Slick\" Leonard", "Coach", null, "1969-1980", 2014],
+        [76286, "Roger Brown", "F", null, "1968-1974, 1976", 2013],
+        [76502, "Mel Daniels", "C", null, "1969-1974", 2012],
+        [397, "Reggie Miller", "G", null, "1988-2005", 2012],
+        [904, "Chris Mullin", "F", null, "1998-2000", 2011],
+        [77150, "Gus Johnson", "F", null, "1973", 2010],
+        [76504, "Adrian Dantley", "F", null, "1978", 2008],
+        [76673, "Alex English", "F", null, "1979-1980", 1997]
+      ]
+    },
+    {
+      "name": "TeamRetired",
+      "headers": [
+        "PLAYERID",
+        "PLAYER",
+        "POSITION",
+        "JERSEY",
+        "SEASONSWITHTEAM",
+        "YEAR"
+      ],
+      "rowSet": [
+        [null, "Melvin Simon", "Owner", "", "1983-2009", 2009],
+        [397, "Reggie Miller", "G", "31", "1988-2005", 2005],
+        [null, "Bobby \"Slick\" Leonard", "Coach", "529", "1969-1980", 1996],
+        [77532, "George McGinnis", "F", "30", "1972-1975, 1980-1982", 1985],
+        [76502, "Mel Daniels", "C", "34", "1969-1974", 1985],
+        [76286, "Roger Brown", "F", "35", "1968-1974, 1976", 1985]
+      ]
+    }
+  ]
+}
