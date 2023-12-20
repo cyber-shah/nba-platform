@@ -1,7 +1,8 @@
 import { Box, Grid } from "grommet";
 import { React, useEffect, useState } from "react";
-import GET from "../../EspnAPI/LeagueData/Route";
+import GET from "../../EspnAPI/SeasonData/Route";
 import SeasonHeader from "./SeasonHeader";
+import SeasonsStandings from "./Standings/SeasonStandings";
 import TeamList from "./TeamList/TeamList";
 import NewsSideBar from "./TeamNews/NewsSideBar";
 
@@ -25,11 +26,11 @@ export default function TeamHome(props) {
 
   return (
     <div>
-      <SeasonHeader>
+      <SeasonHeader
         setTab={setTab}
         onActive={onActive}
         selectedTab={selectedTab}
-      </SeasonHeader>
+      />
 
 
       <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
@@ -40,7 +41,7 @@ export default function TeamHome(props) {
               {selectedTab === 0 && <div>Scoreboard</div>}
               {selectedTab === 1 &&
                 <TeamList teamData={data.LeagueTeams} />}
-              {selectedTab === 2 && <div>Standings</div>}
+              {selectedTab === 2 && <SeasonsStandings standings={data.LeagueStandings} />}
               {selectedTab === 3 && <div>Leaderboard</div>}
             </Box>
           )}

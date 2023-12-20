@@ -1,12 +1,12 @@
 export function getTeamLogoUrl(teamId) {
   // Construct the logo URL based on the provided team ID
-  const logoUrl = `https://cdn.nba.com/logos/nba/${teamId}/primary/L/logo.svg`;
+  const logoUrl = ``;
   return logoUrl;
 }
 
 export function getPlayerImageUrl(playerId) {
   // Construct the player image URL based on the provided player ID
-  const imageUrl = `https://cdn.nba.com/headshots/nba/latest/1040x760/${playerId}.png`;
+  const imageUrl = `https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/${playerId}.png&w=350&h=254`;
   return imageUrl;
 }
 
