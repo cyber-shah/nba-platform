@@ -1,15 +1,15 @@
 // App.js
 
+import { Grommet } from "grommet";
+import { colors } from "grommet/themes/base";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
-import { Grommet } from "grommet";
-import { colors } from "grommet/themes/base";
 
 function App() {
   const customTheme = {
-        global: {
+    global: {
       colors: {
         brand: "#FF0000",
         placeholder: "#BDBDBD",

@@ -1,41 +1,53 @@
-import { React, useState, useEffect } from "react";
-import { Box, Grid, Image, Text } from "grommet";
-import NewsSideBar from "./TeamNews/NewsSideBar";
-import TeamList from "./TeamList/TeamList";
+import { Box, Grid } from "grommet";
+import { React, useEffect, useState } from "react";
 import GET from "../../EspnAPI/LeagueData/Route";
 import SeasonHeader from "./SeasonHeader";
+import TeamList from "./TeamList/TeamList";
+import NewsSideBar from "./TeamNews/NewsSideBar";
 
 export default function TeamHome(props) {
   const [data, setData] = useState(null);
 
+  // for Season Header
+  const [selectedTab, setTab] = useState(1);
+  const onActive = (nextIndex) => setTab(nextIndex);
+
+
   const fetchData = async () => {
-    const result = await GET({seasonYear: 2024});
+    const result = await GET({ seasonYear: 2024 });
     setData(result);
   }
 
   useEffect(() => {
     fetchData();
-  }, []); 
+  }, []);
 
-  
+
   return (
     <div>
       <SeasonHeader>
-        
+        setTab={setTab}
+        onActive={onActive}
+        selectedTab={selectedTab}
       </SeasonHeader>
-      <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto"}}>
+
+
+      <Box style={{ height: "100vh", maxWidth: "1200px", margin: "auto" }}>
         <Grid columns={["3/4", "1/4"]}>
-          
+
           {data !== null && (
             <Box pad="small">
-              <TeamList teamData={data.LeagueTeams} />
+              {selectedTab === 0 && <div>Scoreboard</div>}
+              {selectedTab === 1 &&
+                <TeamList teamData={data.LeagueTeams} />}
+              {selectedTab === 2 && <div>Standings</div>}
+              {selectedTab === 3 && <div>Leaderboard</div>}
             </Box>
           )}
 
           {/* News side bar */}
           {data !== null && (
             <Box pad="small" >
-              {/* pass league news here */}
               <NewsSideBar newsData={data.LeagueNews} />
             </Box>
           )}
