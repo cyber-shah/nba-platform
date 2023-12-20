@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Image, Anchor, Text } from "grommet";
-import { getPlayerImageUrl } from "../API/EspnAPI/GetLogos";
+import { getPlayerImageUrl } from "../EspnAPI/GetLogos";
 
 // TODO: understand all of these better
 // TODO: how to generate columns with images?
@@ -12,28 +12,10 @@ import { getPlayerImageUrl } from "../API/EspnAPI/GetLogos";
  */
 function generateColumns(queryResults, handleClick) {
   if (queryResults.length > 0) {
-    const firstObjectKeys = Object.keys(queryResults[0]);
+    const firstObjectKeys = Object.keys(queryResults[1]);
     return firstObjectKeys.map((key, index) => ({
       property: key,
       header: key,
-      render: (datum) => {
-        if (key === 'player_id') {
-          return renderPlayer(datum, handleClick);
-        } else if (key === 'first_name' && datum.player_id) {
-          return (
-            <Anchor
-              color="black"
-              onClick={() => {
-                handleClick(datum.player_id);
-              }}
-            >
-              {datum[key]}
-            </Anchor>
-          );
-        } else {
-          return <Text>{datum[key]}</Text>;
-        }
-      },
     }));
   } else {
     return [];

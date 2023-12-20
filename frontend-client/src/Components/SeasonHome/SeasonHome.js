@@ -46,6 +46,7 @@ export default function TeamHome(props) {
             </Box>
           )}
 
+
           {/* News side bar */}
           {data !== null && (
             <Box pad="small" >

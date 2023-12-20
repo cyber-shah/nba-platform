@@ -6,11 +6,17 @@ export default function SeasonsStandings(props) {
 
 
   const dataArray = props.standings.children;
-  const first = dataArray[0];
+  const conference = dataArray[0];
 
-  const entries = first.entries;
-  const stats = entries[1];
-  const columns = generateColumns(stats);
+  const entries = conference.entries;
+  // const team = entries.team;
+  // const stats = entries.stats[1];
+  //  const columns = generateColumns(stats);
+  console.log(conference.standings.entries);
+  const standings = conference.standings.entries;
+  const team = standings[0].team;
+  const stats = standings[0].stats;
+
   return (
     <Box align="center" elevation="large" round="medium">
       <Text size="large" margin="medium" alignSelf="start">
@@ -21,14 +27,15 @@ export default function SeasonsStandings(props) {
 
       { /** MAP This later on */}
       <Text size="medium" margin="medium" alignSelf="start">
-        {first.name} - {first.standings.displayName}
+        {conference.name} - {conference.standings.displayName}
       </Text>
 
 
       <DataTable
-        columns={columns}
+        columns={generateColumns(stats)}
         data={stats}
-        pad={{ horizontal: "medium", vertical: "xsmall" }}
+        size="medium"
+        pad={{ horizontal: "small", vertical: "xsmall" }}
         background={{
           header: { color: "white", opacity: "strong" },
           body: ["light-1", "white"],

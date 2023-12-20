@@ -24,7 +24,7 @@ export async function GET(params) {
   const nbaStandingsResponse = await fetch(
     `https://site.web.api.espn.com/apis/v2/sports/basketball/nba/standings?
       region=us&lang=en&contentorigin=espn&type=0&
-      level=2&sort=playoffseed:asc&season=${params.seasonyear}`,
+      level=2&sort=playoffseed:asc&season=${params.seasonYear}`,
     {
       cache: "no-store",
     }
