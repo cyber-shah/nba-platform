@@ -2,12 +2,14 @@ import React from 'react';
 import { Table, Grid, Image, Paper } from '@mantine/core';
 
 
-export default function Stats(props) {
-  const stat = props.players.leaders.categories[0];
+/**
+* Displays a table of stats
+* @param {Object} props contains the stat to display
+* @returns {JSX.Element} the table of stats
+*/
+function StatsTableDisplay(props) {
 
-
-
-  const rows = stat.leaders.map((leader, index) => {
+  const rows = props.stat.leaders.map((leader, index) => {
     return (
       <Table.Tr key={leader.athlete.displayName}>
         <Table.Td>{index + 1}</Table.Td>
@@ -26,29 +28,36 @@ export default function Stats(props) {
     );
   });
 
-  // const tableHeader = stat.map((stat) => {
   const tableHeader = () => {
     return (
       <Table.Tr>
         <Table.Th key="SerialNumber">#</Table.Th>
         <Table.Th key="Player"> Player </Table.Th>
-        <Table.Th key={stat.abbreviation}> {stat.abbreviation}</Table.Th>
+        <Table.Th key={props.stat.abbreviation}> {props.stat.abbreviation}</Table.Th>
       </Table.Tr>
     );
   };
 
+  // eventually return the table with all the rows
+  return (
+    <Table striped highlightOnHover captionSide="top">
+      <Table.Caption>{props.stat.displayName}</Table.Caption>
+      <Table.Thead>{tableHeader()}</Table.Thead>
+      <Table.Tbody>{rows}</Table.Tbody>
+    </Table>
+  );
+}
 
+
+
+
+export default function Stats(props) {
   return (
     <Paper shadow="xl" radius="lg" p={10}>
-
-      <Table striped highlightOnHover captionSide="top">
-        <Table.Caption>{stat.displayName}</Table.Caption>
-        <Table.Thead>{tableHeader()}</Table.Thead>
-        <Table.Tbody>{rows}</Table.Tbody>
-
-      </Table>
+      {/* for each category, create a StatsTableDisplay table */}
+      {props.players.leaders.categories.map((stat) => (
+        <StatsTableDisplay key={stat.displayName} stat={stat} />
+      ))}
     </Paper >
   );
-
-
 }
