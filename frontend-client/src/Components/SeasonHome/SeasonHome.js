@@ -40,10 +40,11 @@ export default function TeamHome(props) {
           {data !== null && (
             <Box pad="small">
               {selectedTab === 0 && <div>Scoreboard</div>}
-              {selectedTab === 1 &&
+              {selectedTab === 1 && <div>Schedule</div>}
+              {selectedTab === 2 && <Stats players={data.LeagueLeadersPlayers} />}
+              {selectedTab === 3 && < StandingsTable standings={data.LeagueStandings} />}
+              {selectedTab === 4 &&
                 <TeamList teamData={data.LeagueTeams} />}
-              {selectedTab === 2 && < StandingsTable standings={data.LeagueStandings} />}
-              {selectedTab === 3 && <Stats players={data.LeagueLeadersPlayers} />}
             </Box>
           )}
 

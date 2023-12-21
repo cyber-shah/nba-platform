@@ -21,10 +21,11 @@ export default function SeasonHeader(props) {
             onActive={props.onActive}
             margin="small"
           >
-            <Tab title="Scoreboard" />
-            <Tab title="Teams" />
-            <Tab title="Standings" />
+            <Tab title="Scores" />
+            <Tab title="Schedule" />
             <Tab title="Leaderboard" />
+            <Tab title="Standings" />
+            <Tab title="Teams" />
           </Tabs>
         </Box>
       </Grid>

@@ -81,7 +81,7 @@ function App() {
         <Grommet theme={customTheme}>
           <Router>
             <Routes>
-              <Route path="/SeasonHome" element={<SeasonHome />} />
+              <Route path="/" element={<SeasonHome />} />
               <Route path="/PlayerHome" element={<PlayerHome />} />
             </Routes>
           </Router>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table, Grid, Image, Paper, Text } from '@mantine/core';
 
-
 /**
 * Displays a table of stats
 * @param {Object} props contains the stat to display
@@ -13,6 +12,7 @@ function StatsTableDisplay(props) {
     return (
       <Table.Tr key={leader.athlete.displayName}>
         <Table.Td>{index + 1}</Table.Td>
+
         <Table.Td>
           <Grid align="center">
             <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
@@ -24,7 +24,11 @@ function StatsTableDisplay(props) {
             </Grid.Col>
           </Grid>
         </Table.Td>
-        <Table.Td>{leader.displayValue}</Table.Td>
+
+        <Table.Td>
+          <Text fw={700}>{leader.displayValue}  </Text>
+        </Table.Td>
+
       </Table.Tr>
     );
   });
