@@ -1,55 +1,61 @@
 
 import React from 'react';
-import { Table, Grid, Image } from '@mantine/core';
+import { Table, Grid, Image, Paper } from '@mantine/core';
 
 export default function StandingsTable(props) {
-  const entries = props.standings.children[0].standings.entries;
-  const FirstStats = entries[2].stats;
+  const conferences = props.standings.children;
 
   const dataStats = (
     <Table.Tr>
-      <Table.Th key="Team">Team</Table.Th>
-      {FirstStats.map((stat) => (
+      <Table.Th key="SerialNumber">#</Table.Th>
+      <Table.Th key="Team" colSpan={2}>
+        Team
+      </Table.Th>
+      {conferences[0].standings.entries[2].stats.map((stat) => (
         <Table.Th key={stat.shortDisplayName}>{stat.shortDisplayName}</Table.Th>
       ))}
     </Table.Tr>
   );
 
-  const body = entries.map((entry) => (
-    <Table.Tr key={entry.team.displayName}>
+  const tables = conferences.map((conference, conferenceIndex) => {
+    const entries = conference.standings.entries;
 
-      <Table.Td>
-        <Grid>
-          <Grid.Col span={8} >
-            <Image src={entry.team.logos[0].href} />
+    const body = entries.map((entry, index) => (
+      <Table.Tr key={entry.team.displayName}>
+        <Table.Td>{index + 1}</Table.Td>
+        <Table.Td colSpan={2}>
+          <Grid>
+            <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
+              <Image src={entry.team.logos[0].href} />
+            </Grid.Col>
+            <Grid.Col span={6} style={{ whiteSpace: 'nowrap' }}>
+              {entry.team.displayName}
+            </Grid.Col>
+          </Grid>
+        </Table.Td>
+        {entry.stats.map((stat, statIndex) => (
+          <Table.Td key={statIndex}>{stat.displayValue}</Table.Td>
+        ))}
+      </Table.Tr>
+    ));
 
-          </Grid.Col>
-          <Grid.Col span={4}>
-            {entry.team.displayName}
-          </Grid.Col>
-        </Grid>
+    return (
+      <Paper shadow="xl" radius="xl" p="sm">
 
-      </Table.Td>
-      {
-        entry.stats.map((stat, index) => (
-          <Table.Td key={index}>{stat.displayValue}</Table.Td>
-        ))
-      }
+        <h4>{conference.name} Standings</h4>
+        <div style={{ overflowX: 'auto' }}>
 
-    </Table.Tr >
-  ));
+          <Table striped highlightOnHover>
+            <Table.Thead>{dataStats}</Table.Thead>
+            <Table.Tbody>{body}</Table.Tbody>
+          </Table>
 
+        </div>
 
+      </Paper>
+    );
+  });
 
-
-
-  return (
-    <div style={{ overflowX: 'auto' }}>
-      <Table striped highlightOnHover>
-        <Table.Thead>{dataStats}</Table.Thead>
-        <Table.Tbody>{body}</Table.Tbody>
-      </Table>
-    </div>
-  );
+  return <div>{tables}</div>;
 }
 
