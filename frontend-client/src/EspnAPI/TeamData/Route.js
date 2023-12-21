@@ -12,10 +12,10 @@ export async function GET(params) {
   }
   const teamStats = await teamStatsResponse.json();
 
-    
+
   // TEAM SCHEDULES ____________________________________
   const teamScheduleResponse = await fetch(
-      `https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/
+    `https://site.web.api.espn.com/apis/site/v2/sports/basketball/nba/
     teams/${params.teamId}/schedule?region=us&lang=en&season=${params.seasonYear}&seasontype=1`,
     {
       cache: "no-store",
@@ -26,10 +26,10 @@ export async function GET(params) {
   }
   const teamSchedule = await teamScheduleResponse.json();
 
-    
+
   // TEAM ROSTER___________________________________________
   const teamRosterResponse = await fetch(
-      `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/
+    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/
     ${params.teamId}/roster?region=us&lang=en&season=${params.seasonYear}`,
     {
       cache: "no-store",
@@ -41,10 +41,10 @@ export async function GET(params) {
 
   const teamRoster = await teamRosterResponse.json();
 
-    
+
   // TEAM NEWS ____________________________________________
   const teamNewsResponse = await fetch(
-      `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?
+    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?
     team=${params.teamId}`,
     { cache: "no-store", }
   );
