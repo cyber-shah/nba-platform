@@ -6,6 +6,14 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
+import '@mantine/core/styles.css';
+import { createTheme, MantineProvider } from '@mantine/core';
+
+
+const theme = createTheme({
+  /** Put your mantine theme override here */
+});
+
 
 function App() {
   const customTheme = {
@@ -35,11 +43,18 @@ function App() {
     },
 
     dataTable: {
+      border: {
+        body: "bottom",
+      },
 
       body: {
         background: ["light-2", "white"],
         extend: {
           color: 'blue',
+        },
+        font: {
+          size: '10px', // Adjust the font size here
+          weight: 'bold', // You can also adjust the font weight if needed
         },
       },
 
@@ -62,14 +77,16 @@ function App() {
 
   return (
     <>
-      <Grommet theme={customTheme}>
-        <Router>
-          <Routes>
-            <Route path="/SeasonHome" element={<SeasonHome />} />
-            <Route path="/PlayerHome" element={<PlayerHome />} />
-          </Routes>
-        </Router>
-      </Grommet>
+      <MantineProvider theme={theme}>
+        <Grommet theme={customTheme}>
+          <Router>
+            <Routes>
+              <Route path="/SeasonHome" element={<SeasonHome />} />
+              <Route path="/PlayerHome" element={<PlayerHome />} />
+            </Routes>
+          </Router>
+        </Grommet>
+      </MantineProvider>
     </>
   );
 }
