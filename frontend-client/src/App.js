@@ -10,14 +10,6 @@ import SeasonHome from "./Components/SeasonHome/SeasonHome";
 function App() {
   const customTheme = {
     global: {
-      colors: {
-        brand: "#FF0000",
-        placeholder: "#BDBDBD",
-        text: {
-          light: "#FFFFFF",
-          dark: "#000000",
-        },
-      },
     },
 
     tab: {
@@ -42,7 +34,31 @@ function App() {
       },
     },
 
+    dataTable: {
+
+      body: {
+        background: ["light-2", "white"],
+        extend: {
+          color: 'blue',
+        },
+      },
+
+      header: {
+        gap: "0px",
+        font: {
+          size: '10px', // Adjust the font size here
+          weight: 'bold', // You can also adjust the font weight if needed
+        },
+        background: {
+          color: 'white', // Set the background color here
+        },
+      },
+
+    },
   };
+
+  // ... (other DataTable settings)
+
 
   return (
     <>

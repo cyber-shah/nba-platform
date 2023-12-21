@@ -14,7 +14,7 @@ export default function SeasonHeader(props) {
           />
         </Box>
 
-              <Box justify="end" align="center">
+        <Box justify="end" align="center">
           {/* 2. Tabs */}
           <Tabs
             activeIndex={props.selectedTab}

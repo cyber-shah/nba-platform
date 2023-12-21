@@ -1,29 +1,57 @@
 import React from "react";
-import { Box, DataTable, Image, Text, Data, Toolbar, DataSort, grommet, Grommet } from "grommet";
+import { Box, DataTable, Text, grommet, Grommet } from "grommet";
+
+
 
 export default function SeasonsStandings(props) {
-  const dataarray = props.standings.children;
-  const conference = dataarray[0];
-  const standings = conference.standings.entries;
-  const team = standings[0].team;
-  const stats = standings[0].stats;
 
+  // Assuming props.standings.children is an array of conferences
+  const conferences = props.standings.children;
 
+  // Define arrays to store columns and data for each conference
+  const columnsByConference = {};
+  const dataByConference = {};
 
-  // Define columns
-  const columns = [
-    { property: "team", header: "Team", primary: true },
-    ...stats.map(stat => ({ property: stat.name, header: stat.shortDisplayName, })),
-  ];
+  // Iterate through conferences
+  conferences.forEach((conference) => {
+    const conferenceName = conference.name;
+    const standings = conference.standings.entries;
 
-  // Extract data for the first team
-  const data = [{
-    team: team.displayName,
-    ...stats.reduce((acc, stat) => {
-      acc[stat.name] = stat.displayValue;
-      return acc;
-    }, {}),
-  }];
+    // Define columns for the current conference
+    const columns = [
+      { property: "team", header: "Team", primary: true },
+      ...standings[0].stats.map((stat) => ({
+        property: stat.name,
+        header: stat.shortDisplayName,
+      })),
+    ];
+
+    // Initialize data array for the current conference
+    const data = [];
+
+    // Iterate through teams in the current conference
+    standings.forEach((teamStanding) => {
+      const team = teamStanding.team;
+      const stats = teamStanding.stats;
+
+      // Extract data for the current team
+      const teamData = {
+        team: team.displayName,
+        ...stats.reduce((acc, stat) => {
+          acc[stat.name] = stat.displayValue;
+          return acc;
+        }, {}),
+      };
+
+      // Add the current team's data to the data array
+      data.push(teamData);
+    });
+
+    // Store columns and data in the respective arrays
+    columnsByConference[conferenceName] = columns;
+    dataByConference[conferenceName] = data;
+  });
+
 
   return (
     <Box align="center" elevation="large" round="medium">
@@ -33,28 +61,25 @@ export default function SeasonsStandings(props) {
 
       {/* Additional information */}
       <Text size="medium" margin="medium" alignSelf="start">
-        {conference.name} - {conference.standings.displayname}
       </Text>
 
       {/* Display Team and Stats in DataTable */}
-      <Grommet theme={grommet}>
-        <Box align="center" elevation="large" round="medium">
-          {/* ... (previous code) */}
+      {/* ... (previous code) */}
 
-          {/* Display Team and Stats in DataTable */}
-          <DataTable
-            columns={columns}
-            data={data}
-            pad={{ horizontal: "small", vertical: "xsmall" }}
-            background={{
-              header: { color: "white", opacity: "strong" },
-              body: ["light-2", "white"],
-              footer: { color: "dark-1", opacity: "strong" },
-            }}
-            border={{ body: "bottom" }}
-          />
-        </Box>
-      </Grommet>    </Box>
+      {/* Display Team and Stats in DataTable */}
+
+      <Box align="center" round="medium">
+        {Object.keys(columnsByConference).map((conferenceName) => (
+          <Box key={conferenceName} margin={{ bottom: "medium" }} >
+            <Text size="large">{conferenceName} standings</Text>
+            <DataTable
+              columns={columnsByConference[conferenceName]}
+              data={dataByConference[conferenceName]}
+            />
+          </Box>
+        ))}
+      </Box>
+    </Box >
   );
 }
 
