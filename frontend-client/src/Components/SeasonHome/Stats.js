@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Grid, Image, Paper } from '@mantine/core';
+import { Table, Grid, Image, Paper, Text } from '@mantine/core';
 
 
 /**
@@ -8,18 +8,19 @@ import { Table, Grid, Image, Paper } from '@mantine/core';
 * @returns {JSX.Element} the table of stats
 */
 function StatsTableDisplay(props) {
-
+  // for each leader, create a row
   const rows = props.stat.leaders.map((leader, index) => {
     return (
       <Table.Tr key={leader.athlete.displayName}>
         <Table.Td>{index + 1}</Table.Td>
         <Table.Td>
-          <Grid>
+          <Grid align="center">
             <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
               <Image src={leader.athlete.headshot.href} h={50} w={50} />
             </Grid.Col>
             <Grid.Col span={6} style={{ whiteSpace: 'nowrap' }}>
-              {leader.athlete.displayName}
+              <Text> {leader.athlete.displayName} </Text>
+              <Text c="dimmed" size="sm">{leader.athlete.position.displayName} @ {leader.team.displayName}</Text>
             </Grid.Col>
           </Grid>
         </Table.Td>
@@ -28,6 +29,7 @@ function StatsTableDisplay(props) {
     );
   });
 
+  // create the table header
   const tableHeader = () => {
     return (
       <Table.Tr>
@@ -49,15 +51,22 @@ function StatsTableDisplay(props) {
 }
 
 
-
-
+/**
+* For all categories, create a StatsTableDisplay table
+* @param {Object} props contains the players object
+* @returns {JSX.Element} the table of stats
+*/
 export default function Stats(props) {
   return (
     <Paper shadow="xl" radius="lg" p={10}>
-      {/* for each category, create a StatsTableDisplay table */}
-      {props.players.leaders.categories.map((stat) => (
-        <StatsTableDisplay key={stat.displayName} stat={stat} />
-      ))}
-    </Paper >
+      <Grid>
+        {/* for each category, create a StatsTableDisplay table */}
+        {props.players.leaders.categories.map((stat) => (
+          <Grid.Col key={stat.displayName} span={6}>
+            <StatsTableDisplay stat={stat} />
+          </Grid.Col>
+        ))}
+      </Grid>
+    </Paper>
   );
 }
