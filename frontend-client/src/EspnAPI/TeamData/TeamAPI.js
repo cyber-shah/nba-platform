@@ -53,4 +53,11 @@ export async function GET(params) {
   }
 
   const teamNews = await teamNewsResponse.json();
+
+  return {
+    teamStats: teamStats,
+    teamSchedule: teamSchedule,
+    teamRoster: teamRoster,
+    teamNews: teamNews,
+  };
 }

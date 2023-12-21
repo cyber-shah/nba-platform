@@ -1,10 +1,8 @@
 // App.js
 
 import { Grommet } from "grommet";
-import { colors } from "grommet/themes/base";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PlayerHome from "./Components/PlayerHome/PlayerHome";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
@@ -82,7 +80,6 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<SeasonHome />} />
-              <Route path="/PlayerHome" element={<PlayerHome />} />
             </Routes>
           </Router>
         </Grommet>

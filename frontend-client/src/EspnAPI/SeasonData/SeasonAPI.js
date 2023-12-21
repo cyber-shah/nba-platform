@@ -44,13 +44,20 @@ qualified=true&season=${params.seasonYear}&seasontype=2`,
   const nbaLeadersPlayers = await nbaLeadersPlayersResponse.json();
 
 
-
+  const nbaScheduleResponse = await fetch(
+    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${params.date}`,
+    {
+      cache: "no-store",
+    }
+  );
+  const nbaSchedule = await nbaScheduleResponse.json();
 
   return {
     LeagueNews: nbaNews,
     LeagueTeams: nbaTeams,
     LeagueStandings: nbaStandings,
     LeagueLeadersPlayers: nbaLeadersPlayers,
+    LeagueSchedule: nbaSchedule,
   };
 
 
