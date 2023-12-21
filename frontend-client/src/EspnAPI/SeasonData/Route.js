@@ -12,7 +12,7 @@ export async function GET(params) {
   // NOTE : this is only for NBA hence, we see "nba, sports" 
   // here if there is some other could be the same
   const nbaTeamsResponse = await fetch(
-    "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams",
+    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams`,
     {
       cache: "no-store",
     }
