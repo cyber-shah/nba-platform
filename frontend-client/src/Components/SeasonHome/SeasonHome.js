@@ -2,7 +2,6 @@ import { Box, Grid } from "grommet";
 import { React, useEffect, useState } from "react";
 import GET from "../../EspnAPI/SeasonData/Route";
 import SeasonHeader from "./SeasonHeader";
-import SeasonsStandings from "./Standings/SeasonStandings";
 import TeamList from "./TeamList/TeamList";
 import NewsSideBar from "./TeamNews/NewsSideBar";
 import StandingsTable from "./Standings/StandingsTable";

@@ -3,9 +3,20 @@ import React from 'react';
 import { Table, Grid, Image, Paper } from '@mantine/core';
 
 export default function StandingsTable(props) {
+  return (
+    <Paper shadow="xl" radius="lg" p={10}>
+      <StandingsTableDisplay standings={props.standings} />
+    </Paper>
+
+  );
+}
+
+
+function StandingsTableDisplay(props) {
   const conferences = props.standings.children;
 
-  const dataStats = (
+  // Table Headers : Th
+  const tableHeaders = (
     <Table.Tr>
       <Table.Th key="SerialNumber">#</Table.Th>
       <Table.Th key="Team" colSpan={2}>
@@ -20,9 +31,11 @@ export default function StandingsTable(props) {
   const tables = conferences.map((conference, conferenceIndex) => {
     const entries = conference.standings.entries;
 
-    const body = entries.map((entry, index) => (
+    const tableRows = entries.map((entry, index) => (
+
       <Table.Tr key={entry.team.displayName}>
         <Table.Td>{index + 1}</Table.Td>
+
         <Table.Td colSpan={2}>
           <Grid>
             <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
@@ -33,26 +46,27 @@ export default function StandingsTable(props) {
             </Grid.Col>
           </Grid>
         </Table.Td>
+
+        { /** Map 1through each stat and display it in a table cell */}
         {entry.stats.map((stat, statIndex) => (
           <Table.Td key={statIndex}>{stat.displayValue}</Table.Td>
         ))}
+
       </Table.Tr>
     ));
 
     return (
-      <Paper shadow="xl" radius="xl" p="sm">
-
+      <>
         <h4>{conference.name} Standings</h4>
         <div style={{ overflowX: 'auto' }}>
 
           <Table striped highlightOnHover>
-            <Table.Thead>{dataStats}</Table.Thead>
-            <Table.Tbody>{body}</Table.Tbody>
+            <Table.Thead>{tableHeaders}</Table.Thead>
+            <Table.Tbody>{tableRows}</Table.Tbody>
           </Table>
 
         </div>
-
-      </Paper>
+      </>
     );
   });
 
