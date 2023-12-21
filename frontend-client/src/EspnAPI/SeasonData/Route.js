@@ -29,12 +29,28 @@ export async function GET(params) {
       cache: "no-store",
     }
   );
-
   const nbaStandings = await nbaStandingsResponse.json();
+
+
+  // season type 2 is for regular season and 3 is for playoffs
+  const nbaLeadersPlayersResponse = await fetch(
+    `https://site.web.api.espn.com/apis/site/v3/sports/basketball/nba/leaders?
+region=us&lang=en&contentorigin=espn&limit=5&
+qualified=true&season=${params.seasonYear}&seasontype=2`,
+    {
+      cache: "no-store",
+    }
+  );
+  const nbaLeadersPlayers = await nbaLeadersPlayersResponse.json();
+
+
+
+
   return {
     LeagueNews: nbaNews,
     LeagueTeams: nbaTeams,
     LeagueStandings: nbaStandings,
+    LeagueLeadersPlayers: nbaLeadersPlayers,
   };
 
 

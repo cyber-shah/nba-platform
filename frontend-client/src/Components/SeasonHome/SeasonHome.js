@@ -5,7 +5,7 @@ import SeasonHeader from "./SeasonHeader";
 import TeamList from "./TeamList/TeamList";
 import NewsSideBar from "./TeamNews/NewsSideBar";
 import StandingsTable from "./Standings/StandingsTable";
-
+import Stats from "./Stats";
 
 export default function TeamHome(props) {
   const [data, setData] = useState(null);
@@ -43,7 +43,7 @@ export default function TeamHome(props) {
               {selectedTab === 1 &&
                 <TeamList teamData={data.LeagueTeams} />}
               {selectedTab === 2 && < StandingsTable standings={data.LeagueStandings} />}
-              {selectedTab === 3 && <div>Leaderboard</div>}
+              {selectedTab === 3 && <Stats players={data.LeagueLeadersPlayers} />}
             </Box>
           )}
 
