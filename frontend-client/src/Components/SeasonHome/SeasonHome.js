@@ -5,7 +5,7 @@ import SeasonHeader from "./SeasonHeader";
 import TeamList from "./TeamList/TeamList";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
 import StandingsTable from "./Standings/StandingsTable";
-import Stats from "./Stats";
+import Stats from "./Leaderboard";
 import Scores from "./Scores/Scores.js";
 
 export default function TeamHome() {
