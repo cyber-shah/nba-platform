@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Table, Grid, Image, Paper } from '@mantine/core';
+import { Table, Grid, Image, Paper, Anchor } from '@mantine/core';
 
 export default function StandingsTable(props) {
   return (
@@ -42,7 +42,7 @@ function StandingsTableDisplay(props) {
               <Image src={entry.team.logos[0].href} />
             </Grid.Col>
             <Grid.Col span={6} style={{ whiteSpace: 'nowrap' }}>
-              {entry.team.displayName}
+              <Anchor size='sm' co> {entry.team.displayName} </Anchor>
             </Grid.Col>
           </Grid>
         </Table.Td>
@@ -58,7 +58,7 @@ function StandingsTableDisplay(props) {
     return (
       <>
         <h4>{conference.name} Standings</h4>
-        <div style={{ overflowX: 'auto' }}>
+        <div style={{ overflowX: 'auto', overflowY: 'clip' }}>
 
           <Table striped highlightOnHover>
             <Table.Thead>{tableHeaders}</Table.Thead>
