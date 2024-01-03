@@ -10,6 +10,7 @@ import Scores from "./Scores/Scores.js";
 
 export default function TeamHome() {
   const [data, setData] = useState(null);
+  const [date, setDate] = useState(null);
 
   // for Season Header
   const [selectedTab, setTab] = useState(2);
@@ -40,7 +41,8 @@ export default function TeamHome() {
 
           {data !== null && (
             <Box pad="small">
-              {selectedTab === 0 && <Scores scores={data.LeagueSchedule} />}
+              {selectedTab === 0 && <Scores scores={data.LeagueScoreboard} setDate={setDate} date={date}
+              />}
               {selectedTab === 4 && <div>Schedule</div>}
               {selectedTab === 1 && <Stats players={data.LeagueLeadersPlayers} />}
               {selectedTab === 2 && < StandingsTable standings={data.LeagueStandings} />}

@@ -50,14 +50,14 @@ qualified=true&season=${params.seasonYear}&seasontype=2`,
       cache: "no-store",
     }
   );
-  const nbaSchedule = await nbaScheduleResponse.json();
+  const nbaScoreboard = await nbaScheduleResponse.json();
 
   return {
     LeagueNews: nbaNews,
     LeagueTeams: nbaTeams,
     LeagueStandings: nbaStandings,
     LeagueLeadersPlayers: nbaLeadersPlayers,
-    LeagueSchedule: nbaSchedule,
+    LeagueScoreboard: nbaScoreboard,
   };
 
 
