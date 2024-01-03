@@ -41,10 +41,10 @@ export default function TeamHome() {
           {data !== null && (
             <Box pad="small">
               {selectedTab === 0 && <Scores scores={data.LeagueSchedule} />}
-              {selectedTab === 1 && <div>Schedule</div>}
-              {selectedTab === 2 && <Stats players={data.LeagueLeadersPlayers} />}
-              {selectedTab === 3 && < StandingsTable standings={data.LeagueStandings} />}
-              {selectedTab === 4 &&
+              {selectedTab === 4 && <div>Schedule</div>}
+              {selectedTab === 1 && <Stats players={data.LeagueLeadersPlayers} />}
+              {selectedTab === 2 && < StandingsTable standings={data.LeagueStandings} />}
+              {selectedTab === 3 &&
                 <TeamList teamData={data.LeagueTeams} />}
             </Box>
           )}

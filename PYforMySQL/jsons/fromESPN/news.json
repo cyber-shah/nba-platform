@@ -1,0 +1,2182 @@
+{
+    "header": "NBA News",
+    "link": {
+        "language": "en",
+        "rel": [
+            "index",
+            "desktop",
+            "league"
+        ],
+        "href": "https://www.espn.com/nba/",
+        "text": "All NBA News",
+        "shortText": "All News",
+        "isExternal": false,
+        "isPremium": false
+    },
+    "articles": [
+        {
+            "dataSourceIdentifier": "6f66d24f9e8f0",
+            "description": "— Anthony Edwards had 23 points, 10 rebounds and five assists, Karl-Anthony Towns scored 20 points, and the Western Conference-leading Minnesota Timberwolves beat the New York Knicks 117-100 on Monday night.",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948914"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948914"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584849"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948914"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "id": 4533,
+                    "description": "Minnesota Timberwolves",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 16,
+                    "team": {
+                        "id": 16,
+                        "description": "Minnesota Timberwolves",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/16"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/min/minnesota-timberwolves"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=16"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:16",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "id": 4293,
+                    "description": "New York Knicks",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 18,
+                    "team": {
+                        "id": 18,
+                        "description": "New York Knicks",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/18"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/ny/new-york-knicks"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=18"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:18",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "13f727cb-254d-b484-a337-93fcc0047add",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "13f727cb254db484a33793fcc0047add",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "61719eb2-11c3-4e3d-90c3-0a1319fd850b",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "61719eb211c34e3d90c30a1319fd850b",
+                    "createDate": "2023-11-21T03:45:58Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:45:58Z"
+                }
+            ],
+            "headline": "Timberwolves stay atop West, undefeated at home as Edwards, Towns shine in 117-100 win over Knicks",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584849.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Anthony Edwards elevates for the putback slam",
+                    "width": 576,
+                    "caption": "Anthony Edwards races down the court and finishes strong at the rim with a nice dunk vs. New York.",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_205258125_2404673/ss_20231120_205258125_2404673.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T04:52:01Z",
+            "lastModified": "2023-11-21T04:52:01Z"
+        },
+        {
+            "dataSourceIdentifier": "3c98066901730",
+            "description": "— Bam Adebayo scored 23 points and had 11 rebounds, and the Miami Heat blew out the Chicago Bulls 118-100 on Monday night, two nights after blowing a 21-point...",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948905"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948905"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584848"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948905"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "id": 4392,
+                    "description": "Chicago Bulls",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 4,
+                    "team": {
+                        "id": 4,
+                        "description": "Chicago Bulls",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/4"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/chi/chicago-bulls"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=4"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:4",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "id": 4259,
+                    "description": "Miami Heat",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 14,
+                    "team": {
+                        "id": 14,
+                        "description": "Miami Heat",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/14"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/mia/miami-heat"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=14"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:14",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e588ccf1-ba03-ea43-c34c-9a9c8d1895ca",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e588ccf1ba03ea43c34c9a9c8d1895ca",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "81e3212c-30ef-9b1b-5edb-453b13ff265a",
+                    "createDate": "2023-11-21T03:42:55Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "81e3212c30ef9b1b5edb453b13ff265a",
+                    "createDate": "2023-11-21T03:42:55Z"
+                }
+            ],
+            "headline": "Bam Adebayo scores 23 points as the Heat cruise to a 118-100 win over the Bulls",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584848.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Jimmy Butler yells 'Skyhook!' and converts",
+                    "width": 576,
+                    "caption": "Jimmy Butler gets into the lane and calls his shot against the Bulls.",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_234919335_2405017/ss_20231120_234919335_2405017.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T04:38:56Z",
+            "lastModified": "2023-11-21T04:38:55Z"
+        },
+        {
+            "dataSourceIdentifier": "d9eb1743884d9",
+            "description": "— Brandon Ingram hit all five of his 3-pointers and led all scorers with 31 points, and Zion Williamson dominated the paint by scoring 26 points on 12-for-16 shooting to power the New Orleans Pelicans to a 129-93 victory over the Sacramento Kings on...",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948893"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948893"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584850"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948893"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "id": 114922,
+                    "description": "New Orleans Pelicans",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 3,
+                    "team": {
+                        "id": 3,
+                        "description": "New Orleans Pelicans",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/3"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=3"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:3",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "id": 4676,
+                    "description": "Sacramento Kings",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 23,
+                    "team": {
+                        "id": 23,
+                        "description": "Sacramento Kings",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/23"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/sac/sacramento-kings"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=23"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:23",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9461f397-7882-94c0-c18c-e89bdc9e570e",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9461f397788294c0c18ce89bdc9e570e",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e266c4ea-9af3-1bd8-06fb-fd608fd30e26",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e266c4ea9af31bd806fbfd608fd30e26",
+                    "createDate": "2023-11-21T03:40:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:40:56Z"
+                }
+            ],
+            "headline": "Ingram, Williamson power the Pelicans to a 129-93 win over Pacific Division-leading Kings",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584850.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Zion Williamson rocks the rim with slam",
+                    "width": 576,
+                    "caption": "Zion Williamson rocks the rim with slam",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_220214664_2404886/ss_20231120_220214664_2404886.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T03:40:57Z",
+            "lastModified": "2023-11-21T03:40:56Z"
+        },
+        {
+            "dataSourceIdentifier": "f4bb2686e0611",
+            "description": "— Paul George scored 28 points, Kawhi Leonard added 21 and the Los Angeles Clippers rolled past Victor Wembanyama and San Antonio 124-99 on Monday night, extending the Spurs’ losing streak to nine games.",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948833"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948833"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584851"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948833"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "id": 4548,
+                    "description": "San Antonio Spurs",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 24,
+                    "team": {
+                        "id": 24,
+                        "description": "San Antonio Spurs",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/24"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/sa/san-antonio-spurs"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=24"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:24",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "id": 154798,
+                    "description": "LA Clippers",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 12,
+                    "team": {
+                        "id": 12,
+                        "description": "LA Clippers",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/12"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/lac/la-clippers"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=12"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:12",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "083a58a6-b849-3501-e67b-059290d12295",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "083a58a6b8493501e67b059290d12295",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "8aef854732f50943a1dee734567674cc",
+                    "createDate": "2023-11-21T03:29:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "8aef8547-32f5-0943-a1de-e734567674cc",
+                    "createDate": "2023-11-21T03:29:56Z"
+                }
+            ],
+            "headline": "George, Leonard lead Clippers past Spurs 124-99, extending San Antonio's skid to 9 straight",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584851.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Cedi Osman drains shot vs vs. LA Clippers",
+                    "width": 576,
+                    "caption": "Cedi Osman drains shot vs vs. LA Clippers",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_214708153_2404849/ss_20231120_214708153_2404849.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T04:34:56Z",
+            "lastModified": "2023-11-21T04:34:55Z"
+        },
+        {
+            "images": [
+                {
+                    "name": "Reggie Jackson gets the and-1 to fall",
+                    "width": 576,
+                    "alt": "",
+                    "caption": "Reggie Jackson gets the and-1 to fall",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_212004118_2404758/ss_20231120_212004118_2404758.jpg",
+                    "height": 324
+                }
+            ],
+            "dataSourceIdentifier": "3543d00fb45bc",
+            "description": "Reggie Jackson gets the and-1 to fall",
+            "published": "2023-11-21T03:14:13Z",
+            "type": "Media",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948244"
+                    },
+                    "self": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948244"
+                    }
+                },
+                "web": {
+                    "href": "https://www.espn.com/video/clip?id=38948244"
+                }
+            },
+            "lastModified": "2023-11-21T03:14:08Z",
+            "categories": [
+                {
+                    "id": 4502,
+                    "description": "Denver Nuggets",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 7,
+                    "team": {
+                        "id": 7,
+                        "description": "Denver Nuggets",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/7"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/den/denver-nuggets"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=7"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:7",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "id": 92011,
+                    "description": "Reggie Jackson",
+                    "type": "athlete",
+                    "sportId": 46,
+                    "athleteId": 6443,
+                    "athlete": {
+                        "id": 6443,
+                        "description": "Reggie Jackson",
+                        "links": {
+                            "api": {
+                                "athletes": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/athletes/6443"
+                                }
+                            },
+                            "web": {
+                                "athletes": {
+                                    "href": "https://www.espn.com/nba/player/_/id/6443/reggie-jackson"
+                                }
+                            },
+                            "mobile": {
+                                "athletes": {
+                                    "href": "http://m.espn.com/nba/playercard?playerId=6443"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~a:6443",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "id": 191422,
+                    "description": "nba highlight",
+                    "type": "topic",
+                    "sportId": 0,
+                    "topicId": 707,
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "id": 12025,
+                    "description": "Fantasy NBA",
+                    "type": "league",
+                    "sportId": 3090,
+                    "leagueId": 3090,
+                    "league": {
+                        "id": 3090,
+                        "description": "Fantasy NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {}
+                            },
+                            "web": {
+                                "leagues": {}
+                            },
+                            "mobile": {
+                                "leagues": {}
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:3090",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "f4f210d8024f8e2533dfc7291b278905",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "f4f210d8-024f-8e25-33df-c7291b278905",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd0190a52726f82603bcf57d32ae",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "c4aceb39-0eb9-a30b-1120-9cb5b12b677a",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "c4aceb390eb9a30b11209cb5b12b677a",
+                    "createDate": "2023-11-21T02:20:03Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:20:03Z"
+                }
+            ],
+            "headline": "Reggie Jackson gets the and-1 to fall"
+        },
+        {
+            "images": [
+                {
+                    "name": "Zion Williamson rocks the rim with slam",
+                    "width": 576,
+                    "alt": "",
+                    "caption": "Zion Williamson rocks the rim with slam",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_220214664_2404886/ss_20231120_220214664_2404886.jpg",
+                    "height": 324
+                }
+            ],
+            "dataSourceIdentifier": "24d79182c35bf",
+            "description": "Zion Williamson rocks the rim with slam",
+            "published": "2023-11-21T03:23:17Z",
+            "type": "Media",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948600"
+                    },
+                    "self": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948600"
+                    }
+                },
+                "web": {
+                    "href": "https://www.espn.com/video/clip?id=38948600"
+                }
+            },
+            "lastModified": "2023-11-21T03:23:13Z",
+            "categories": [
+                {
+                    "id": 4676,
+                    "description": "Sacramento Kings",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 23,
+                    "team": {
+                        "id": 23,
+                        "description": "Sacramento Kings",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/23"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/sac/sacramento-kings"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=23"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:23",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "id": 114922,
+                    "description": "New Orleans Pelicans",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 3,
+                    "team": {
+                        "id": 3,
+                        "description": "New Orleans Pelicans",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/3"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/no/new-orleans-pelicans"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=3"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:3",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "id": 384265,
+                    "description": "Zion Williamson",
+                    "type": "athlete",
+                    "sportId": 46,
+                    "athleteId": 4395628,
+                    "athlete": {
+                        "id": 4395628,
+                        "description": "Zion Williamson",
+                        "links": {
+                            "api": {
+                                "athletes": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/athletes/4395628"
+                                }
+                            },
+                            "web": {
+                                "athletes": {
+                                    "href": "https://www.espn.com/nba/player/_/id/4395628/zion-williamson"
+                                }
+                            },
+                            "mobile": {
+                                "athletes": {
+                                    "href": "http://m.espn.com/nba/playercard?playerId=4395628"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~a:4395628",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "id": 191422,
+                    "description": "nba highlight",
+                    "type": "topic",
+                    "sportId": 0,
+                    "topicId": 707,
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "id": 12025,
+                    "description": "Fantasy NBA",
+                    "type": "league",
+                    "sportId": 3090,
+                    "leagueId": 3090,
+                    "league": {
+                        "id": 3090,
+                        "description": "Fantasy NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {}
+                            },
+                            "web": {
+                                "leagues": {}
+                            },
+                            "mobile": {
+                                "leagues": {}
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:3090",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9461f397-7882-94c0-c18c-e89bdc9e570e",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9461f397788294c0c18ce89bdc9e570e",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "34e5ec5d10b3ba592ba13a3be9a1be22",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "34e5ec5d-10b3-ba59-2ba1-3a3be9a1be22",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e266c4ea-9af3-1bd8-06fb-fd608fd30e26",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "e266c4ea9af31bd806fbfd608fd30e26",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd0190a52726f82603bcf57d32ae",
+                    "createDate": "2023-11-21T03:02:14Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
+                    "createDate": "2023-11-21T03:02:14Z"
+                }
+            ],
+            "headline": "Zion Williamson rocks the rim with slam"
+        },
+        {
+            "dataSourceIdentifier": "1e52e6c5af043",
+            "description": "— Miles Bridges made the most of his first NBA start in 586 days.",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948525"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948525"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584845"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948525"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "id": 127884,
+                    "description": "Charlotte Hornets",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 30,
+                    "team": {
+                        "id": 30,
+                        "description": "Charlotte Hornets",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/30"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/cha/charlotte-hornets"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=30"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:30",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "id": 4245,
+                    "description": "Boston Celtics",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 2,
+                    "team": {
+                        "id": 2,
+                        "description": "Boston Celtics",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/2"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/bos/boston-celtics"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=2"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:2",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "377633c20dd191a183c09ed2d0c00ea1",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "377633c2-0dd1-91a1-83c0-9ed2d0c00ea1",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "2ca761df-5f60-b2e9-22ed-e099c46d889b",
+                    "createDate": "2023-11-21T02:49:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "2ca761df5f60b2e922ede099c46d889b",
+                    "createDate": "2023-11-21T02:49:56Z"
+                }
+            ],
+            "headline": "Miles Bridges' 3-pointer with 6.6 seconds left in OT helps Hornets beat Celtics; Tatum scores 45",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584845.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Jayson Tatum misses crucial free-throw for Celtics in OT thriller",
+                    "width": 576,
+                    "caption": "Jayson Tatum misses a free-throw at the goal line, costing the Celtics a chance to defeat the Hornets in OT.",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_214722224_2404850/ss_20231120_214722224_2404850.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T03:43:55Z",
+            "lastModified": "2023-11-21T03:43:55Z"
+        },
+        {
+            "images": [
+                {
+                    "name": "James Harden dimes Kawhi Leonard for an impressive and-1",
+                    "width": 576,
+                    "alt": "",
+                    "caption": "James Harden heaves a nearly full-court dime to Kawhi Leonard who drains an impressive and-1 to pad the Clippers' lead.",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_214426461_2404838/ss_20231120_214426461_2404838.jpg",
+                    "height": 324
+                }
+            ],
+            "dataSourceIdentifier": "c8b9a6aac7b7a",
+            "description": "James Harden heaves a nearly full-court dime to Kawhi Leonard who drains an impressive and-1 to pad the Clippers' lead.",
+            "published": "2023-11-21T03:32:41Z",
+            "type": "Media",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948469"
+                    },
+                    "self": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948469"
+                    }
+                },
+                "web": {
+                    "href": "https://www.espn.com/video/clip?id=38948469"
+                }
+            },
+            "lastModified": "2023-11-21T03:32:36Z",
+            "categories": [
+                {
+                    "id": 4548,
+                    "description": "San Antonio Spurs",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 24,
+                    "team": {
+                        "id": 24,
+                        "description": "San Antonio Spurs",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/24"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/sa/san-antonio-spurs"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=24"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:24",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "id": 91976,
+                    "description": "Kawhi Leonard",
+                    "type": "athlete",
+                    "sportId": 46,
+                    "athleteId": 6450,
+                    "athlete": {
+                        "id": 6450,
+                        "description": "Kawhi Leonard",
+                        "links": {
+                            "api": {
+                                "athletes": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/athletes/6450"
+                                }
+                            },
+                            "web": {
+                                "athletes": {
+                                    "href": "https://www.espn.com/nba/player/_/id/6450/kawhi-leonard"
+                                }
+                            },
+                            "mobile": {
+                                "athletes": {
+                                    "href": "http://m.espn.com/nba/playercard?playerId=6450"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~a:6450",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "id": 154798,
+                    "description": "LA Clippers",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 12,
+                    "team": {
+                        "id": 12,
+                        "description": "LA Clippers",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/12"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/lac/la-clippers"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=12"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:12",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "id": 191422,
+                    "description": "nba highlight",
+                    "type": "topic",
+                    "sportId": 0,
+                    "topicId": 707,
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "id": 12025,
+                    "description": "Fantasy NBA",
+                    "type": "league",
+                    "sportId": 3090,
+                    "leagueId": 3090,
+                    "league": {
+                        "id": 3090,
+                        "description": "Fantasy NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {}
+                            },
+                            "web": {
+                                "leagues": {}
+                            },
+                            "mobile": {
+                                "leagues": {}
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:3090",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "083a58a6-b849-3501-e67b-059290d12295",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "083a58a6b8493501e67b059290d12295",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "8aef854732f50943a1dee734567674cc",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "8aef8547-32f5-0943-a1de-e734567674cc",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd0190a52726f82603bcf57d32ae",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "87ff907cc68ca82d121537e05d0c62ef",
+                    "createDate": "2023-11-21T02:44:25Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "87ff907c-c68c-a82d-1215-37e05d0c62ef",
+                    "createDate": "2023-11-21T02:44:25Z"
+                }
+            ],
+            "headline": "James Harden dimes Kawhi Leonard for an impressive and-1"
+        },
+        {
+            "dataSourceIdentifier": "29c86c7c1e7b7",
+            "description": "— Reggie Jackson scored 21 points and carried Denver in the fourth quarter after two-time MVP Nikola Jokic was ejected in the first half, and the Nuggets handed the Detroit Pistons their 12th straight loss, 107-103 on Monday night.",
+            "type": "Recap",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948467"
+                    },
+                    "self": {
+                        "href": "http://now.core.api.espn.com/v1/sports/news/38948467"
+                    }
+                },
+                "web": {
+                    "href": "http://www.espn.com/nba/recap?gameId=401584846"
+                },
+                "mobile": {
+                    "href": "http://m.espn.go.com/nba/story?storyId=38948467"
+                }
+            },
+            "categories": [
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "id": 4422,
+                    "description": "Detroit Pistons",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 8,
+                    "team": {
+                        "id": 8,
+                        "description": "Detroit Pistons",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/8"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/det/detroit-pistons"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=8"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:8",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "id": 4502,
+                    "description": "Denver Nuggets",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 7,
+                    "team": {
+                        "id": 7,
+                        "description": "Denver Nuggets",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/7"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/den/denver-nuggets"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=7"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:7",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "c4aceb39-0eb9-a30b-1120-9cb5b12b677a",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "c4aceb390eb9a30b11209cb5b12b677a",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "4e096981-dc02-51d0-3dcd-2468fcc1e22d",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "4e096981dc0251d03dcd2468fcc1e22d",
+                    "createDate": "2023-11-21T02:43:56Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:43:56Z"
+                }
+            ],
+            "headline": "Reggie Jackson leads Nuggets past Pistons for 107-103 win after Nikola Jokic ejected",
+            "images": [
+                {
+                    "name": "espn.applewatch.awayhome.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.applewatch.awayhome.1"
+                },
+                {
+                    "name": "espn.applewatch.homeaway.1",
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.applewatch.homeaway.1"
+                },
+                {
+                    "name": "espn.all.awayhome.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.awayhome.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.homeaway.16x9.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.homeaway.16x9.1",
+                    "ratio": "16x9",
+                    "height": 173
+                },
+                {
+                    "name": "espn.all.awayhome.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.awayhome.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.homeaway.1x1.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.homeaway.1x1.1",
+                    "ratio": "1x1",
+                    "height": 308
+                },
+                {
+                    "name": "espn.all.awayhome.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.awayhome.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "espn.all.homeaway.5x2.1",
+                    "width": 308,
+                    "type": "stitcher",
+                    "url": "https://s.espncdn.com/stitcher/sports/basketball/nba/events/401584846.png?templateId=espn.all.homeaway.5x2.1",
+                    "ratio": "5x2",
+                    "height": 124
+                },
+                {
+                    "name": "Reggie Jackson gets the and-1 to fall",
+                    "width": 576,
+                    "caption": "Reggie Jackson gets the and-1 to fall",
+                    "type": "Media",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_212004118_2404758/ss_20231120_212004118_2404758.jpg",
+                    "height": 324
+                }
+            ],
+            "published": "2023-11-21T03:18:56Z",
+            "lastModified": "2023-11-21T03:18:55Z"
+        },
+        {
+            "images": [
+                {
+                    "name": "LaMelo dimes Miles Bridges for 3 with seconds left in OT",
+                    "width": 576,
+                    "alt": "",
+                    "caption": "LaMelo Ball finds Miles Bridges in the corner who strokes the 3-pointer to give the Hornets the lead.",
+                    "url": "https://a.espncdn.com/media/motion/2023/1120/ss_20231120_212744824_2404787/ss_20231120_212744824_2404787.jpg",
+                    "height": 324
+                }
+            ],
+            "dataSourceIdentifier": "ea1ef1263b1ad",
+            "description": "LaMelo Ball finds Miles Bridges in the corner who strokes the 3-pointer to give the Hornets the lead.",
+            "published": "2023-11-21T02:33:19Z",
+            "type": "Media",
+            "premium": false,
+            "links": {
+                "api": {
+                    "news": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948322"
+                    },
+                    "self": {
+                        "href": "http://api-app.espn.com/v1/video/clips/38948322"
+                    }
+                },
+                "web": {
+                    "href": "https://www.espn.com/video/clip?id=38948322"
+                }
+            },
+            "lastModified": "2023-11-21T02:33:18Z",
+            "categories": [
+                {
+                    "id": 187361,
+                    "description": "Miles Bridges",
+                    "type": "athlete",
+                    "sportId": 46,
+                    "athleteId": 4066383,
+                    "athlete": {
+                        "id": 4066383,
+                        "description": "Miles Bridges",
+                        "links": {
+                            "api": {
+                                "athletes": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/athletes/4066383"
+                                }
+                            },
+                            "web": {
+                                "athletes": {
+                                    "href": "https://www.espn.com/nba/player/_/id/4066383/miles-bridges"
+                                }
+                            },
+                            "mobile": {
+                                "athletes": {
+                                    "href": "http://m.espn.com/nba/playercard?playerId=4066383"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~a:4066383",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "id": 4245,
+                    "description": "Boston Celtics",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 2,
+                    "team": {
+                        "id": 2,
+                        "description": "Boston Celtics",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/2"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/bos/boston-celtics"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=2"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:2",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "id": 9577,
+                    "description": "NBA",
+                    "type": "league",
+                    "sportId": 46,
+                    "leagueId": 46,
+                    "league": {
+                        "id": 46,
+                        "description": "NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba"
+                                }
+                            },
+                            "web": {
+                                "leagues": {
+                                    "href": "https://www.espn.com/nba/"
+                                }
+                            },
+                            "mobile": {
+                                "leagues": {
+                                    "href": "http://m.espn.com/nba/"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "id": 127884,
+                    "description": "Charlotte Hornets",
+                    "type": "team",
+                    "sportId": 46,
+                    "teamId": 30,
+                    "team": {
+                        "id": 30,
+                        "description": "Charlotte Hornets",
+                        "links": {
+                            "api": {
+                                "teams": {
+                                    "href": "http://now.core.api.espn.com/v1/sports/basketball/nba/teams/30"
+                                }
+                            },
+                            "web": {
+                                "teams": {
+                                    "href": "https://www.espn.com/nba/team/_/name/cha/charlotte-hornets"
+                                }
+                            },
+                            "mobile": {
+                                "teams": {
+                                    "href": "http://m.espn.com/nba/clubhouse?teamId=30"
+                                }
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:46~t:30",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "id": 191422,
+                    "description": "nba highlight",
+                    "type": "topic",
+                    "sportId": 0,
+                    "topicId": 707,
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "id": 12025,
+                    "description": "Fantasy NBA",
+                    "type": "league",
+                    "sportId": 3090,
+                    "leagueId": 3090,
+                    "league": {
+                        "id": 3090,
+                        "description": "Fantasy NBA",
+                        "links": {
+                            "api": {
+                                "leagues": {}
+                            },
+                            "web": {
+                                "leagues": {}
+                            },
+                            "mobile": {
+                                "leagues": {}
+                            }
+                        }
+                    },
+                    "uid": "s:40~l:3090",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd0190a52726f82603bcf57d32ae",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "9660cd01-90a5-2726-f826-03bcf57d32ae",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "2ca761df-5f60-b2e9-22ed-e099c46d889b",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "2ca761df5f60b2e922ede099c46d889b",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "377633c20dd191a183c09ed2d0c00ea1",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "377633c2-0dd1-91a1-83c0-9ed2d0c00ea1",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "f288347bfa90b31d965a98e20e1a8294",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "f288347b-fa90-b31d-965a-98e20e1a8294",
+                    "createDate": "2023-11-21T02:27:44Z"
+                },
+                {
+                    "type": "guid",
+                    "guid": "7b3729c9-7f69-308a-bf8a-ee15a6aba154",
+                    "createDate": "2023-11-21T02:27:44Z"
+                }
+            ],
+            "headline": "LaMelo dimes Miles Bridges for 3 with seconds left in OT"
+        }
+    ]
+}

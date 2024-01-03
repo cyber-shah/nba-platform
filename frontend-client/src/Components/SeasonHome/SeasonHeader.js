@@ -22,7 +22,7 @@ export default function SeasonHeader(props) {
             margin="small"
           >
             <Tab title="Scores" />
-            <Tab title="Schedule" />
+            { /** <Tab title="Schedule" /> */}
             <Tab title="Leaderboard" />
             <Tab title="Standings" />
             <Tab title="Teams" />

@@ -1,0 +1,58 @@
+{
+  "resource": "leaderstiles",
+  "parameters": {
+    "LeagueID": "00",
+    "Season": "2023-24",
+    "SeasonType": "Regular Season",
+    "GameScope": "2024",
+    "PlayerScope": "All Players",
+    "PlayerOrTeam": "Team",
+    "Stat": "PTS"
+  },
+  "resultSet": [
+    {
+      "name": "LeadersTiles",
+      "headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"],
+      "rowSet": [
+        [1, 1610612754, "IND", "Indiana Pacers", 127.9],
+        [2, 1610612737, "ATL", "Atlanta Hawks", 123.3],
+        [3, 1610612749, "MIL", "Milwaukee Bucks", 120.5],
+        [4, 1610612755, "PHI", "Philadelphia 76ers", 120.1],
+        [5, 1610612760, "OKC", "Oklahoma City Thunder", 119.4]
+      ]
+    },
+    {
+      "name": "AllTimeSeasonHigh",
+      "headers": [
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "TEAM_NAME",
+        "SEASON_YEAR",
+        "PTS"
+      ],
+      "rowSet": [[1610612743, "DEN", "Nuggets", "1981-82", 126.475]]
+    },
+    {
+      "name": "LastSeasonHigh",
+      "headers": ["RANK", "TEAM_ID", "TEAM_ABBREVIATION", "TEAM_NAME", "PTS"],
+      "rowSet": [
+        [1, 1610612758, "SAC", "Sacramento Kings", 120.7],
+        [2, 1610612744, "GSW", "Golden State Warriors", 118.9],
+        [3, 1610612737, "ATL", "Atlanta Hawks", 118.4],
+        [4, 1610612738, "BOS", "Boston Celtics", 117.9],
+        [5, 1610612760, "OKC", "Oklahoma City Thunder", 117.5]
+      ]
+    },
+    {
+      "name": "LowSeasonHigh",
+      "headers": [
+        "TEAM_ID",
+        "TEAM_ABBREVIATION",
+        "TEAM_NAME",
+        "SEASON_YEAR",
+        "PTS"
+      ],
+      "rowSet": [[1610610025, "CHS", "Stags", "1947-48", 75.833]]
+    }
+  ]
+}
