@@ -16,7 +16,9 @@ function StatsTableDisplay(props) {
         <Table.Td>
           <Grid align="center">
             <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
-              <Image src={leader.athlete.headshot.href} h={50} w={50} />
+              {leader.athlete.headshot && leader.athlete.headshot.href && (
+                <Image src={leader.athlete.headshot.href} h={50} w={50} />
+              )}
             </Grid.Col>
             <Grid.Col span={6} style={{ whiteSpace: 'nowrap' }}>
               <Text> {leader.athlete.displayName} </Text>
