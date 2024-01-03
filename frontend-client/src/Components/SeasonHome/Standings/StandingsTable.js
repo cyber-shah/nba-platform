@@ -36,12 +36,12 @@ function StandingsTableDisplay(props) {
       <Table.Tr key={entry.team.displayName}>
         <Table.Td>{index + 1}</Table.Td>
 
-        <Table.Td colSpan={2}>
+        <Table.Td colSpan={3}>
           <Grid>
             <Grid.Col span={3} style={{ whiteSpace: 'nowrap' }}>
               <Image src={entry.team.logos[0].href} />
             </Grid.Col>
-            <Grid.Col span={6} style={{ whiteSpace: 'nowrap' }}>
+            <Grid.Col span={10} style={{ whiteSpace: 'nowrap' }}>
               <Anchor size='sm' co> {entry.team.displayName} </Anchor>
             </Grid.Col>
           </Grid>
