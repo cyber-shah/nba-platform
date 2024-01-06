@@ -22,7 +22,7 @@ export default function TeamHome(props) {
   return (
     <div>
       {data !== null && (
-        <TeamHeader props={data.teamData} />
+        <TeamHeader teamData={data.teamData} />
       )}
 
     </div>
