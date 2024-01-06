@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SeasonHome from "./Components/SeasonHome/SeasonHome";
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
+import TeamHome from "./Components/TeamHome/TeamHome.js";
 
 
 const theme = createTheme({
@@ -80,6 +81,7 @@ function App() {
           <Router>
             <Routes>
               <Route path="/" element={<SeasonHome />} />
+              <Route path="/Team/:teamId" element={<TeamHome />} />
             </Routes>
           </Router>
         </Grommet>
