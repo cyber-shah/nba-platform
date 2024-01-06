@@ -13,7 +13,7 @@ export default function TeamHeader(props) {
   const styles = {
     background: {
       width: "100%",
-      height: "19vh",
+      height: "20vh",
       maxHeight: "350px",
       display: "flex",
       alignItems: "center",
@@ -21,7 +21,8 @@ export default function TeamHeader(props) {
       paddingTop: "50px",
     },
     gridContainer: {
-      width: "500px",
+      width: "auto",
+      margin: "auto",
     },
     col: {
       display: "flex",
@@ -31,24 +32,27 @@ export default function TeamHeader(props) {
 
   return (
     <Paper shadow="xl" style={styles.background} p="xl">
-      <Stack >
+      <Stack gap={rem(1)}>
         <Grid style={styles.gridContainer}>
 
-          <Grid.Col span={3} style={styles.col}>
+          <Grid.Col span="content" style={styles.col}>
             <img src={props.teamData.team.logos[0].href} alt="Team Logo"
-              width="100px"
-              height="100px" />
+              width="150px"
+              height="150px" />
           </Grid.Col>
 
-          <Grid.Col span={9} style={styles.col}>
+          <Grid.Col span="content" style={styles.col}>
             <Stack
-              gap="sm"
+              gap={rem(0.5)}
             >
               <Title order={2} style={{ color: `#${props.teamData.team.color}` }}>
                 {props.teamData.team.displayName}
               </Title>
-              <Text size="md" style={{ color: `#${props.teamData.team.color}` }}>
-                {props.teamData.team.record.items[0].summary} | {props.teamData.team.standingSummary}
+              <Text size="sm" style={{ color: `#${props.teamData.team.color}` }}>
+                {props.teamData.team.standingSummary}
+              </Text>
+              <Text size="sm" c="dimmed" style={{ color: `#${props.teamData.team.color}` }}>
+                {props.teamData.team.record.items[0].description} : {props.teamData.team.record.items[0].summary}
               </Text>
             </Stack>
           </Grid.Col>
@@ -57,7 +61,7 @@ export default function TeamHeader(props) {
 
 
         <Tabs color={`#${props.teamData.team.color}`} value={activeTab} onChange={setActiveTab}>
-          <Tabs.List>
+          <Tabs.List style={{ display: 'flex', justifyContent: 'space-around' }} >
             <Tabs.Tab value="home">Home</Tabs.Tab>
             <Tabs.Tab value="stats">Stats</Tabs.Tab>
             <Tabs.Tab value="schedule">Schedule</Tabs.Tab>
@@ -66,6 +70,6 @@ export default function TeamHeader(props) {
         </Tabs>
 
       </Stack>
-    </Paper>
+    </Paper >
   );
 }
