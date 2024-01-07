@@ -51,8 +51,7 @@ export default async function GET(params) {
 
   // TEAM NEWS ____________________________________________
   const teamNewsResponse = await fetch(
-    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?
-      team=${params.teamId}`,
+    `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?team=${params.teamId}`,
     { cache: "no-store", }
   );
   if (!teamNewsResponse.ok) {

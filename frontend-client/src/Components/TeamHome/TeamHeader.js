@@ -5,10 +5,7 @@ import { useState } from 'react';
 
 //TODO: set background color to team color
 export default function TeamHeader(props) {
-  console.log(props);
-  console.log(props.teamData.team.color.toString());
 
-  const [activeTab, setActiveTab] = useState('home');
 
   const styles = {
     background: {
@@ -60,7 +57,7 @@ export default function TeamHeader(props) {
         </Grid>
 
 
-        <Tabs color={`#${props.teamData.team.color}`} value={activeTab} onChange={setActiveTab}>
+        <Tabs color={`#${props.teamData.team.color}`} value={props.activeTab} onChange={props.setActiveTab}>
           <Tabs.List style={{ display: 'flex', justifyContent: 'space-around' }} >
             <Tabs.Tab value="home">Home</Tabs.Tab>
             <Tabs.Tab value="stats">Stats</Tabs.Tab>

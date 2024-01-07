@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Box, Paper } from '@mantine/core'
+import { Table, Box, Paper, Text, Title } from '@mantine/core'
 
 
 export default function TeamRoster(props) {
@@ -31,32 +31,37 @@ export default function TeamRoster(props) {
         )}
       </Table.Td>
       <Table.Td>
-        {athlete.displayName}
+        <Text>{athlete.displayName}</Text>
       </Table.Td>
       <Table.Td>
-        {athlete.position.abbreviation}
+        <Text c="dimmed"> {athlete.position.abbreviation} </Text>
       </Table.Td>
       <Table.Td>
-        {athlete.displayHeight}
+        <Text c="dimmed"> {athlete.displayHeight} </Text>
       </Table.Td>
       <Table.Td>
-        {athlete.displayWeight}
+        <Text c="dimmed"> {athlete.displayWeight} </Text>
       </Table.Td>
       <Table.Td>
-        {athlete.age}
+        <Text c="dimmed"> {athlete.age} </Text>
       </Table.Td>
       <Table.Td>
-        ${athlete.contracts[0].salary}
+        <Text c="dimmed"> ${athlete.contracts[0].salary} </Text>
       </Table.Td>
     </Table.Tr>
   ));
 
 
   return (
-    <Paper shadow="md" my="lg" radius="xl" style={styles.background}>
+    <Paper shadow="md" radius="xl" p="xl" style={styles.background}>
+
+      <Title order={2} py="xl">
+        {props.teamRoster.team.displayName} Roster | {props.teamRoster.team.seasonSummary}
+      </Title>
+
       <Table striped highlightOnHover>
-        <Table.Tbody> {tableRows}</Table.Tbody>
-        <Table.Thead> {tableHeaders} </Table.Thead>
+        <Table.Tbody>{tableRows}</Table.Tbody>
+        <Table.Thead>{tableHeaders}</Table.Thead>
       </Table>
     </Paper>
   )
