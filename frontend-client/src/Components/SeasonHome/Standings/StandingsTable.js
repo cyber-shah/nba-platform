@@ -49,9 +49,9 @@ function StandingsTableDisplay(props) {
         </Table.Td>
 
         <Table.Td>
-          { /** <Link to={`/team/${entry.team.id}`} style={{ textDecoration: 'none' }}> */}
-          <Anchor size='sm' underline="hover" style={{ whiteSpace: 'nowrap' }}> {entry.team.displayName} </Anchor>
-          { /** </Link> */}
+          <Link to={`/team/${entry.team.id}`} style={{ textDecoration: 'none' }}>
+            <Anchor size='sm' underline="hover" style={{ whiteSpace: 'nowrap' }}> {entry.team.displayName} </Anchor>
+          </Link>
         </Table.Td>
 
         { /** Map 1through each stat and display it in a table cell */}

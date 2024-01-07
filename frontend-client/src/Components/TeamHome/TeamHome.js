@@ -4,6 +4,7 @@ import { Box, Paper } from '@mantine/core'
 import TeamHeader from './TeamHeader';
 import GET from "../../EspnAPI/TeamData/TeamAPI.js"
 import { useEffect, useState } from 'react';
+import TeamRoster from './TeamRoster';
 
 
 export default function TeamHome(props) {
@@ -12,7 +13,9 @@ export default function TeamHome(props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await GET({ teamId: teamId, seasonYear: 2024 });
+      const result = await GET({
+        teamId: teamId, seasonYear: '2024'
+      });
       setData(result);
     }
     fetchData();
@@ -22,7 +25,10 @@ export default function TeamHome(props) {
   return (
     <div>
       {data !== null && (
-        <TeamHeader teamData={data.teamData} />
+        <>
+          <TeamHeader teamData={data.teamData} />
+          <TeamRoster teamRoster={data.teamRoster} />
+        </>
       )}
 
     </div>
