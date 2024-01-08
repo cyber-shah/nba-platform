@@ -6,7 +6,7 @@ import GET from "../../EspnAPI/TeamData/TeamAPI.js"
 import { useEffect, useState } from 'react';
 import TeamRoster from './TeamRoster';
 import NewsSideBar from '../SeasonHome/SeasonNews/NewsSideBar';
-
+import TeamStats from './TeamStats';
 
 export default function TeamHome(props) {
   const { teamId } = useParams();
@@ -30,21 +30,23 @@ export default function TeamHome(props) {
         <TeamHeader teamData={data.teamData} activeTab={activeTab} setActiveTab={setActiveTab} />
       )}
 
-      <Grid py="md" style={{ width: '70vw', maxWidth: '1200px', margin: 'auto' }}>
-        <Grid.Col span={9}>
-          {data !== null && activeTab === 'roster' && (
-            <TeamRoster teamRoster={data.teamRoster} />
-          )}
-        </Grid.Col>
+      {data !== null && (
+        <Grid py="md" style={{ width: '70vw', maxWidth: '1200px', margin: 'auto' }}>
+          <Grid.Col span={9}>
+            {activeTab === 'roster' && (
+              <TeamRoster teamRoster={data.teamRoster} />
+            )}
+            {activeTab === 'stats' && (
+              <TeamStats teamStats={data.teamStats} teamLeaders={data.teamLeaders} teamPlayerStats={data.teamPlayerStats} />
+            )}
+          </Grid.Col>
 
-        <Grid.Col span={3}>
-          {data !== null && (
+          <Grid.Col span={3}>
             <NewsSideBar newsData={data.teamNews} />
-          )}
+          </Grid.Col>
 
-        </Grid.Col>
-
-      </Grid>
+        </Grid>
+      )}
     </div>
   )
 }

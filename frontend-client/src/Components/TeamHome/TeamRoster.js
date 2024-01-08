@@ -6,7 +6,7 @@ export default function TeamRoster(props) {
   console.log(props.teamRoster);
 
   const styles = {
-    background: { width: '80vw', maxWidth: '900px', margin: 'auto' }
+    background: { maxWidth: '900px', margin: 'auto' }
   };
 
   const tableHeaders = (
