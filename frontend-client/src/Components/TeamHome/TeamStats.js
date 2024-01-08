@@ -22,7 +22,11 @@ export default function TeamStats(props) {
   const tableRows = genLeaders.map((leader) => (
     <Table.Tr key={leader.athlete.id}>
       <Table.Td>
-        <img src={leader.athlete.headshot.href} alt="Headshot" width="52px" height="36px" />
+        {leader.athlete.headshot ? (
+          <img src={leader.athlete.headshot.href} alt="Headshot" width="52px" height="36px" />
+        ) : (
+          <img src='https://a.espncdn.com/combiner/i?img=/i/headshots/nophoto.png&w=110&h=80&scale=crop' alt="Headshot" width="52px" height="36px" />
+        )}
       </Table.Td>
       <Table.Td>{leader.athlete.displayName}</Table.Td>
       {leader.statistics[0].stats.map((stat) => (
@@ -45,10 +49,27 @@ export default function TeamStats(props) {
 
   return (
     <Paper shadow="md" radius="xl" p="xl">
-      <div>
-        {props.teamLeaders.leaders.categories.map((category) => leadersBlock(category))}
-      </div>
+      <Title order={2} py="sm">
+        Team Leaders
+      </Title>
 
+      <Grid>
+        {props.teamLeaders.leaders.categories.map((category, index) => {
+          if (index < 9) {
+            return (
+              <Grid.Col span={4} key={index}>
+                {leadersBlock(category)}
+              </Grid.Col>
+            );
+          } else {
+            return null; // or some other fallback if needed
+          }
+        })}
+      </Grid>
+
+      <Title order={2} py="xl">
+        General Split Stats
+      </Title>
       <Table striped highlightOnHover>
         <Table.Thead>{tableHeaders}</Table.Thead>
         <Table.Tbody>{tableRows}</Table.Tbody>
@@ -62,21 +83,25 @@ export default function TeamStats(props) {
 const leadersBlock = (category) => {
   return (
     <>
-      <Box>
+      <Paper p="md">
         <Text> {category.abbreviation}</Text>
         <Grid>
-          <Grid.Col span={4}>
-            <img src={category.leaders[0].athlete.headshot.href} alt="Headshot" width="100px" height="72px" />
+          <Grid.Col span={6}>
+            {category.leaders[0].athlete.headshot ? (
+              <img src={category.leaders[0].athlete.headshot.href} alt="Headshot" width="100px" height="72px" />
+            ) : (
+              <img src='https://a.espncdn.com/combiner/i?img=/i/headshots/nophoto.png&w=110&h=80&scale=crop' alt="Headshot" width="100px" height="72px" />
+            )}
           </Grid.Col>
 
-          <Grid.Col span={8}>
+          <Grid.Col span={6}>
             <Stack>
-              <Text> {category.leaders[0].athlete.displayName}</Text>
-              <Title order={2}> {category.leaders[0].displayValue}</Title>
+              <Text size="sm"> {category.leaders[0].athlete.displayName}</Text>
+              <Title order={2} align="center"> {category.leaders[0].displayValue}</Title>
             </Stack>
           </Grid.Col>
         </Grid>
-      </Box>
+      </Paper>
     </>
   );
 };
