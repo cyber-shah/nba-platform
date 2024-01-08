@@ -1,13 +1,13 @@
 import React from 'react';
-import { Table, Box, Paper, Text, Title } from '@mantine/core'
+import { Table, Box, Paper, Text, Title, Grid, Stack } from '@mantine/core'
 
 export default function TeamStats(props) {
-  console.log(props.teamStats);
   console.log(props.teamLeaders);
   console.log(props.teamPlayerStats);
 
   const genLeaders = props.teamPlayerStats.results[0].leaders;
 
+  // make headers based on first leader
   const tableHeaders = (
     <Table.Tr>
       <Table.Th key="Headshot"> </Table.Th>
@@ -18,7 +18,7 @@ export default function TeamStats(props) {
     </Table.Tr>
   );
 
-
+  // for each leader in general category, make a row
   const tableRows = genLeaders.map((leader) => (
     <Table.Tr key={leader.athlete.id}>
       <Table.Td>
@@ -45,6 +45,9 @@ export default function TeamStats(props) {
 
   return (
     <Paper shadow="md" radius="xl" p="xl">
+      <div>
+        {props.teamLeaders.leaders.categories.map((category) => leadersBlock(category))}
+      </div>
 
       <Table striped highlightOnHover>
         <Table.Thead>{tableHeaders}</Table.Thead>
@@ -54,3 +57,26 @@ export default function TeamStats(props) {
     </Paper>
   )
 }
+
+
+const leadersBlock = (category) => {
+  return (
+    <>
+      <Box>
+        <Text> {category.abbreviation}</Text>
+        <Grid>
+          <Grid.Col span={4}>
+            <img src={category.leaders[0].athlete.headshot.href} alt="Headshot" width="100px" height="72px" />
+          </Grid.Col>
+
+          <Grid.Col span={8}>
+            <Stack>
+              <Text> {category.leaders[0].athlete.displayName}</Text>
+              <Title order={2}> {category.leaders[0].displayValue}</Title>
+            </Stack>
+          </Grid.Col>
+        </Grid>
+      </Box>
+    </>
+  );
+};
