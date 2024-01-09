@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Table, Grid, Image, Paper, Anchor, Title } from '@mantine/core';
+import { Table, Grid, Image, Paper, Anchor, Title, Box } from '@mantine/core';
 import { Link } from 'react-router-dom';
 
 export default function StandingsTable(props) {
@@ -65,7 +65,7 @@ function StandingsTableDisplay(props) {
     ));
 
     return (
-      <>
+      <Box key={conferenceIndex}>
         <Title order={2} p="lg" > {conference.name}</Title>
         <div style={{ overflowX: 'auto', overflowY: 'clip' }}>
 
@@ -75,7 +75,7 @@ function StandingsTableDisplay(props) {
           </Table>
 
         </div>
-      </>
+      </Box>
     );
   });
 

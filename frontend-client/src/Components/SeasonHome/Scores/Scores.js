@@ -1,5 +1,5 @@
 import ScoreBlock from './ScoreBlock.js';
-import { Paper, Divider } from '@mantine/core';
+import { Paper, Divider, Box } from '@mantine/core';
 import DateSelector from './DateSelector.js';
 import { useState, useEffect } from 'react';
 import { GETScores } from '../../../EspnAPI/SeasonData/SeasonAPI.js';
@@ -11,7 +11,7 @@ export default function Scores(props) {
 
   useEffect(() => {
     fetchData();
-    console.log(selectedDate);
+    console.log(scores);
   }, [selectedDate]);
 
   const fetchData = async () => {
@@ -27,10 +27,10 @@ export default function Scores(props) {
         scores !== undefined && scores !== null && (
           scores.events.map((event, index) => {
             return (
-              <>
+              <Box key={index}>
                 < ScoreBlock key={index + 1} event={event} />
                 <Divider my="md" />
-              </>
+              </Box>
             );
           })
         )
