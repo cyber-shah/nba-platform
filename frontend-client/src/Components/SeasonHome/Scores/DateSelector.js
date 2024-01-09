@@ -2,14 +2,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers";
 import dayjs from "dayjs";
-import { useEffect, useState } from "react";
 
 export default function DateSelector(props) {
-
-  useEffect(() => {
-    const formattedDate = dayjs(props.selectedDate).format('YYYYMMDD');
-    props.setSelectedDate(formattedDate.toString());
-  }, [props.selectedDate]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -28,7 +22,7 @@ export default function DateSelector(props) {
           },
         }}
         label="Select Date"
-        onChange={(newDate) => props.setSelectedDate(newDate)}
+        onChange={(newDate) => props.setSelectedDate(dayjs(newDate).format('YYYYMMDD').toString())}
         slotProps={{ textField: { size: "small" } }}
       />
     </LocalizationProvider>

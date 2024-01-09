@@ -63,7 +63,6 @@ export default function ScoreBlock(props) {
     );
   });
 
-  console.log(props.event.competitions[0].competitors[0]);
   return (
     /* Score Block */
     <Grid cols={3}>
