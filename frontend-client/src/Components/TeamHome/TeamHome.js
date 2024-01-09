@@ -11,7 +11,7 @@ import TeamStats from './TeamStats';
 export default function TeamHome(props) {
   const { teamId } = useParams();
   const [data, setData] = useState(null);
-  const [activeTab, setActiveTab] = useState('home');
+  const [activeTab, setActiveTab] = useState('roster');
 
   useEffect(() => {
     const fetchData = async () => {
