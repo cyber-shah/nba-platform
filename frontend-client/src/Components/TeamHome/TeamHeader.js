@@ -10,12 +10,10 @@ export default function TeamHeader(props) {
   const styles = {
     background: {
       width: "100%",
-      height: "20vh",
       maxHeight: "350px",
       display: "flex",
-      alignItems: "center",
       justifyContent: "center",
-      paddingTop: "50px",
+      paddingTop: "20px",
     },
     gridContainer: {
       width: "auto",
@@ -28,8 +26,8 @@ export default function TeamHeader(props) {
   };
 
   return (
-    <Paper shadow="xl" style={styles.background} p="xl">
-      <Stack gap={rem(1)}>
+    <Paper shadow="xl" style={styles.background}>
+      <Stack gap={rem(1)} >
         <Grid style={styles.gridContainer}>
 
           <Grid.Col span="content" style={styles.col}>
@@ -57,11 +55,18 @@ export default function TeamHeader(props) {
         </Grid>
 
 
-        <Tabs color={`#${props.teamData.team.color}`} value={props.activeTab} onChange={props.setActiveTab}>
-          <Tabs.List style={{ display: 'flex', justifyContent: 'space-around' }} >
-            <Tabs.Tab value="home">Home</Tabs.Tab>
+        <Tabs
+          color={`#${props.teamData.team.color}`}
+          value={props.activeTab}
+          onChange={props.setActiveTab}>
+          <Tabs.List
+            style={{
+              display: 'flex',
+              justifyContent: 'space-around',
+            }} >
+            {/** <Tabs.Tab value="home">Home</Tabs.Tab> */}
             <Tabs.Tab value="stats">Stats</Tabs.Tab>
-            <Tabs.Tab value="schedule">Schedule</Tabs.Tab>
+            {/** <Tabs.Tab value="schedule">Schedule</Tabs.Tab> */}
             <Tabs.Tab value="roster">Roster</Tabs.Tab>
           </Tabs.List>
         </Tabs>
