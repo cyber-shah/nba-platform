@@ -44,6 +44,19 @@ qualified=true&season=${params.seasonYear}&seasontype=2`,
   const nbaLeadersPlayers = await nbaLeadersPlayersResponse.json();
 
 
+
+  return {
+    LeagueNews: nbaNews,
+    LeagueTeams: nbaTeams,
+    LeagueStandings: nbaStandings,
+    LeagueLeadersPlayers: nbaLeadersPlayers,
+  };
+
+}
+
+
+export async function GETScores(params) {
+
   const nbaScheduleResponse = await fetch(
     `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${params.date}`,
     {
@@ -53,15 +66,8 @@ qualified=true&season=${params.seasonYear}&seasontype=2`,
   const nbaScoreboard = await nbaScheduleResponse.json();
 
   return {
-    LeagueNews: nbaNews,
-    LeagueTeams: nbaTeams,
-    LeagueStandings: nbaStandings,
-    LeagueLeadersPlayers: nbaLeadersPlayers,
     LeagueScoreboard: nbaScoreboard,
   };
-
-
-
 }
 
-export default GET;
+

@@ -18,7 +18,7 @@ function StandingsTableDisplay(props) {
 
   // Table Headers : Th
   const tableHeaders = (
-    <Table.Tr>
+    <Table.Tr key={""}>
       <Table.Th key="SerialNumber">#</Table.Th>
       <Table.Th key="Team" >
         Team
@@ -27,7 +27,7 @@ function StandingsTableDisplay(props) {
         Name
       </Table.Th>
       {conferences[0].standings.entries[2].stats.map((stat) => (
-        <Table.Th key={stat.shortDisplayName}>{stat.shortDisplayName}</Table.Th>
+        <Table.Th key={stat.displayName}>{stat.shortDisplayName}</Table.Th>
       ))}
     </Table.Tr>
   );
@@ -41,7 +41,7 @@ function StandingsTableDisplay(props) {
       // 1. Show the team logo, and Team Name
       // 2. Map through each stat and display it in a table cell
 
-      <Table.Tr key={entry.team.displayName}>
+      <Table.Tr key={index}>
         <Table.Td>{index + 1}</Table.Td>
 
         <Table.Td >
@@ -69,7 +69,7 @@ function StandingsTableDisplay(props) {
         <Title order={2} p="lg" > {conference.name}</Title>
         <div style={{ overflowX: 'auto', overflowY: 'clip' }}>
 
-          <Table striped highlightOnHover>
+          <Table striped highlightOnHover key={conference}>
             <Table.Thead>{tableHeaders}</Table.Thead>
             <Table.Tbody>{tableRows}</Table.Tbody>
           </Table>

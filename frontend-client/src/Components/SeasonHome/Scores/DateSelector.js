@@ -5,15 +5,11 @@ import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 
 export default function DateSelector(props) {
-  const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
-    if (selectedDate) {
-      const formattedDate = dayjs(selectedDate).format('YYYYMMDD');
-      console.log(formattedDate);
-      props.setDate(formattedDate.toString());
-    }
-  }, [selectedDate, props]);
+    const formattedDate = dayjs(props.selectedDate).format('YYYYMMDD');
+    props.setSelectedDate(formattedDate.toString());
+  }, [props.selectedDate]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -32,8 +28,7 @@ export default function DateSelector(props) {
           },
         }}
         label="Select Date"
-        value={selectedDate}
-        onChange={(newDate) => setSelectedDate(newDate)}
+        onChange={(newDate) => props.setSelectedDate(newDate)}
         slotProps={{ textField: { size: "small" } }}
       />
     </LocalizationProvider>

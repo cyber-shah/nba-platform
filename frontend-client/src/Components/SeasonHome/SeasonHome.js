@@ -1,6 +1,6 @@
 import { Box, Grid } from "grommet";
 import { React, useEffect, useState } from "react";
-import GET from "../../EspnAPI/SeasonData/SeasonAPI";
+import { GET } from "../../EspnAPI/SeasonData/SeasonAPI";
 import SeasonHeader from "./SeasonHeader";
 import TeamList from "./TeamList/TeamList";
 import NewsSideBar from "./SeasonNews/NewsSideBar";
@@ -8,9 +8,9 @@ import StandingsTable from "./Standings/StandingsTable";
 import Stats from "./Leaderboard";
 import Scores from "./Scores/Scores.js";
 
+
 export default function TeamHome() {
   const [data, setData] = useState(null);
-  const [date, setDate] = useState(null);
 
   // for Season Header
   const [selectedTab, setTab] = useState(2);
@@ -18,7 +18,7 @@ export default function TeamHome() {
 
 
   const fetchData = async () => {
-    const result = await GET({ seasonYear: 2024, date: "20231217" });
+    const result = await GET({ seasonYear: 2024 });
     setData(result);
   }
 
@@ -41,8 +41,7 @@ export default function TeamHome() {
 
           {data !== null && (
             <Box pad="small">
-              {selectedTab === 0 && <Scores scores={data.LeagueScoreboard} setDate={setDate} date={date}
-              />}
+              {selectedTab === 0 && <Scores />}
               {selectedTab === 4 && <div>Schedule</div>}
               {selectedTab === 1 && <Stats players={data.LeagueLeadersPlayers} />}
               {selectedTab === 2 && < StandingsTable standings={data.LeagueStandings} />}
