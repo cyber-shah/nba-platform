@@ -70,11 +70,14 @@ export default function TeamStats(props) {
       <Title order={2} py="xl">
         General Split Stats
       </Title>
-      <Table striped highlightOnHover>
-        <Table.Thead>{tableHeaders}</Table.Thead>
-        <Table.Tbody>{tableRows}</Table.Tbody>
-        <Table.Tfoot>{tableFooter}</Table.Tfoot>
-      </Table>
+
+      <div style={{ overflowX: 'auto', overflowY: 'clip' }} >
+        <Table striped highlightOnHover>
+          <Table.Thead>{tableHeaders}</Table.Thead>
+          <Table.Tbody>{tableRows}</Table.Tbody>
+          <Table.Tfoot>{tableFooter}</Table.Tfoot>
+        </Table>
+      </div>
     </Paper>
   )
 }

@@ -58,11 +58,12 @@ export default function TeamRoster(props) {
       <Title order={2} py="xl">
         {props.teamRoster.team.displayName} Roster | {props.teamRoster.team.seasonSummary}
       </Title>
-
-      <Table striped highlightOnHover>
-        <Table.Tbody>{tableRows}</Table.Tbody>
-        <Table.Thead>{tableHeaders}</Table.Thead>
-      </Table>
+      <div style={{ overflowX: 'auto', overflowY: 'clip' }} >
+        <Table striped highlightOnHover>
+          <Table.Tbody>{tableRows}</Table.Tbody>
+          <Table.Thead>{tableHeaders}</Table.Thead>
+        </Table>
+      </div>
     </Paper>
   )
 }
