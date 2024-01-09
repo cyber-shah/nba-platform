@@ -128,9 +128,7 @@ export default function ScoreBlock(props) {
         {props.event.status.type.completed === false && (
           <Stack gap="xs" >
             <Button size='xs' variant="outline" radius="xl" href={props.event.links[0].href} style={{ width: '120px' }}>{props.event.links[0].shortText}</Button>
-
           </Stack>
-
         )}
       </Grid.Col>
 
