@@ -1,28 +1,28 @@
 
 import React from 'react';
-import { Table, Grid, Text, Image, Stack, Button, SimpleGrid } from '@mantine/core';
+import { Table, Grid, Text, Image, Stack, Button, } from '@mantine/core';
 
 export default function ScoreBlock(props) {
 
   const tableHeader = () => {
     return (
       <Table.Tr >
-        <Table.Th key="FINAL" style={{ width: '80%' }}>
+        <Table.Th key="FINAL" style={{ width: '90%' }}>
           FINAL
         </Table.Th>
-        <Table.Th key="1" style={{ width: '4%' }}>
+        <Table.Th key="1" style={{ width: '2%' }}>
           1
         </Table.Th>
-        <Table.Th key="2" style={{ width: '4%' }}>
+        <Table.Th key="2" style={{ width: '2%' }}>
           2
         </Table.Th>
-        <Table.Th key="3" style={{ width: '4%' }}>
+        <Table.Th key="3" style={{ width: '2%' }}>
           3
         </Table.Th>
-        <Table.Th key="4" style={{ width: '4%' }}>
+        <Table.Th key="4" style={{ width: '2%' }}>
           4
         </Table.Th>
-        <Table.Th key="T" style={{ width: '4%' }}>
+        <Table.Th key="T" style={{ width: '2%' }}>
           T
         </Table.Th>
       </Table.Tr>
@@ -50,8 +50,8 @@ export default function ScoreBlock(props) {
           </Grid>
         </Table.Td>
 
-        {entry.linescore && entry.linescore[0] && (
-          <Table.Td>
+        {(props.event.status.type.completed === true) && (
+          <>
             <Table.Td style={{ width: '2%' }}>
               <Text size="xs">{entry.linescores[0].value}</Text>
             </Table.Td>
@@ -67,7 +67,7 @@ export default function ScoreBlock(props) {
             <Table.Td style={{ width: '2%' }}>
               <Text size="md" fw={700}>{entry.score}</Text>
             </Table.Td>
-          </Table.Td>
+          </>
         )}
       </Table.Tr>
     );
@@ -118,12 +118,19 @@ export default function ScoreBlock(props) {
 
 
       <Grid.Col span={1.8} >
-        {props.event.links && props.event.links[1] && (
+        {props.event.status.type.completed === true && (
           <Stack gap="xs" >
             <Button size='xs' variant="outline" radius="xl" href={props.event.links[0].href} style={{ width: '120px' }}>{props.event.links[0].shortText}</Button>
             <Button size='xs' variant="outline" radius="xl" href={props.event.links[1].href} style={{ width: '120px' }} >{props.event.links[1].shortText}</Button>
             <Button size='xs' variant="outline" radius="xl" href={props.event.links[2].href} style={{ width: '120px' }}>{props.event.links[2].shortText}</Button>
           </Stack>
+        )}
+        {props.event.status.type.completed === false && (
+          <Stack gap="xs" >
+            <Button size='xs' variant="outline" radius="xl" href={props.event.links[0].href} style={{ width: '120px' }}>{props.event.links[0].shortText}</Button>
+
+          </Stack>
+
         )}
       </Grid.Col>
 
